@@ -17,8 +17,8 @@
 
         // modalInstance resolves the promise
         modal.close = function(){
-            $modalInstance.close(modal.json)
-        }
+            $modalInstance.close(modal.json);
+        };
 
     }
 

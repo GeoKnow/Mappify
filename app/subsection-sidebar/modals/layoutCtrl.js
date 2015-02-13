@@ -16,8 +16,8 @@
         };
 
         modal.close = function(){
-            $modalInstance.close(modal.layout)
-        }
+            $modalInstance.close(modal.layout);
+        };
 
     }
 

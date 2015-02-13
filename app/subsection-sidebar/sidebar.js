@@ -21,7 +21,7 @@
     // the map config
     function mapConfigModel(configModel) {
 
-        var data = {}
+        var data = {};
 
         var mapConfig = {};
         mapConfig.createMapConfigFromScafoldingConfig = createMapConfigFromScaffoldingConfig;
@@ -106,7 +106,7 @@
         return model;
     }
 
-    function configService($modal, configModel) {
+    function configService($modal, configModel, $log) {
 
         var service = {};
 
@@ -115,10 +115,6 @@
         service.changeTileLayers = changeTileLayers;
 
         return service;
-
-        function wizard(){
-            changeLayout().then(changeTileLayers);
-        }
 
         function loadConfig(){
             return openModal({
@@ -166,7 +162,7 @@
                 }
             }).then(function (data) {
                 // validation point ?
-                console.log(data);
+                $log.warn(data);
 
                 configModel.setTileLayer(data);
             });

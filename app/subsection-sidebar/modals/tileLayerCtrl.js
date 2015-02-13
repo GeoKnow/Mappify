@@ -15,8 +15,8 @@
         };
 
         modal.close = function(){
-            $modalInstance.close(modal.tl)
-        }
+            $modalInstance.close(modal.tl);
+        };
     }
 
 })();

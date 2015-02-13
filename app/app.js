@@ -17,12 +17,12 @@
         $stateProvider.state('root', {
             url: '/',
             views: {
-                "sidebar": {
+                sidebar: {
                     controller: 'SidebarController',
                     controllerAs: 'sidebar',
                     templateUrl: '/subsection-sidebar/sidebar.tpl.html'
                 },
-                "map": {
+                map: {
                     controller: 'MainController',
                     controllerAs: 'main',
                     templateUrl: '/subsection-main/main.tpl.html'
