@@ -1,0 +1,22 @@
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                Load Json
+                <i class="fa fa-times close"
+                   ng-click="modal.cancel()"></i>
+            </div>
+            <div class="modal-body">
+                <textarea ng-model="modal.json">
+
+                </textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" ng-click="modal.close()">
+                    <i class="fa fa-fw fa-save"></i>
+                    Save
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

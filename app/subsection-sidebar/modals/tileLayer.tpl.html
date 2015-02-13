@@ -1,0 +1,39 @@
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                Tile Layer
+                <i class="fa fa-times close"
+                   ng-click="modal.cancel()"></i>
+            </div>
+            <div class="modal-body">
+                <div class="col-xs-3">
+                    <h6>Google Maps</h6>
+                    <input type="checkbox" ng-model="modal.tl.google.road" name="google.road" id="google.road" /> roadmap <br />
+                    <input type="checkbox" ng-model="modal.tl.google.satellite" name="google.satellite" id="google.satellite" /> satellite <br />
+                    <input type="checkbox" ng-model="modal.tl.google.hybrid" name="google.hybrid" id="google.hybrid" /> hybrid <br />
+                    <input type="checkbox" ng-model="modal.tl.google.terrain" name="google.terrain" id="google.terrain" /> terrain <br />
+
+                </div>
+
+                <div class="col-xs-3">
+                    <h6>Open Layers</h6>
+                    <input type="checkbox" ng-model="modal.tl.osm.standard" name="google.road" id="osm.standard" /> Road <br />
+                </div>
+
+                <div class="col-xs-3">
+                    <h6>Mapbox</h6>
+                    <input type="checkbox" ng-model="modal.tl.mapbox.road" name="google.satellite" id=mapbox.road" /> satellite <br />
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" ng-click="modal.close()">
+                    <i class="fa fa-fw fa-save"></i>
+                    Save
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

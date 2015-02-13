@@ -1,0 +1,29 @@
+/* Imports dependencies like bootstrap, etc. */
+@import "dependencies";
+@import "variables.less";
+
+/* Imports app-wide styles */
+@import "globals/map";
+@import "globals/modals";
+
+
+/* app wide general styles */
+body {
+  font-size: 12px;
+  height: 100%;
+  background: #F3F3F3;
+  overflow-x: hidden;
+  min-height: 100%;
+  font-family: 'Open Sans', Calibri, Arial, sans-serif;
+}
+
+a {
+  cursor: pointer;
+}
+
+.text-vertical-middle {
+  display: flex;
+  justify-content:center;
+  align-content:center;
+  flex-direction:column;
+}

@@ -1,0 +1,15 @@
+<div>
+    <button ng-click="sidebar.changeLayout()">Change Zoom/Center</button>
+</div>
+
+<div>
+    <button ng-click="sidebar.changeTileLayers()">Change TileLayers</button>
+</div>
+
+<div>
+    <button ng-click="sidebar.loadConfig()">Load Config</button>
+</div>
+
+<pre>
+    {{sidebar.getConfigModel() | json}}
+</pre>

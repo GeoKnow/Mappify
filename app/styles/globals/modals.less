@@ -1,0 +1,61 @@
+/** foo */
+.modal:not(.untouched) .modal {
+  &-backdrop {
+    background-color: #555;
+    &.in {
+      opacity: 0.75;
+    }
+  }
+
+  &-body {
+    padding: @grid-gutter-width / 2 * 2;
+
+    &.fixed-height {
+      height: 450px;
+      max-height: 450px;
+      min-height: 450px;
+      overflow-y: scroll;
+    }
+
+  }
+
+  &-header, &-footer {
+    height: @grid-gutter-width *2;
+    padding: @grid-gutter-width / 2;
+  }
+
+  &-header {
+    background-color: @title-background;
+    color: #ffffff;
+    font-size: @font-size-h4;
+    .text-vertical-middle();
+
+    .close {
+      cursor: pointer;
+      position: absolute;
+      right: @grid-gutter-width / 2;
+      top: 0;
+      margin: 0;
+      height: @grid-gutter-width * 2;
+      line-height: @grid-gutter-width * 2;
+    }
+
+  }
+
+  &-footer {
+    background-color: #eaeaea;
+
+    .btn {
+      .btn-sm();
+    }
+
+  }
+
+  .table {
+    &, tr, td {
+      border: none;
+    }
+    margin: 0;
+  }
+
+}
