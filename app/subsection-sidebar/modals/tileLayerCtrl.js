@@ -5,10 +5,12 @@
 
         .controller('TileLayerCtrl', TileLayerCtrl);
 
-    function TileLayerCtrl($modalInstance, tileLayer) {
+    function TileLayerCtrl($modalInstance, tileLayer, availableTileLayer) {
 
         var modal = this;
         modal.tl = tileLayer.tileLayer;
+        modal.availableTileLayer = availableTileLayer;
+
 
         modal.cancel = function(){
             $modalInstance.dismiss();

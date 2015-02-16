@@ -12,8 +12,6 @@
         .config(stateProviderConfig);
 
     function stateProviderConfig($stateProvider, $urlRouterProvider) {
-
-
         $stateProvider.state('root', {
             url: '/',
             views: {

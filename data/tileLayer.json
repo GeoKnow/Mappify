@@ -1,0 +1,14 @@
+{
+  "google": {
+    "roadmap": false,
+    "hybrid": false,
+    "satellite": true,
+    "terrain": false
+  },
+  "osm": {
+    "standard": false
+  },
+  "mapbox": {
+    "road": false
+  }
+}

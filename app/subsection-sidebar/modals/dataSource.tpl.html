@@ -1,0 +1,41 @@
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                DataSource
+                <i class="fa fa-times close"
+                   ng-click="modal.cancel()"></i>
+            </div>
+            <div class="modal-body">
+                <label>displayName</label>
+                <input type="text" ng-model="modal.ds.displayName" />
+
+                <h6>service</h6>
+
+
+                <div ng-repeat="service in modal.availableServices">
+                    <div ng-click="modal.toggleServiceSelection(service.id)"
+                         ng-class="modal.isServiceSelected(service.id) ? 'bg-warning' : ''"
+                         style="height: 100px; width: 100px;">
+                         {{service.displayName}}
+
+                    </div>
+
+
+                </div>
+
+
+                <label>concept</label>
+                <select></select>
+                <input type="text" ng-model="modal.ds.concept" placeholder="http://dbpedia.org/ontology/University"/>
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" ng-click="modal.close()">
+                    <i class="fa fa-fw fa-save"></i>
+                    Save
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

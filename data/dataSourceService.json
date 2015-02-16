@@ -1,0 +1,11 @@
+[
+  {
+    "id": "DBpedia-Sparql",
+    "displayName": "DBpedia",
+    "type": "sparql",
+    "serviceUrl": "http://dbpedia.org/sparql",
+    "defaultGraphUris": ["http://dbpedia.org"],
+    "GeoMapFactory": "WktMapFactory"
+  }
+
+]
