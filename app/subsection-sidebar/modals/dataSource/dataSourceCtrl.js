@@ -1,8 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('mappifyApp.sidebar.dataSource', [])
-
+    angular.module('mappifyApp.sidebar.dataSource', ['zenubu.input'])
         .controller('DataSourceCtrl', DataSourceCtrl);
 
     function DataSourceCtrl($modalInstance, availableServices) {
@@ -18,7 +17,7 @@
             function findService(serviceIdentifier) {
                 return _.find(availableServices, function (service) {
                     return service.id === serviceIdentifier;
-                })
+                });
             }
 
             if (null !== modal.selectedService) {

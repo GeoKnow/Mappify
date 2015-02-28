@@ -1,13 +1,16 @@
 /* Imports dependencies like bootstrap, etc. */
 @import "dependencies";
 @import "variables.less";
-
 /* Imports app-wide styles */
 @import "globals/map";
 @import "globals/modals";
 
-
 /* app wide general styles */
+
+html {
+  height: 100%;
+}
+
 body {
   font-size: 12px;
   height: 100%;
@@ -23,99 +26,64 @@ a {
 
 .text-vertical-middle {
   display: flex;
-  justify-content:center;
-  align-content:center;
-  flex-direction:column;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
+
 #map {
   height: 100vh;
 }
 
-#refreshButton {
-  display: block;
-  font-size: 14px;
-  padding: 12px 20px;
-  color: @mainFontColor;
-  text-decoration: none;
-  background-color: transparent;
-  border-radius: 3px;
-  border: 1px solid @mainFontColor;
-}
-
-/**** *///
+/**** */
+//
 
 #sidebar {
   padding-left: 0;
   right: 0;
-}
 
-#sidebar hr {
-  border-color: #ddd;
-  margin: 10px 15px;
-}
+  hr {
+    border-color: #ddd;
+    margin: 10px 15px;
+  }
 
-#sidebar a {
-  color: #444;
-}
+  &, & a {
+    color: #444;
+  }
 
-#sidebar ul.navigation {
-  list-style: none outside none;
-  margin: 0;
-  padding: 0;
-}
+  ul.navigation {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
 
-#sidebar .navigation li a {
-  display: block;
-  font-size: 14px;
-  padding: 12px 20px;
-}
+    li a {
+      display: block;
+      font-size: 14px;
+      padding: 12px 20px;
 
-#sidebar .navigation li a:hover,
-#sidebar .navigation li a:focus {
-  text-decoration: none;
-  background: #f0f0f0;
-}
+      &:hover, &:focus {
+        text-decoration: none;
+        background: #f0f0f0;
+      }
 
-#sidebar .navigation li p.sw-alert:hover,
-#sidebar .navigation li p.sw-alert:focus {
-  text-decoration: none;
-  background: #f0f0f0;
-}
-#sidebar .navigation li i {
-  font-size: 16px;
-  margin-right: 15px;
-  position: relative;
-  top: 2px;
-}
-#sidebar .navigation li i.list_angle {
-  float: right;
-  margin-right: 0;
-}
-#sidebar .navigation li ul.nav-second-level {
-  background: rgba(0, 0, 0, 0.2);
-}
-#sidebar .navigation li ul.nav-second-level li a {
-  font-size: 12px;
-  padding-left: 35px;
-}
-#sidebar .navigation li a.btn {
-  display: block;
-  padding: 10px 12px;
-  margin: 0 15px;
-}
-#sidebar .navigation li a.btn i {
-  margin-right: 2px;
-}
-#sidebar .navigation li a.btn-orange:hover,
-#sidebar .navigation li a.btn-orange:focus,
-#sidebar .navigation li a.btn-orange:active {
-  background: #f75432;
-  color: #ffffff;
-}
-#sidebar .navigation li a.btn-orange:active {
-  background: #b72a22;
-  box-shadow: none;
-  color: #ffffff;
+      i {
+        margin-left: 10px;
+      }
+
+    }
+
+  }
+
+  i {
+    font-size: 16px;
+    margin-right: 15px;
+    position: relative;
+  }
+
+  .btn {
+    text-align: left;
+  }
+
 }
 
 textarea {
@@ -126,4 +94,26 @@ textarea {
 .colorBox {
   height: 20px;
   width: 30px;
+}
+
+.tile-layer-preview {
+  position: relative;
+  background: url(../images/satellite.png) no-repeat center center;
+  height: 100px;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 15px;
+
+  .preview-inactive {
+    position: absolute; top: 0; left:0; width:100%; height: 100%; background: black; opacity: 0.5;
+  }
+
+  .fa-stack {
+    position: absolute; bottom: 10px; right: 10px;
+  }
+
+  .badge {
+    position: absolute; bottom: 10px; left: 10px;
+  }
+
 }

@@ -10,11 +10,11 @@
         var data =
         {
             layout: {
-                zoom: 5,
                 viewCenter: {
-                    longitude: 12,
-                    latitude: 51.12
-                }
+                    latitude:  51.339018,
+                    longitude: 12.3797776
+                },
+                zoom: 15
             },
             tileLayer: {
                 google: {
@@ -64,12 +64,12 @@
 
             // todo change to id
             var index = _.findIndex(data.dataSources, function (dataSource) {
-                return dataSource.displayName == newDataSource.displayName;
+                return dataSource.displayName === newDataSource.displayName;
             });
 
             // handle as create
             if (-1 === index) {
-                data.dataSources.push(newDataSource)
+                data.dataSources.push(newDataSource);
             }
             // handle as update
             else {

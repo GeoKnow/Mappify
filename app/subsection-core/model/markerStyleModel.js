@@ -22,9 +22,7 @@
         }
 
         model.getMarkerStyles = function () {
-            return (markerStyle)
-                ? $q.when(markerStyle)
-                : $http.get(URLS.FETCH).then(cacheMarkerStyle);
+            return (markerStyle) ? $q.when(markerStyle) : $http.get(URLS.FETCH).then(cacheMarkerStyle);
         };
     }
 

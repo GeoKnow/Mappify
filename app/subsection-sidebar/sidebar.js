@@ -54,7 +54,7 @@
         }
     }
 
-    function configService($modal, $log, scaffoldingConfigModel, tileLayerModel) {
+    function configService($modal, scaffoldingConfigModel) {
 
         var service = {};
 
@@ -64,6 +64,9 @@
         service.downloadConfig = downloadConfig;
         service.loadConfig = loadConfig;
         service.selectMarkerStyle = selectMarkerStyle;
+
+        changeTileLayers();
+
 
         return service;
 
@@ -77,7 +80,7 @@
                         return scaffoldingConfigModel.getCurrentConfig();
                     }
                 }
-            }).then(function (data) {
+            }).then(function () {
                 // intentionally left blank
             });
         }
@@ -141,7 +144,7 @@
                         };
                     },
                     availableTileLayer: function(tileLayerModel) {
-                        return tileLayerModel.getTileLayers();;
+                        return tileLayerModel.getTileLayers();
                     }
                 }
             }).then(function (data) {
@@ -161,7 +164,7 @@
                         return markerStyleModel.getMarkerStyles();
                     }
                 }
-            }).then(function (data) {
+            }).then(function () {
                 // ToDo
                 //scaffoldingConfigModel.setSetDataSource(data);
             });

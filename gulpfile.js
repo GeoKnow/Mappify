@@ -14,7 +14,7 @@ var staticFiles = [
         name: 'fonts',
         folder: 'dist/fonts',
         src: '$vendor',
-        filter: ['{f,F}ont*.{otf,eot,svg,ttf,woff}']
+        filter: ['{f,F}ont*.{otf,eot,svg,ttf,woff,woff2}']
     },
     {
         name: 'images',
@@ -61,7 +61,7 @@ gulp.task('dev', ['bower','dev.fonts', 'develop', 'watch.less']);
 gulp.task('dev.fonts', ['bower'], function () {
 
     return gulp.src(gulp.options.files.vendor)
-        .pipe($.filter(['{f,F}ont*.{otf,eot,svg,ttf,woff}']))
+        .pipe($.filter(['{f,F}ont*.{otf,eot,svg,ttf,woff2}']))
         .pipe(gulp.dest('.tmp/fonts'));
 
 });

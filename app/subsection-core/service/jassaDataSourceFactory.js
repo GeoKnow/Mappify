@@ -5,9 +5,10 @@
         .service('jassaDataSourceFactory', jassaDataSourceFactory);
 
     function jassaDataSourceFactory() {
+
         var factory = this;
 
-        factory.create = function(dataSourceConfig) {
+        factory.create = function() {
 
             var sparqlService = createSparqlService('http://akswnc3.informatik.uni-leipzig.de/data/dbpedia/sparql', ['http://dbpedia.org']);
             var geoMapFactory = createGeoMapFactory('wkt');
@@ -43,10 +44,10 @@
         {
             type = type.toLowerCase();
 
-            if (type == 'wgs84')    {
+            if (type === 'wgs84')    {
                 return jassa.geo.GeoMapFactoryUtils
                     .wgs84MapFactory;
-            } else if (type == 'wkt') {
+            } else if (type === 'wkt') {
                 return jassa.geo.GeoMapFactoryUtils
                     .createWktMapFactory('http://www.w3.org/2003/01/geo/wgs84_pos#geometry', 'bif:st_intersects', 'bif:st_geomFromText');
             } else {

@@ -20,8 +20,8 @@
         // @notice add other data source here
         // we only handle jassa
         main.getDataSource = function() {
-            return handleJassaDataSource(main.getMapConfig(), jassaDataSourceFactory)
-        }
+            return handleJassaDataSource(main.getMapConfig(), jassaDataSourceFactory);
+        };
 
         main.refreshConfig = function(){
             main.showMap = false;
@@ -36,10 +36,10 @@
 
         main.config = {
             viewCenter: {
-                latitude:  51.5286416,
-                longitude: -0.1015987
+                latitude:  51.339018,
+                longitude: 12.3797776
             },
-            zoom: 12
+            zoom: 15
         };
 
         main.datasource = {};

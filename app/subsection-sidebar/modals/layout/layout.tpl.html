@@ -6,17 +6,29 @@
                 <i class="fa fa-times close"
                    ng-click="modal.cancel()"></i>
             </div>
-            <div class="modal-body">
-                <input ng-model="modal.layout.zoom" type="number" placeholder="Zoom" min="1" max="22">
-                <input ng-model="modal.layout.lat" type="number" placeholder="Lat" min="-90" max="90">
-                <input ng-model="modal.layout.lng" type="number" placeholder="Lng" min="-180" max="180">
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-success" ng-click="modal.close()">
-                    <i class="fa fa-fw fa-save"></i>
-                    Save
-                </button>
-            </div>
+            <zenubu-form submit-function="modal.close" model="modal.layout" validation-object="{}">
+                <div class="modal-body">
+
+                    <div class="row">
+                        <zenubu-input class="col-xs-4" field="lat" placeholder="Latitude" label="Latitude"></zenubu-input>
+                        <zenubu-input class="col-xs-4" field="lng" placeholder="Longitude" label="Longitude"></zenubu-input>
+                        <zenubu-input class="col-xs-4" field="zoom" placeholder="Zoom" label="Zoom"></zenubu-input>
+                    </div>
+
+                    <div  style="margin-bottom: 5px;"><strong>Preview</strong></div>
+
+                    <div id="map-preview-image" style="background: url(images/preview.png) no-repeat center center; height:300px; width: 100%">
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <zenubu-submit class="btn-success">
+                        <i class="fa fa-fw fa-save"></i>
+                        Save
+                    </zenubu-submit>
+                </div>
+            </zenubu-form>
         </div>
     </div>
 </div>

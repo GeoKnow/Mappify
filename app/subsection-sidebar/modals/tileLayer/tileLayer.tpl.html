@@ -7,27 +7,45 @@
                    ng-click="modal.cancel()"></i>
             </div>
             <div class="modal-body">
-                <div class="col-xs-3">
-                    <h6>Google Maps</h6>
-                    <input type="checkbox" ng-model="modal.tl.google.road" name="google.road" id="google.road" /> roadmap <br />
-                    <input type="checkbox" ng-model="modal.tl.google.satellite" name="google.satellite" id="google.satellite" /> satellite <br />
-                    <input type="checkbox" ng-model="modal.tl.google.hybrid" name="google.hybrid" id="google.hybrid" /> hybrid <br />
-                    <input type="checkbox" ng-model="modal.tl.google.terrain" name="google.terrain" id="google.terrain" /> terrain <br />
 
+                <label style="margin-bottom: 15px">Please select the tile layers your map should provide.</label>
+
+                <div class="row">
+                    <div class="col-xs-6"
+                         ng-repeat="(key,val) in modal.availableTileLayer.google">
+                        <div class="tile-layer-preview" style="background-image:url(images/{{key}}.png);"
+                             ng-click="modal.tl.google[key] = !modal.tl.google[key]"
+                                >
+                            <div class="preview-inactive" ng-if="!modal.tl.google[key]">
+                            </div>
+                            <span class="badge">Google: {{key}}</span>
+                        <span class="fa-stack">
+                            <i class="fa fa-3x fa-circle fa-stack-1x" style="color: white;"></i>
+                            <i class="fa fa-3x fa-stack-1x"
+                               ng-class="(modal.tl.google[key])?'fa-check-circle-o text-success':'fa-times-circle-o text-danger'"></i>
+                        </span>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xs-6">
+                        <div class="tile-layer-preview" style="background-image:url(images/osm.png);"
+                             ng-click="modal.tl.osm.standard = !modal.tl.osm.standard"
+                                >
+                            <div class="preview-inactive" ng-if="!modal.tl.osm.standard">
+                            </div>
+                            <span class="badge">osm: standard</span>
+                        <span class="fa-stack">
+                            <i class="fa fa-3x fa-circle fa-stack-1x" style="color: white;"></i>
+                            <i class="fa fa-3x fa-stack-1x"
+                               ng-class="(modal.tl.osm.standard)?'fa-check-circle-o text-success':'fa-times-circle-o text-danger'"></i>
+                        </span>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="col-xs-3">
-                    <h6>Open Layers</h6>
-                    <input type="checkbox" ng-model="modal.tl.osm.standard" name="google.road" id="osm.standard" /> Road <br />
-                </div>
-
-                <div class="col-xs-3">
-                    <h6>Mapbox</h6>
-                    <input type="checkbox" ng-model="modal.tl.mapbox.road" name="google.satellite" id=mapbox.road" /> satellite <br />
-                </div>
-
-                <div class="clearfix"></div>
             </div>
+
+            <div class="clearfix"></div>
             <div class="modal-footer">
                 <button class="btn btn-success" ng-click="modal.close()">
                     <i class="fa fa-fw fa-save"></i>

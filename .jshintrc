@@ -16,9 +16,11 @@
   "globalstrict": true,
   "trailing": true,
   "smarttabs": true,
+  "validthis":true,
   "globals": {
     "angular": false,
     "moment": false,
+    "jassa": false,
     "$": false,
     "L": false,
     "FastClick": false,

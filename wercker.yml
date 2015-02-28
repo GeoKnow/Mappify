@@ -19,7 +19,7 @@ build:
 
 deploy:
   steps:
-    - git-push:
-         gh_token: $GH_TOKEN
+    - leipert/git-push:
+         gh_oauth: $GH_TOKEN
          gh_pages: true
          basedir: dist

@@ -21,9 +21,7 @@
         }
 
         model.getTileLayers = function () {
-            return (tileLayer)
-                ? $q.when(tileLayer)
-                : $http.get(URLS.FETCH).then(cacheTileLayer);
+            return (tileLayer) ? $q.when(tileLayer) : $http.get(URLS.FETCH).then(cacheTileLayer);
         };
     }
 

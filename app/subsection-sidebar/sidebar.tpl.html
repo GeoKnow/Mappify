@@ -1,39 +1,52 @@
+<div class="col-xs-12">
+    <div class="h3 text-center">
+        Mappify
+    </div>
+    <br>
+</div>
+<div class="clearfix"></div>
 <ul class="navigation">
     <li>
-        <a href="#" ng-click="sidebar.changeLayout()"><i class="fa fa-location-arrow"></i>Change Zoom/Center</a>
+        <a href="#" ng-click="sidebar.changeLayout()"><i class="fa fa-fw fa-location-arrow"></i>Change Zoom/Center</a>
     </li>
     <li>
-        <a href="#" ng-click="sidebar.changeTileLayers()"><i class="fa fa-globe"></i>Change TileLayers</a>
+        <a href="#" ng-click="sidebar.changeTileLayers()"><i class="fa fa-fw fa-globe"></i>Change TileLayers</a>
     </li>
     <li>
-        <a href="" ng-click="sidebar.loadConfig()"><i class="fa fa-cloud-upload"></i>Load Config</a>
+        <a href="" ng-click="sidebar.loadConfig()"><i class="fa fa-fw fa-cloud-upload"></i>Load Config</a>
     </li>
     <li>
-        <a ng-click="sidebar.downloadConfig()"><i class="fa fa-cloud-download"></i>Download Config</a>
+        <a ng-click="sidebar.downloadConfig()"><i class="fa fa-fw fa-cloud-download"></i>Download Config</a>
     </li>
     <li>
-        <a ng-click="sidebar.changeDataSource()"><i class="fa fa-database"></i>Change DataSource</a>
+        <a ng-click="sidebar.changeDataSource()"><i class="fa fa-fw fa-database"></i>Change DataSource</a>
     </li>
 
     <li>
-        <a ng-click="sidebar.changeDataSource()"><i class="fa fa-cog"></i>Map Settings</a>
+        <a ng-click="sidebar.changeDataSource()"><i class="fa fa-fw fa-cog"></i>Map Settings</a>
     </li>
 
     <li>
-        <a ng-click="sidebar.selectMarkerStyle()"><i class="fa fa-cog"></i>Select Marker Style</a>
+        <a ng-click="sidebar.selectMarkerStyle()"><i class="fa fa-fw fa-map-marker"></i>Select Marker Style</a>
     </li>
-
-    <hr>
-    <li>
-        <a href="/subscribe" class="btn btn-orange"><i class=""></i>Generate Files</a>
-    </li>
-    <hr>
 </ul>
+<div class="col-xs-12">
+    <hr>
+    <button href="/subscribe" class="btn btn-primary btn-block text-left"><i class="fa fa-fw fa-cogs"></i> Generate Files</button>
+</div>
+<div class="col-xs-12" style="position: absolute; bottom: 15px;">
+    <button class="btn btn-info btn-block text-left" ng-click="main.refreshConfig()" id="refreshButton">
+        <i class="fa fa-fw fa-refresh"></i> Refresh map
+    </button>
+    <hr>
+    <button class="btn btn-block text-left" ng-class="(main.autoRefresh)?'btn-success':'btn-warning'" ng-click="main.refreshConfig()" id="autoRefresh">
+        <i class="fa fa-fw " ng-class="(main.autoRefresh)?'fa-toggle-on':'fa-toggle-off'"></i> Autorefresh
+        <span ng-if="main.autoRefresh">on</span>
+        <span ng-if="!main.autoRefresh">off</span>
+    </button>
+</div>
 
-<button ng-click="main.refreshConfig()" id="refreshButton">
-    Refresh map
-</button>
 
-<pre>
-    {{sidebar.getConfigModel() | json}}
-</pre>
+<!--<pre>-->
+<!--{{sidebar.getConfigModel() | json}}-->
+<!--</pre>-->

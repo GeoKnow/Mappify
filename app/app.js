@@ -9,7 +9,14 @@
         'ui.router'
     ])
         .controller('AppCtrl', AppCtrl)
+        .filter('translate', translateFilter)
         .config(stateProviderConfig);
+
+    function translateFilter(){
+        return function(string){
+            return string;
+        };
+    }
 
     function stateProviderConfig($stateProvider, $urlRouterProvider) {
         $stateProvider.state('root', {

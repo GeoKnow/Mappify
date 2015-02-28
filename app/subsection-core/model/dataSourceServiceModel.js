@@ -22,9 +22,7 @@
         }
 
         model.getDataSourceServices = function () {
-            return (dataSourceServices)
-                ? $q.when(dataSourceServices)
-                : $http.get(URLS.FETCH).then(cacheDataSourceServices);
+            return (dataSourceServices) ? $q.when(dataSourceServices) : $http.get(URLS.FETCH).then(cacheDataSourceServices);
         };
 
         // todo: get by id
@@ -33,7 +31,7 @@
 
             function findByDisplayName(){
                 return _.find(dataSourceServices, function(singleDataSourceService){
-                    return singleDataSourceService.displayName == displayName;
+                    return singleDataSourceService.displayName === displayName;
                 });
             }
 
