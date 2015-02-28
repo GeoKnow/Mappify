@@ -1,18 +1,38 @@
-<div>
-    <button ng-click="sidebar.changeLayout()">Change Zoom/Center</button>
-</div>
+<ul class="navigation">
+    <li>
+        <a href="#" ng-click="sidebar.changeLayout()"><i class="fa fa-location-arrow"></i>Change Zoom/Center</a>
+    </li>
+    <li>
+        <a href="#" ng-click="sidebar.changeTileLayers()"><i class="fa fa-globe"></i>Change TileLayers</a>
+    </li>
+    <li>
+        <a href="" ng-click="sidebar.loadConfig()"><i class="fa fa-cloud-upload"></i>Load Config</a>
+    </li>
+    <li>
+        <a ng-click="sidebar.downloadConfig()"><i class="fa fa-cloud-download"></i>Download Config</a>
+    </li>
+    <li>
+        <a ng-click="sidebar.changeDataSource()"><i class="fa fa-database"></i>Change DataSource</a>
+    </li>
 
-<div>
-    <button ng-click="sidebar.changeTileLayers()">Change TileLayers</button>
-</div>
+    <li>
+        <a ng-click="sidebar.changeDataSource()"><i class="fa fa-cog"></i>Map Settings</a>
+    </li>
 
-<div>
-    <button ng-click="sidebar.loadConfig()">Load Config</button>
-</div>
+    <li>
+        <a ng-click="sidebar.selectMarkerStyle()"><i class="fa fa-cog"></i>Select Marker Style</a>
+    </li>
 
-<div>
-    <button ng-click="sidebar.changeDataSource()">Change DataSource</button>
-</div>
+    <hr>
+    <li>
+        <a href="/subscribe" class="btn btn-orange"><i class=""></i>Generate Files</a>
+    </li>
+    <hr>
+</ul>
+
+<button ng-click="main.refreshConfig()" id="refreshButton">
+    Refresh map
+</button>
 
 <pre>
     {{sidebar.getConfigModel() | json}}

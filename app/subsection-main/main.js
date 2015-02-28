@@ -11,15 +11,13 @@
     function MainController(mapConfigModel, $timeout, jassaDataSourceFactory) {
 
         var main = this;
-
         main.showMap = true;
 
         main.getMapConfig = function() {
-            // todo: should we cache=
             return mapConfigModel.createMapConfigFromScafoldingConfig();
         };
 
-        // todo - add other data source
+        // @notice add other data source here
         // we only handle jassa
         main.getDataSource = function() {
             return handleJassaDataSource(main.getMapConfig(), jassaDataSourceFactory)
@@ -29,8 +27,6 @@
             main.showMap = false;
             main.config = main.getMapConfig();
             main.datasource = main.getDataSource();
-
-            console.log(main.config);
 
 
             $timeout(function(){
@@ -43,9 +39,8 @@
                 latitude:  51.5286416,
                 longitude: -0.1015987
             },
-            zoom: 6
+            zoom: 12
         };
-
 
         main.datasource = {};
         main.datasource.fetchData = function () {
@@ -55,14 +50,6 @@
     }
 
     function handleJassaDataSource(dataSourceConfig, jassaDataSourceFactory) {
-
-        console.log('FUCK YEAH!!!!');
-        console.log('FUCK YEAH!!!!');
-        console.log('FUCK YEAH!!!!');
-        console.log('FUCK YEAH!!!!');
-        console.log('FUCK YEAH!!!!');
-        console.log('FUCK YEAH!!!!');
-        console.log(dataSourceConfig);
 
         var dataSource = jassaDataSourceFactory.create(dataSourceConfig);
 

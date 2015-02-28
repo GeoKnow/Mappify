@@ -29,10 +29,10 @@
 </head>
 <body ng-cloak>
 <div ng-controller="AppCtrl">
-    <div class="col-xs-4">
-        <div ui-view="sidebar"></div>
+    <div class="col-xs-2" style="padding: 0;">
+        <div ui-view="sidebar" id="sidebar" ></div>
     </div>
-    <div class="col-xs-8">
+    <div class="col-xs-10" style="padding: 0;">
         <div ui-view="map"></div>
     </div>
 </div>
@@ -59,16 +59,19 @@
 <script src="/bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
 <!-- endinject -->
 <!-- inject:js -->
+<script src="/subsection-sidebar/modals/tileLayer/tileLayerCtrl.js"></script>
+<script src="/subsection-sidebar/modals/markerStyle/markerStyleCtrl.js"></script>
+<script src="/subsection-sidebar/modals/load/loadCtrl.js"></script>
+<script src="/subsection-sidebar/modals/layout/layoutCtrl.js"></script>
+<script src="/subsection-sidebar/modals/download/downloadCtrl.js"></script>
+<script src="/subsection-sidebar/modals/dataSource/dataSourceCtrl.js"></script>
 <script src="/components/zenubu.ngStrap/modal/modal.js"></script>
 <script src="/components/zenubu.ngStrap/dropdown/dropdown.js"></script>
 <script src="/components/zenubu.ngStrap/datepicker/datepicker.js"></script>
-<script src="/subsection-sidebar/modals/tileLayerCtrl.js"></script>
-<script src="/subsection-sidebar/modals/loadCtrl.js"></script>
-<script src="/subsection-sidebar/modals/layoutCtrl.js"></script>
-<script src="/subsection-sidebar/modals/dataSourceCtrl.js"></script>
 <script src="/subsection-core/service/jassaDataSourceFactory.js"></script>
 <script src="/subsection-core/model/tileLayerModel.js"></script>
 <script src="/subsection-core/model/scaffoldingConfigModel.js"></script>
+<script src="/subsection-core/model/markerStyleModel.js"></script>
 <script src="/subsection-core/model/dataSourceServiceModel.js"></script>
 <script src="/components/zenubu.ngStrap/zenubu.ngStrap.js"></script>
 <script src="/subsection-sidebar/sidebar.js"></script>

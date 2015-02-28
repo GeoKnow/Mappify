@@ -6359,7 +6359,7 @@ a.list-group-item-danger.active:focus {
 body {
   font-size: 12px;
   height: 100%;
-  background: #F3F3F3;
+  background: #fff;
   overflow-x: hidden;
   min-height: 100%;
   font-family: 'Open Sans', Calibri, Arial, sans-serif;
@@ -6372,4 +6372,89 @@ a {
   justify-content: center;
   align-content: center;
   flex-direction: column;
+}
+#map {
+  height: 100vh;
+}
+#refreshButton {
+  display: block;
+  font-size: 14px;
+  padding: 12px 20px;
+  color: #337ab7;
+  text-decoration: none;
+  background-color: transparent;
+  border-radius: 3px;
+  border: 1px solid #337ab7;
+}
+/**** */
+#sidebar {
+  padding-left: 0;
+  right: 0;
+}
+#sidebar hr {
+  border-color: #ddd;
+  margin: 10px 15px;
+}
+#sidebar a {
+  color: #444;
+}
+#sidebar ul.navigation {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+#sidebar .navigation li a {
+  display: block;
+  font-size: 14px;
+  padding: 12px 20px;
+}
+#sidebar .navigation li a:hover,
+#sidebar .navigation li a:focus {
+  text-decoration: none;
+  background: #f0f0f0;
+}
+#sidebar .navigation li p.sw-alert:hover,
+#sidebar .navigation li p.sw-alert:focus {
+  text-decoration: none;
+  background: #f0f0f0;
+}
+#sidebar .navigation li i {
+  font-size: 16px;
+  margin-right: 15px;
+  position: relative;
+  top: 2px;
+}
+#sidebar .navigation li i.list_angle {
+  float: right;
+  margin-right: 0;
+}
+#sidebar .navigation li ul.nav-second-level {
+  background: rgba(0, 0, 0, 0.2);
+}
+#sidebar .navigation li ul.nav-second-level li a {
+  font-size: 12px;
+  padding-left: 35px;
+}
+#sidebar .navigation li a.btn {
+  display: block;
+  padding: 10px 12px;
+  margin: 0 15px;
+}
+#sidebar .navigation li a.btn i {
+  margin-right: 2px;
+}
+#sidebar .navigation li a.btn-orange:hover,
+#sidebar .navigation li a.btn-orange:focus,
+#sidebar .navigation li a.btn-orange:active {
+  background: #f75432;
+  color: #ffffff;
+}
+#sidebar .navigation li a.btn-orange:active {
+  background: #b72a22;
+  box-shadow: none;
+  color: #ffffff;
+}
+textarea {
+  height: 300px;
+  width: 100%;
 }

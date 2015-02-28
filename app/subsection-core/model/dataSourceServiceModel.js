@@ -5,11 +5,12 @@
         .service('dataSourceServiceModel', dataSourceServiceModel);
 
     function dataSourceServiceModel($http, $q) {
-        var model = this,
-            URLS = {
+        var model = this;
+
+        var dataSourceServices;
+        var URLS = {
                 FETCH: 'data/dataSourceService.json'
-            },
-            dataSourceServices;
+            };
 
         function extract(result) {
             return result.data;
@@ -26,21 +27,22 @@
                 : $http.get(URLS.FETCH).then(cacheDataSourceServices);
         };
 
+        // todo: get by id
         model.getDataSourceServiceByName = function (displayName) {
             var deferred = $q.defer();
 
             function findByDisplayName(){
                 return _.find(dataSourceServices, function(singleDataSourceService){
                     return singleDataSourceService.displayName == displayName;
-                })
+                });
             }
 
             if (dataSourceServices) {
-                deferred.resolve(findByDisplayName(displayName))
+                deferred.resolve(findByDisplayName(displayName));
             } else {
                 model.getDataSourceServices().then(function () {
-                    deferred.resolve(findByDisplayName(displayName))
-                })
+                    deferred.resolve(findByDisplayName(displayName));
+                });
             }
 
             return deferred.promise;
@@ -48,3 +50,4 @@
     }
 
 })();
+

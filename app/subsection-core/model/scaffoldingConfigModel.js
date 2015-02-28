@@ -49,7 +49,7 @@
             data.layout.viewCenter.longitude = lng;
         }
 
-        function loadConfigModelFromJSON(json){
+        function loadConfigModelFromJSON(json) {
             data = JSON.parse(json);
         }
 
@@ -57,11 +57,12 @@
             data.tileLayer = tileLayer;
         }
 
-
+        // the display name is used as key and must be unique
         function setSetDataSource(newDataSource) {
 
             data.dataSources = data.dataSources || [];
 
+            // todo change to id
             var index = _.findIndex(data.dataSources, function (dataSource) {
                 return dataSource.displayName == newDataSource.displayName;
             });

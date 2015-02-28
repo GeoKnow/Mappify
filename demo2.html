@@ -1,0 +1,22 @@
+<html>
+<head>
+    <script type="text/javascript" src="http://goo.gl/J7Lo18"></script>
+    <script type="text/javascript">
+        angular.module('exampleApp', [])
+            .controller('HelloCtrl', function ($scope, helloWorldService) {
+                $scope.famousText = helloWorldService.text;
+            })
+            .factory('helloWorldService', function () {
+                return {
+                    text: "Hello World"
+                }
+            });
+    </script>
+</head>
+<body>
+    <div ng-app="exampleApp" ng-controller="HelloCtrl">
+        {{famousText}}
+    </div>
+</body>
+</html>
+

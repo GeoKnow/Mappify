@@ -1,0 +1,3892 @@
+[
+  {
+    "filterData": "glass|martini|drink|bar|alcohol|liquor",
+    "prefix": "fa",
+    "icon": "fa fa-glass"
+  },
+  {
+    "filterData": "music|note|sound",
+    "prefix": "fa",
+    "icon": "fa fa-music"
+  },
+  {
+    "filterData": "search|magnify|zoom|enlarge|bigger",
+    "prefix": "fa",
+    "icon": "fa fa-search"
+  },
+  {
+    "filterData": "envelope-o|email|support|e-mail|letter|mail|notification",
+    "prefix": "fa",
+    "icon": "fa fa-envelope-o"
+  },
+  {
+    "filterData": "heart|love|like|favorite",
+    "prefix": "fa",
+    "icon": "fa fa-heart"
+  },
+  {
+    "filterData": "star|award|achievement|night|rating|score",
+    "prefix": "fa",
+    "icon": "fa fa-star"
+  },
+  {
+    "filterData": "star-o|award|achievement|night|rating|score",
+    "prefix": "fa",
+    "icon": "fa fa-star-o"
+  },
+  {
+    "filterData": "user|person|man|head|profile",
+    "prefix": "fa",
+    "icon": "fa fa-user"
+  },
+  {
+    "filterData": "film|movie",
+    "prefix": "fa",
+    "icon": "fa fa-film"
+  },
+  {
+    "filterData": "th-large|blocks|squares|boxes",
+    "prefix": "fa",
+    "icon": "fa fa-th-large"
+  },
+  {
+    "filterData": "th|blocks|squares|boxes",
+    "prefix": "fa",
+    "icon": "fa fa-th"
+  },
+  {
+    "filterData": "th-list|ul|ol|checklist|finished|completed|done|todo",
+    "prefix": "fa",
+    "icon": "fa fa-th-list"
+  },
+  {
+    "filterData": "check|checkmark|done|todo|agree|accept|confirm",
+    "prefix": "fa",
+    "icon": "fa fa-check"
+  },
+  {
+    "filterData": "times|remove|close|close|exit|x",
+    "prefix": "fa",
+    "icon": "fa fa-times"
+  },
+  {
+    "filterData": "search-plus|magnify|zoom|enlarge|bigger",
+    "prefix": "fa",
+    "icon": "fa fa-search-plus"
+  },
+  {
+    "filterData": "search-minus|magnify|minify|zoom|smaller",
+    "prefix": "fa",
+    "icon": "fa fa-search-minus"
+  },
+  {
+    "filterData": "power-off|on",
+    "prefix": "fa",
+    "icon": "fa fa-power-off"
+  },
+  {
+    "filterData": "signal",
+    "prefix": "fa",
+    "icon": "fa fa-signal"
+  },
+  {
+    "filterData": "cog|gear|settings",
+    "prefix": "fa",
+    "icon": "fa fa-cog"
+  },
+  {
+    "filterData": "trash-o|garbage|delete|remove|trash|hide",
+    "prefix": "fa",
+    "icon": "fa fa-trash-o"
+  },
+  {
+    "filterData": "home|main|house",
+    "prefix": "fa",
+    "icon": "fa fa-home"
+  },
+  {
+    "filterData": "file-o|new|page|pdf|document",
+    "prefix": "fa",
+    "icon": "fa fa-file-o"
+  },
+  {
+    "filterData": "clock-o|watch|timer|late|timestamp",
+    "prefix": "fa",
+    "icon": "fa fa-clock-o"
+  },
+  {
+    "filterData": "road|street",
+    "prefix": "fa",
+    "icon": "fa fa-road"
+  },
+  {
+    "filterData": "download|import",
+    "prefix": "fa",
+    "icon": "fa fa-download"
+  },
+  {
+    "filterData": "arrow-circle-o-down|download",
+    "prefix": "fa",
+    "icon": "fa fa-arrow-circle-o-down"
+  },
+  {
+    "filterData": "arrow-circle-o-up",
+    "prefix": "fa",
+    "icon": "fa fa-arrow-circle-o-up"
+  },
+  {
+    "filterData": "inbox",
+    "prefix": "fa",
+    "icon": "fa fa-inbox"
+  },
+  {
+    "filterData": "play-circle-o",
+    "prefix": "fa",
+    "icon": "fa fa-play-circle-o"
+  },
+  {
+    "filterData": "repeat|rotate-right|redo|forward",
+    "prefix": "fa",
+    "icon": "fa fa-repeat"
+  },
+  {
+    "filterData": "refresh|reload",
+    "prefix": "fa",
+    "icon": "fa fa-refresh"
+  },
+  {
+    "filterData": "list-alt|ul|ol|checklist|finished|completed|done|todo",
+    "prefix": "fa",
+    "icon": "fa fa-list-alt"
+  },
+  {
+    "filterData": "lock|protect|admin",
+    "prefix": "fa",
+    "icon": "fa fa-lock"
+  },
+  {
+    "filterData": "flag|report|notification|notify",
+    "prefix": "fa",
+    "icon": "fa fa-flag"
+  },
+  {
+    "filterData": "headphones|sound|listen|music",
+    "prefix": "fa",
+    "icon": "fa fa-headphones"
+  },
+  {
+    "filterData": "volume-off|mute|sound|music",
+    "prefix": "fa",
+    "icon": "fa fa-volume-off"
+  },
+  {
+    "filterData": "volume-down|lower|quieter|sound|music",
+    "prefix": "fa",
+    "icon": "fa fa-volume-down"
+  },
+  {
+    "filterData": "volume-up|higher|louder|sound|music",
+    "prefix": "fa",
+    "icon": "fa fa-volume-up"
+  },
+  {
+    "filterData": "qrcode|scan",
+    "prefix": "fa",
+    "icon": "fa fa-qrcode"
+  },
+  {
+    "filterData": "barcode|scan",
+    "prefix": "fa",
+    "icon": "fa fa-barcode"
+  },
+  {
+    "filterData": "tag|label",
+    "prefix": "fa",
+    "icon": "fa fa-tag"
+  },
+  {
+    "filterData": "tags|labels",
+    "prefix": "fa",
+    "icon": "fa fa-tags"
+  },
+  {
+    "filterData": "book|read|documentation",
+    "prefix": "fa",
+    "icon": "fa fa-book"
+  },
+  {
+    "filterData": "bookmark|save",
+    "prefix": "fa",
+    "icon": "fa fa-bookmark"
+  },
+  {
+    "filterData": "print",
+    "prefix": "fa",
+    "icon": "fa fa-print"
+  },
+  {
+    "filterData": "camera|photo|picture|record",
+    "prefix": "fa",
+    "icon": "fa fa-camera"
+  },
+  {
+    "filterData": "font|text",
+    "prefix": "fa",
+    "icon": "fa fa-font"
+  },
+  {
+    "filterData": "bold",
+    "prefix": "fa",
+    "icon": "fa fa-bold"
+  },
+  {
+    "filterData": "italic|italics",
+    "prefix": "fa",
+    "icon": "fa fa-italic"
+  },
+  {
+    "filterData": "text-height",
+    "prefix": "fa",
+    "icon": "fa fa-text-height"
+  },
+  {
+    "filterData": "text-width",
+    "prefix": "fa",
+    "icon": "fa fa-text-width"
+  },
+  {
+    "filterData": "align-left|text",
+    "prefix": "fa",
+    "icon": "fa fa-align-left"
+  },
+  {
+    "filterData": "align-center|middle|text",
+    "prefix": "fa",
+    "icon": "fa fa-align-center"
+  },
+  {
+    "filterData": "align-right|text",
+    "prefix": "fa",
+    "icon": "fa fa-align-right"
+  },
+  {
+    "filterData": "align-justify|text",
+    "prefix": "fa",
+    "icon": "fa fa-align-justify"
+  },
+  {
+    "filterData": "list|ul|ol|checklist|finished|completed|done|todo",
+    "prefix": "fa",
+    "icon": "fa fa-list"
+  },
+  {
+    "filterData": "outdent|dedent",
+    "prefix": "fa",
+    "icon": "fa fa-outdent"
+  },
+  {
+    "filterData": "indent",
+    "prefix": "fa",
+    "icon": "fa fa-indent"
+  },
+  {
+    "filterData": "video-camera|film|movie|record",
+    "prefix": "fa",
+    "icon": "fa fa-video-camera"
+  },
+  {
+    "filterData": "picture-o|photo|image",
+    "prefix": "fa",
+    "icon": "fa fa-picture-o"
+  },
+  {
+    "filterData": "pencil|write|edit|update",
+    "prefix": "fa",
+    "icon": "fa fa-pencil"
+  },
+  {
+    "filterData": "map-marker|map|pin|location|coordinates|localize|address|travel|where|place",
+    "prefix": "fa",
+    "icon": "fa fa-map-marker"
+  },
+  {
+    "filterData": "adjust|contrast",
+    "prefix": "fa",
+    "icon": "fa fa-adjust"
+  },
+  {
+    "filterData": "tint|raindrop",
+    "prefix": "fa",
+    "icon": "fa fa-tint"
+  },
+  {
+    "filterData": "pencil-square-o|edit|write|edit|update",
+    "prefix": "fa",
+    "icon": "fa fa-pencil-square-o"
+  },
+  {
+    "filterData": "share-square-o|social|send",
+    "prefix": "fa",
+    "icon": "fa fa-share-square-o"
+  },
+  {
+    "filterData": "check-square-o|todo|done|agree|accept|confirm",
+    "prefix": "fa",
+    "icon": "fa fa-check-square-o"
+  },
+  {
+    "filterData": "arrows|move|reorder|resize",
+    "prefix": "fa",
+    "icon": "fa fa-arrows"
+  },
+  {
+    "filterData": "step-backward|rewind|previous|beginning|start|first",
+    "prefix": "fa",
+    "icon": "fa fa-step-backward"
+  },
+  {
+    "filterData": "fast-backward|rewind|previous|beginning|start|first",
+    "prefix": "fa",
+    "icon": "fa fa-fast-backward"
+  },
+  {
+    "filterData": "backward|rewind|previous",
+    "prefix": "fa",
+    "icon": "fa fa-backward"
+  },
+  {
+    "filterData": "play|start|playing|music|sound",
+    "prefix": "fa",
+    "icon": "fa fa-play"
+  },
+  {
+    "filterData": "pause|wait",
+    "prefix": "fa",
+    "icon": "fa fa-pause"
+  },
+  {
+    "filterData": "stop|block|box|square",
+    "prefix": "fa",
+    "icon": "fa fa-stop"
+  },
+  {
+    "filterData": "forward|forward|next",
+    "prefix": "fa",
+    "icon": "fa fa-forward"
+  },
+  {
+    "filterData": "fast-forward|next|end|last",
+    "prefix": "fa",
+    "icon": "fa fa-fast-forward"
+  },
+  {
+    "filterData": "step-forward|next|end|last",
+    "prefix": "fa",
+    "icon": "fa fa-step-forward"
+  },
+  {
+    "filterData": "eject",
+    "prefix": "fa",
+    "icon": "fa fa-eject"
+  },
+  {
+    "filterData": "chevron-left|bracket|previous|back",
+    "prefix": "fa",
+    "icon": "fa fa-chevron-left"
+  },
+  {
+    "filterData": "chevron-right|bracket|next|forward",
+    "prefix": "fa",
+    "icon": "fa fa-chevron-right"
+  },
+  {
+    "filterData": "plus-circle|add|new|create|expand",
+    "prefix": "fa",
+    "icon": "fa fa-plus-circle"
+  },
+  {
+    "filterData": "minus-circle|delete|remove|trash|hide",
+    "prefix": "fa",
+    "icon": "fa fa-minus-circle"
+  },
+  {
+    "filterData": "times-circle|close|exit|x",
+    "prefix": "fa",
+    "icon": "fa fa-times-circle"
+  },
+  {
+    "filterData": "check-circle|todo|done|agree|accept|confirm",
+    "prefix": "fa",
+    "icon": "fa fa-check-circle"
+  },
+  {
+    "filterData": "question-circle|help|information|unknown|support",
+    "prefix": "fa",
+    "icon": "fa fa-question-circle"
+  },
+  {
+    "filterData": "info-circle|help|information|more|details",
+    "prefix": "fa",
+    "icon": "fa fa-info-circle"
+  },
+  {
+    "filterData": "crosshairs|picker",
+    "prefix": "fa",
+    "icon": "fa fa-crosshairs"
+  },
+  {
+    "filterData": "times-circle-o|close|exit|x",
+    "prefix": "fa",
+    "icon": "fa fa-times-circle-o"
+  },
+  {
+    "filterData": "check-circle-o|todo|done|agree|accept|confirm",
+    "prefix": "fa",
+    "icon": "fa fa-check-circle-o"
+  },
+  {
+    "filterData": "ban|block|abort",
+    "prefix": "fa",
+    "icon": "fa fa-ban"
+  },
+  {
+    "filterData": "arrow-left|previous|back",
+    "prefix": "fa",
+    "icon": "fa fa-arrow-left"
+  },
+  {
+    "filterData": "arrow-right|next|forward",
+    "prefix": "fa",
+    "icon": "fa fa-arrow-right"
+  },
+  {
+    "filterData": "arrow-up",
+    "prefix": "fa",
+    "icon": "fa fa-arrow-up"
+  },
+  {
+    "filterData": "arrow-down|download",
+    "prefix": "fa",
+    "icon": "fa fa-arrow-down"
+  },
+  {
+    "filterData": "share|mail-forward",
+    "prefix": "fa",
+    "icon": "fa fa-share"
+  },
+  {
+    "filterData": "expand|enlarge|bigger|resize",
+    "prefix": "fa",
+    "icon": "fa fa-expand"
+  },
+  {
+    "filterData": "compress|combine|merge|smaller",
+    "prefix": "fa",
+    "icon": "fa fa-compress"
+  },
+  {
+    "filterData": "plus|add|new|create|expand",
+    "prefix": "fa",
+    "icon": "fa fa-plus"
+  },
+  {
+    "filterData": "minus|hide|minify|delete|remove|trash|hide|collapse",
+    "prefix": "fa",
+    "icon": "fa fa-minus"
+  },
+  {
+    "filterData": "asterisk|details",
+    "prefix": "fa",
+    "icon": "fa fa-asterisk"
+  },
+  {
+    "filterData": "exclamation-circle|warning|error|problem|notification|alert",
+    "prefix": "fa",
+    "icon": "fa fa-exclamation-circle"
+  },
+  {
+    "filterData": "gift|present",
+    "prefix": "fa",
+    "icon": "fa fa-gift"
+  },
+  {
+    "filterData": "leaf|eco|nature",
+    "prefix": "fa",
+    "icon": "fa fa-leaf"
+  },
+  {
+    "filterData": "fire|flame|hot|popular",
+    "prefix": "fa",
+    "icon": "fa fa-fire"
+  },
+  {
+    "filterData": "eye|show|visible|views",
+    "prefix": "fa",
+    "icon": "fa fa-eye"
+  },
+  {
+    "filterData": "eye-slash|toggle|show|hide|visible|visiblity|views",
+    "prefix": "fa",
+    "icon": "fa fa-eye-slash"
+  },
+  {
+    "filterData": "exclamation-triangle|warning|warning|error|problem|notification|alert",
+    "prefix": "fa",
+    "icon": "fa fa-exclamation-triangle"
+  },
+  {
+    "filterData": "plane|travel|trip|location|destination|airplane|fly|mode",
+    "prefix": "fa",
+    "icon": "fa fa-plane"
+  },
+  {
+    "filterData": "calendar|date|time|when",
+    "prefix": "fa",
+    "icon": "fa fa-calendar"
+  },
+  {
+    "filterData": "random|sort",
+    "prefix": "fa",
+    "icon": "fa fa-random"
+  },
+  {
+    "filterData": "comment|speech|notification|note",
+    "prefix": "fa",
+    "icon": "fa fa-comment"
+  },
+  {
+    "filterData": "magnet",
+    "prefix": "fa",
+    "icon": "fa fa-magnet"
+  },
+  {
+    "filterData": "chevron-up",
+    "prefix": "fa",
+    "icon": "fa fa-chevron-up"
+  },
+  {
+    "filterData": "chevron-down",
+    "prefix": "fa",
+    "icon": "fa fa-chevron-down"
+  },
+  {
+    "filterData": "retweet|refresh|reload|share",
+    "prefix": "fa",
+    "icon": "fa fa-retweet"
+  },
+  {
+    "filterData": "shopping-cart|checkout|buy|purchase|payment",
+    "prefix": "fa",
+    "icon": "fa fa-shopping-cart"
+  },
+  {
+    "filterData": "folder",
+    "prefix": "fa",
+    "icon": "fa fa-folder"
+  },
+  {
+    "filterData": "folder-open",
+    "prefix": "fa",
+    "icon": "fa fa-folder-open"
+  },
+  {
+    "filterData": "arrows-v|resize",
+    "prefix": "fa",
+    "icon": "fa fa-arrows-v"
+  },
+  {
+    "filterData": "arrows-h|resize",
+    "prefix": "fa",
+    "icon": "fa fa-arrows-h"
+  },
+  {
+    "filterData": "bar-chart|bar-chart-o|graph",
+    "prefix": "fa",
+    "icon": "fa fa-bar-chart"
+  },
+  {
+    "filterData": "twitter-square|tweet|social network",
+    "prefix": "fa",
+    "icon": "fa fa-twitter-square"
+  },
+  {
+    "filterData": "facebook-square|social network",
+    "prefix": "fa",
+    "icon": "fa fa-facebook-square"
+  },
+  {
+    "filterData": "camera-retro|photo|picture|record",
+    "prefix": "fa",
+    "icon": "fa fa-camera-retro"
+  },
+  {
+    "filterData": "key|unlock|password",
+    "prefix": "fa",
+    "icon": "fa fa-key"
+  },
+  {
+    "filterData": "cogs|gears|settings",
+    "prefix": "fa",
+    "icon": "fa fa-cogs"
+  },
+  {
+    "filterData": "comments|conversation|notification|notes",
+    "prefix": "fa",
+    "icon": "fa fa-comments"
+  },
+  {
+    "filterData": "thumbs-o-up|like|approve|favorite|agree",
+    "prefix": "fa",
+    "icon": "fa fa-thumbs-o-up"
+  },
+  {
+    "filterData": "thumbs-o-down|dislike|disapprove|disagree",
+    "prefix": "fa",
+    "icon": "fa fa-thumbs-o-down"
+  },
+  {
+    "filterData": "star-half|award|achievement|rating|score",
+    "prefix": "fa",
+    "icon": "fa fa-star-half"
+  },
+  {
+    "filterData": "heart-o|love|like|favorite",
+    "prefix": "fa",
+    "icon": "fa fa-heart-o"
+  },
+  {
+    "filterData": "sign-out|log out|logout|leave|exit|arrow",
+    "prefix": "fa",
+    "icon": "fa fa-sign-out"
+  },
+  {
+    "filterData": "linkedin-square",
+    "prefix": "fa",
+    "icon": "fa fa-linkedin-square"
+  },
+  {
+    "filterData": "thumb-tack|marker|pin|location|coordinates",
+    "prefix": "fa",
+    "icon": "fa fa-thumb-tack"
+  },
+  {
+    "filterData": "external-link|open|new",
+    "prefix": "fa",
+    "icon": "fa fa-external-link"
+  },
+  {
+    "filterData": "sign-in|enter|join|sign up|sign in|signin|signup|arrow",
+    "prefix": "fa",
+    "icon": "fa fa-sign-in"
+  },
+  {
+    "filterData": "trophy|award|achievement|winner|game",
+    "prefix": "fa",
+    "icon": "fa fa-trophy"
+  },
+  {
+    "filterData": "github-square|octocat",
+    "prefix": "fa",
+    "icon": "fa fa-github-square"
+  },
+  {
+    "filterData": "upload|import",
+    "prefix": "fa",
+    "icon": "fa fa-upload"
+  },
+  {
+    "filterData": "lemon-o",
+    "prefix": "fa",
+    "icon": "fa fa-lemon-o"
+  },
+  {
+    "filterData": "phone|call|voice|number|support",
+    "prefix": "fa",
+    "icon": "fa fa-phone"
+  },
+  {
+    "filterData": "square-o|block|square|box",
+    "prefix": "fa",
+    "icon": "fa fa-square-o"
+  },
+  {
+    "filterData": "bookmark-o|save",
+    "prefix": "fa",
+    "icon": "fa fa-bookmark-o"
+  },
+  {
+    "filterData": "phone-square|call|voice|number|support",
+    "prefix": "fa",
+    "icon": "fa fa-phone-square"
+  },
+  {
+    "filterData": "twitter|tweet|social network",
+    "prefix": "fa",
+    "icon": "fa fa-twitter"
+  },
+  {
+    "filterData": "facebook|facebook-f|social network",
+    "prefix": "fa",
+    "icon": "fa fa-facebook"
+  },
+  {
+    "filterData": "github|octocat",
+    "prefix": "fa",
+    "icon": "fa fa-github"
+  },
+  {
+    "filterData": "unlock|protect|admin|password",
+    "prefix": "fa",
+    "icon": "fa fa-unlock"
+  },
+  {
+    "filterData": "credit-card|money|buy|debit|checkout|purchase|payment",
+    "prefix": "fa",
+    "icon": "fa fa-credit-card"
+  },
+  {
+    "filterData": "rss|feed|blog",
+    "prefix": "fa",
+    "icon": "fa fa-rss"
+  },
+  {
+    "filterData": "hdd-o|harddrive|hard drive|storage|save",
+    "prefix": "fa",
+    "icon": "fa fa-hdd-o"
+  },
+  {
+    "filterData": "bullhorn|announcement|share|broadcast|louder",
+    "prefix": "fa",
+    "icon": "fa fa-bullhorn"
+  },
+  {
+    "filterData": "bell|alert|reminder|notification",
+    "prefix": "fa",
+    "icon": "fa fa-bell"
+  },
+  {
+    "filterData": "certificate|badge|star",
+    "prefix": "fa",
+    "icon": "fa fa-certificate"
+  },
+  {
+    "filterData": "hand-o-right|point|right|next|forward",
+    "prefix": "fa",
+    "icon": "fa fa-hand-o-right"
+  },
+  {
+    "filterData": "hand-o-left|point|left|previous|back",
+    "prefix": "fa",
+    "icon": "fa fa-hand-o-left"
+  },
+  {
+    "filterData": "hand-o-up|point",
+    "prefix": "fa",
+    "icon": "fa fa-hand-o-up"
+  },
+  {
+    "filterData": "hand-o-down|point",
+    "prefix": "fa",
+    "icon": "fa fa-hand-o-down"
+  },
+  {
+    "filterData": "arrow-circle-left|previous|back",
+    "prefix": "fa",
+    "icon": "fa fa-arrow-circle-left"
+  },
+  {
+    "filterData": "arrow-circle-right|next|forward",
+    "prefix": "fa",
+    "icon": "fa fa-arrow-circle-right"
+  },
+  {
+    "filterData": "arrow-circle-up",
+    "prefix": "fa",
+    "icon": "fa fa-arrow-circle-up"
+  },
+  {
+    "filterData": "arrow-circle-down|download",
+    "prefix": "fa",
+    "icon": "fa fa-arrow-circle-down"
+  },
+  {
+    "filterData": "globe|world|planet|map|place|travel|earth|global|translate|all|language|localize|location|coordinates|country",
+    "prefix": "fa",
+    "icon": "fa fa-globe"
+  },
+  {
+    "filterData": "wrench|settings|fix|update",
+    "prefix": "fa",
+    "icon": "fa fa-wrench"
+  },
+  {
+    "filterData": "tasks|progress|loading|downloading|downloads|settings",
+    "prefix": "fa",
+    "icon": "fa fa-tasks"
+  },
+  {
+    "filterData": "filter|funnel|options",
+    "prefix": "fa",
+    "icon": "fa fa-filter"
+  },
+  {
+    "filterData": "briefcase|work|business|office|luggage|bag",
+    "prefix": "fa",
+    "icon": "fa fa-briefcase"
+  },
+  {
+    "filterData": "arrows-alt|expand|enlarge|bigger|move|reorder|resize",
+    "prefix": "fa",
+    "icon": "fa fa-arrows-alt"
+  },
+  {
+    "filterData": "users|group|people|profiles|persons",
+    "prefix": "fa",
+    "icon": "fa fa-users"
+  },
+  {
+    "filterData": "link|chain|chain",
+    "prefix": "fa",
+    "icon": "fa fa-link"
+  },
+  {
+    "filterData": "cloud|save",
+    "prefix": "fa",
+    "icon": "fa fa-cloud"
+  },
+  {
+    "filterData": "flask|science|beaker|experimental|labs",
+    "prefix": "fa",
+    "icon": "fa fa-flask"
+  },
+  {
+    "filterData": "scissors|cut",
+    "prefix": "fa",
+    "icon": "fa fa-scissors"
+  },
+  {
+    "filterData": "files-o|copy|duplicate",
+    "prefix": "fa",
+    "icon": "fa fa-files-o"
+  },
+  {
+    "filterData": "paperclip|attachment",
+    "prefix": "fa",
+    "icon": "fa fa-paperclip"
+  },
+  {
+    "filterData": "floppy-o|save",
+    "prefix": "fa",
+    "icon": "fa fa-floppy-o"
+  },
+  {
+    "filterData": "square|block|box",
+    "prefix": "fa",
+    "icon": "fa fa-square"
+  },
+  {
+    "filterData": "bars|navicon|reorder|menu|drag|reorder|settings|list|ul|ol|checklist|todo|list",
+    "prefix": "fa",
+    "icon": "fa fa-bars"
+  },
+  {
+    "filterData": "list-ul|ul|ol|checklist|todo|list",
+    "prefix": "fa",
+    "icon": "fa fa-list-ul"
+  },
+  {
+    "filterData": "list-ol|ul|ol|checklist|list|todo|list|numbers",
+    "prefix": "fa",
+    "icon": "fa fa-list-ol"
+  },
+  {
+    "filterData": "strikethrough",
+    "prefix": "fa",
+    "icon": "fa fa-strikethrough"
+  },
+  {
+    "filterData": "underline",
+    "prefix": "fa",
+    "icon": "fa fa-underline"
+  },
+  {
+    "filterData": "table|data|excel|spreadsheet",
+    "prefix": "fa",
+    "icon": "fa fa-table"
+  },
+  {
+    "filterData": "magic|wizard|automatic|autocomplete",
+    "prefix": "fa",
+    "icon": "fa fa-magic"
+  },
+  {
+    "filterData": "truck|shipping",
+    "prefix": "fa",
+    "icon": "fa fa-truck"
+  },
+  {
+    "filterData": "pinterest",
+    "prefix": "fa",
+    "icon": "fa fa-pinterest"
+  },
+  {
+    "filterData": "pinterest-square",
+    "prefix": "fa",
+    "icon": "fa fa-pinterest-square"
+  },
+  {
+    "filterData": "google-plus-square|social network",
+    "prefix": "fa",
+    "icon": "fa fa-google-plus-square"
+  },
+  {
+    "filterData": "google-plus|social network",
+    "prefix": "fa",
+    "icon": "fa fa-google-plus"
+  },
+  {
+    "filterData": "money|cash|money|buy|checkout|purchase|payment",
+    "prefix": "fa",
+    "icon": "fa fa-money"
+  },
+  {
+    "filterData": "caret-down|more|dropdown|menu",
+    "prefix": "fa",
+    "icon": "fa fa-caret-down"
+  },
+  {
+    "filterData": "caret-up",
+    "prefix": "fa",
+    "icon": "fa fa-caret-up"
+  },
+  {
+    "filterData": "caret-left|previous|back",
+    "prefix": "fa",
+    "icon": "fa fa-caret-left"
+  },
+  {
+    "filterData": "caret-right|next|forward",
+    "prefix": "fa",
+    "icon": "fa fa-caret-right"
+  },
+  {
+    "filterData": "columns|split|panes",
+    "prefix": "fa",
+    "icon": "fa fa-columns"
+  },
+  {
+    "filterData": "sort|unsorted|order",
+    "prefix": "fa",
+    "icon": "fa fa-sort"
+  },
+  {
+    "filterData": "sort-desc|sort-down|dropdown|more|menu",
+    "prefix": "fa",
+    "icon": "fa fa-sort-desc"
+  },
+  {
+    "filterData": "sort-asc|sort-up",
+    "prefix": "fa",
+    "icon": "fa fa-sort-asc"
+  },
+  {
+    "filterData": "envelope",
+    "prefix": "fa",
+    "icon": "fa fa-envelope"
+  },
+  {
+    "filterData": "linkedin",
+    "prefix": "fa",
+    "icon": "fa fa-linkedin"
+  },
+  {
+    "filterData": "undo|rotate-left|back",
+    "prefix": "fa",
+    "icon": "fa fa-undo"
+  },
+  {
+    "filterData": "gavel|legal",
+    "prefix": "fa",
+    "icon": "fa fa-gavel"
+  },
+  {
+    "filterData": "tachometer|dashboard",
+    "prefix": "fa",
+    "icon": "fa fa-tachometer"
+  },
+  {
+    "filterData": "comment-o|notification|note",
+    "prefix": "fa",
+    "icon": "fa fa-comment-o"
+  },
+  {
+    "filterData": "comments-o|conversation|notification|notes",
+    "prefix": "fa",
+    "icon": "fa fa-comments-o"
+  },
+  {
+    "filterData": "bolt|flash|lightning|weather",
+    "prefix": "fa",
+    "icon": "fa fa-bolt"
+  },
+  {
+    "filterData": "sitemap|directory|hierarchy|organization",
+    "prefix": "fa",
+    "icon": "fa fa-sitemap"
+  },
+  {
+    "filterData": "umbrella",
+    "prefix": "fa",
+    "icon": "fa fa-umbrella"
+  },
+  {
+    "filterData": "clipboard|paste|copy",
+    "prefix": "fa",
+    "icon": "fa fa-clipboard"
+  },
+  {
+    "filterData": "lightbulb-o|idea|inspiration",
+    "prefix": "fa",
+    "icon": "fa fa-lightbulb-o"
+  },
+  {
+    "filterData": "exchange",
+    "prefix": "fa",
+    "icon": "fa fa-exchange"
+  },
+  {
+    "filterData": "cloud-download|import",
+    "prefix": "fa",
+    "icon": "fa fa-cloud-download"
+  },
+  {
+    "filterData": "cloud-upload|import",
+    "prefix": "fa",
+    "icon": "fa fa-cloud-upload"
+  },
+  {
+    "filterData": "user-md|doctor|profile|medical|nurse",
+    "prefix": "fa",
+    "icon": "fa fa-user-md"
+  },
+  {
+    "filterData": "stethoscope",
+    "prefix": "fa",
+    "icon": "fa fa-stethoscope"
+  },
+  {
+    "filterData": "suitcase|trip|luggage|travel|move|baggage",
+    "prefix": "fa",
+    "icon": "fa fa-suitcase"
+  },
+  {
+    "filterData": "bell-o|alert|reminder|notification",
+    "prefix": "fa",
+    "icon": "fa fa-bell-o"
+  },
+  {
+    "filterData": "coffee|morning|mug|breakfast|tea|drink|cafe",
+    "prefix": "fa",
+    "icon": "fa fa-coffee"
+  },
+  {
+    "filterData": "cutlery|food|restaurant|spoon|knife|dinner|eat",
+    "prefix": "fa",
+    "icon": "fa fa-cutlery"
+  },
+  {
+    "filterData": "file-text-o|new|page|pdf|document",
+    "prefix": "fa",
+    "icon": "fa fa-file-text-o"
+  },
+  {
+    "filterData": "building-o|work|business|apartment|office",
+    "prefix": "fa",
+    "icon": "fa fa-building-o"
+  },
+  {
+    "filterData": "hospital-o|building",
+    "prefix": "fa",
+    "icon": "fa fa-hospital-o"
+  },
+  {
+    "filterData": "ambulance|support|help",
+    "prefix": "fa",
+    "icon": "fa fa-ambulance"
+  },
+  {
+    "filterData": "medkit|first aid|firstaid|help|support",
+    "prefix": "fa",
+    "icon": "fa fa-medkit"
+  },
+  {
+    "filterData": "fighter-jet|fly|plane|airplane|quick|fast|travel",
+    "prefix": "fa",
+    "icon": "fa fa-fighter-jet"
+  },
+  {
+    "filterData": "beer|alcohol|stein|drink|mug|bar|liquor",
+    "prefix": "fa",
+    "icon": "fa fa-beer"
+  },
+  {
+    "filterData": "h-square|hospital|hotel",
+    "prefix": "fa",
+    "icon": "fa fa-h-square"
+  },
+  {
+    "filterData": "plus-square|add|new|create|expand",
+    "prefix": "fa",
+    "icon": "fa fa-plus-square"
+  },
+  {
+    "filterData": "angle-double-left|laquo|quote|previous|back",
+    "prefix": "fa",
+    "icon": "fa fa-angle-double-left"
+  },
+  {
+    "filterData": "angle-double-right|raquo|quote|next|forward",
+    "prefix": "fa",
+    "icon": "fa fa-angle-double-right"
+  },
+  {
+    "filterData": "angle-double-up",
+    "prefix": "fa",
+    "icon": "fa fa-angle-double-up"
+  },
+  {
+    "filterData": "angle-double-down",
+    "prefix": "fa",
+    "icon": "fa fa-angle-double-down"
+  },
+  {
+    "filterData": "angle-left|previous|back",
+    "prefix": "fa",
+    "icon": "fa fa-angle-left"
+  },
+  {
+    "filterData": "angle-right|next|forward",
+    "prefix": "fa",
+    "icon": "fa fa-angle-right"
+  },
+  {
+    "filterData": "angle-up",
+    "prefix": "fa",
+    "icon": "fa fa-angle-up"
+  },
+  {
+    "filterData": "angle-down",
+    "prefix": "fa",
+    "icon": "fa fa-angle-down"
+  },
+  {
+    "filterData": "desktop|monitor|screen|desktop|computer|demo|device",
+    "prefix": "fa",
+    "icon": "fa fa-desktop"
+  },
+  {
+    "filterData": "laptop|demo|computer|device",
+    "prefix": "fa",
+    "icon": "fa fa-laptop"
+  },
+  {
+    "filterData": "tablet|ipad|device",
+    "prefix": "fa",
+    "icon": "fa fa-tablet"
+  },
+  {
+    "filterData": "mobile|mobile-phone|cell phone|cellphone|text|call|iphone|number",
+    "prefix": "fa",
+    "icon": "fa fa-mobile"
+  },
+  {
+    "filterData": "circle-o",
+    "prefix": "fa",
+    "icon": "fa fa-circle-o"
+  },
+  {
+    "filterData": "quote-left",
+    "prefix": "fa",
+    "icon": "fa fa-quote-left"
+  },
+  {
+    "filterData": "quote-right",
+    "prefix": "fa",
+    "icon": "fa fa-quote-right"
+  },
+  {
+    "filterData": "spinner|loading|progress",
+    "prefix": "fa",
+    "icon": "fa fa-spinner"
+  },
+  {
+    "filterData": "circle|dot|notification",
+    "prefix": "fa",
+    "icon": "fa fa-circle"
+  },
+  {
+    "filterData": "reply|mail-reply",
+    "prefix": "fa",
+    "icon": "fa fa-reply"
+  },
+  {
+    "filterData": "github-alt|octocat",
+    "prefix": "fa",
+    "icon": "fa fa-github-alt"
+  },
+  {
+    "filterData": "folder-o",
+    "prefix": "fa",
+    "icon": "fa fa-folder-o"
+  },
+  {
+    "filterData": "folder-open-o",
+    "prefix": "fa",
+    "icon": "fa fa-folder-open-o"
+  },
+  {
+    "filterData": "smile-o|emoticon|happy|approve|satisfied|rating",
+    "prefix": "fa",
+    "icon": "fa fa-smile-o"
+  },
+  {
+    "filterData": "frown-o|emoticon|sad|disapprove|rating",
+    "prefix": "fa",
+    "icon": "fa fa-frown-o"
+  },
+  {
+    "filterData": "meh-o|emoticon|rating|neutral",
+    "prefix": "fa",
+    "icon": "fa fa-meh-o"
+  },
+  {
+    "filterData": "gamepad|controller",
+    "prefix": "fa",
+    "icon": "fa fa-gamepad"
+  },
+  {
+    "filterData": "keyboard-o|type|input",
+    "prefix": "fa",
+    "icon": "fa fa-keyboard-o"
+  },
+  {
+    "filterData": "flag-o|report|notification",
+    "prefix": "fa",
+    "icon": "fa fa-flag-o"
+  },
+  {
+    "filterData": "flag-checkered|report|notification|notify",
+    "prefix": "fa",
+    "icon": "fa fa-flag-checkered"
+  },
+  {
+    "filterData": "terminal|command|prompt|code",
+    "prefix": "fa",
+    "icon": "fa fa-terminal"
+  },
+  {
+    "filterData": "code|html|brackets",
+    "prefix": "fa",
+    "icon": "fa fa-code"
+  },
+  {
+    "filterData": "reply-all|mail-reply-all",
+    "prefix": "fa",
+    "icon": "fa fa-reply-all"
+  },
+  {
+    "filterData": "star-half-o|star-half-empty|star-half-full|award|achievement|rating|score",
+    "prefix": "fa",
+    "icon": "fa fa-star-half-o"
+  },
+  {
+    "filterData": "location-arrow|map|coordinates|location|address|place|where",
+    "prefix": "fa",
+    "icon": "fa fa-location-arrow"
+  },
+  {
+    "filterData": "crop",
+    "prefix": "fa",
+    "icon": "fa fa-crop"
+  },
+  {
+    "filterData": "code-fork|git|fork|vcs|svn|github|rebase|version|merge",
+    "prefix": "fa",
+    "icon": "fa fa-code-fork"
+  },
+  {
+    "filterData": "chain-broken|unlink|remove",
+    "prefix": "fa",
+    "icon": "fa fa-chain-broken"
+  },
+  {
+    "filterData": "question|help|information|unknown|support",
+    "prefix": "fa",
+    "icon": "fa fa-question"
+  },
+  {
+    "filterData": "info|help|information|more|details",
+    "prefix": "fa",
+    "icon": "fa fa-info"
+  },
+  {
+    "filterData": "exclamation|warning|error|problem|notification|notify|alert",
+    "prefix": "fa",
+    "icon": "fa fa-exclamation"
+  },
+  {
+    "filterData": "superscript|exponential",
+    "prefix": "fa",
+    "icon": "fa fa-superscript"
+  },
+  {
+    "filterData": "subscript",
+    "prefix": "fa",
+    "icon": "fa fa-subscript"
+  },
+  {
+    "filterData": "eraser",
+    "prefix": "fa",
+    "icon": "fa fa-eraser"
+  },
+  {
+    "filterData": "puzzle-piece|addon|add-on|section",
+    "prefix": "fa",
+    "icon": "fa fa-puzzle-piece"
+  },
+  {
+    "filterData": "microphone|record|voice|sound",
+    "prefix": "fa",
+    "icon": "fa fa-microphone"
+  },
+  {
+    "filterData": "microphone-slash|record|voice|sound|mute",
+    "prefix": "fa",
+    "icon": "fa fa-microphone-slash"
+  },
+  {
+    "filterData": "shield|award|achievement|winner",
+    "prefix": "fa",
+    "icon": "fa fa-shield"
+  },
+  {
+    "filterData": "calendar-o|date|time|when",
+    "prefix": "fa",
+    "icon": "fa fa-calendar-o"
+  },
+  {
+    "filterData": "fire-extinguisher",
+    "prefix": "fa",
+    "icon": "fa fa-fire-extinguisher"
+  },
+  {
+    "filterData": "rocket|app",
+    "prefix": "fa",
+    "icon": "fa fa-rocket"
+  },
+  {
+    "filterData": "maxcdn",
+    "prefix": "fa",
+    "icon": "fa fa-maxcdn"
+  },
+  {
+    "filterData": "chevron-circle-left|previous|back",
+    "prefix": "fa",
+    "icon": "fa fa-chevron-circle-left"
+  },
+  {
+    "filterData": "chevron-circle-right|next|forward",
+    "prefix": "fa",
+    "icon": "fa fa-chevron-circle-right"
+  },
+  {
+    "filterData": "chevron-circle-up",
+    "prefix": "fa",
+    "icon": "fa fa-chevron-circle-up"
+  },
+  {
+    "filterData": "chevron-circle-down|more|dropdown|menu",
+    "prefix": "fa",
+    "icon": "fa fa-chevron-circle-down"
+  },
+  {
+    "filterData": "html5",
+    "prefix": "fa",
+    "icon": "fa fa-html5"
+  },
+  {
+    "filterData": "css3|code",
+    "prefix": "fa",
+    "icon": "fa fa-css3"
+  },
+  {
+    "filterData": "anchor|link",
+    "prefix": "fa",
+    "icon": "fa fa-anchor"
+  },
+  {
+    "filterData": "unlock-alt|protect|admin|password",
+    "prefix": "fa",
+    "icon": "fa fa-unlock-alt"
+  },
+  {
+    "filterData": "bullseye|target",
+    "prefix": "fa",
+    "icon": "fa fa-bullseye"
+  },
+  {
+    "filterData": "ellipsis-h|dots",
+    "prefix": "fa",
+    "icon": "fa fa-ellipsis-h"
+  },
+  {
+    "filterData": "ellipsis-v|dots",
+    "prefix": "fa",
+    "icon": "fa fa-ellipsis-v"
+  },
+  {
+    "filterData": "rss-square|feed|blog",
+    "prefix": "fa",
+    "icon": "fa fa-rss-square"
+  },
+  {
+    "filterData": "play-circle|start|playing",
+    "prefix": "fa",
+    "icon": "fa fa-play-circle"
+  },
+  {
+    "filterData": "ticket|movie|pass|support",
+    "prefix": "fa",
+    "icon": "fa fa-ticket"
+  },
+  {
+    "filterData": "minus-square|hide|minify|delete|remove|trash|hide|collapse",
+    "prefix": "fa",
+    "icon": "fa fa-minus-square"
+  },
+  {
+    "filterData": "minus-square-o|hide|minify|delete|remove|trash|hide|collapse",
+    "prefix": "fa",
+    "icon": "fa fa-minus-square-o"
+  },
+  {
+    "filterData": "level-up",
+    "prefix": "fa",
+    "icon": "fa fa-level-up"
+  },
+  {
+    "filterData": "level-down",
+    "prefix": "fa",
+    "icon": "fa fa-level-down"
+  },
+  {
+    "filterData": "check-square|checkmark|done|todo|agree|accept|confirm",
+    "prefix": "fa",
+    "icon": "fa fa-check-square"
+  },
+  {
+    "filterData": "pencil-square|write|edit|update",
+    "prefix": "fa",
+    "icon": "fa fa-pencil-square"
+  },
+  {
+    "filterData": "external-link-square|open|new",
+    "prefix": "fa",
+    "icon": "fa fa-external-link-square"
+  },
+  {
+    "filterData": "share-square|social|send",
+    "prefix": "fa",
+    "icon": "fa fa-share-square"
+  },
+  {
+    "filterData": "compass|safari|directory|menu|location",
+    "prefix": "fa",
+    "icon": "fa fa-compass"
+  },
+  {
+    "filterData": "caret-square-o-down|toggle-down|more|dropdown|menu",
+    "prefix": "fa",
+    "icon": "fa fa-caret-square-o-down"
+  },
+  {
+    "filterData": "caret-square-o-up|toggle-up",
+    "prefix": "fa",
+    "icon": "fa fa-caret-square-o-up"
+  },
+  {
+    "filterData": "caret-square-o-right|toggle-right|next|forward",
+    "prefix": "fa",
+    "icon": "fa fa-caret-square-o-right"
+  },
+  {
+    "filterData": "eur|euro",
+    "prefix": "fa",
+    "icon": "fa fa-eur"
+  },
+  {
+    "filterData": "gbp",
+    "prefix": "fa",
+    "icon": "fa fa-gbp"
+  },
+  {
+    "filterData": "usd|dollar",
+    "prefix": "fa",
+    "icon": "fa fa-usd"
+  },
+  {
+    "filterData": "inr|rupee",
+    "prefix": "fa",
+    "icon": "fa fa-inr"
+  },
+  {
+    "filterData": "jpy|cny|rmb|yen",
+    "prefix": "fa",
+    "icon": "fa fa-jpy"
+  },
+  {
+    "filterData": "rub|ruble|rouble",
+    "prefix": "fa",
+    "icon": "fa fa-rub"
+  },
+  {
+    "filterData": "krw|won",
+    "prefix": "fa",
+    "icon": "fa fa-krw"
+  },
+  {
+    "filterData": "btc|bitcoin",
+    "prefix": "fa",
+    "icon": "fa fa-btc"
+  },
+  {
+    "filterData": "file|new|page|pdf|document",
+    "prefix": "fa",
+    "icon": "fa fa-file"
+  },
+  {
+    "filterData": "file-text|new|page|pdf|document",
+    "prefix": "fa",
+    "icon": "fa fa-file-text"
+  },
+  {
+    "filterData": "sort-alpha-asc",
+    "prefix": "fa",
+    "icon": "fa fa-sort-alpha-asc"
+  },
+  {
+    "filterData": "sort-alpha-desc",
+    "prefix": "fa",
+    "icon": "fa fa-sort-alpha-desc"
+  },
+  {
+    "filterData": "sort-amount-asc",
+    "prefix": "fa",
+    "icon": "fa fa-sort-amount-asc"
+  },
+  {
+    "filterData": "sort-amount-desc",
+    "prefix": "fa",
+    "icon": "fa fa-sort-amount-desc"
+  },
+  {
+    "filterData": "sort-numeric-asc|numbers",
+    "prefix": "fa",
+    "icon": "fa fa-sort-numeric-asc"
+  },
+  {
+    "filterData": "sort-numeric-desc|numbers",
+    "prefix": "fa",
+    "icon": "fa fa-sort-numeric-desc"
+  },
+  {
+    "filterData": "thumbs-up|like|favorite|approve|agree",
+    "prefix": "fa",
+    "icon": "fa fa-thumbs-up"
+  },
+  {
+    "filterData": "thumbs-down|dislike|disapprove|disagree",
+    "prefix": "fa",
+    "icon": "fa fa-thumbs-down"
+  },
+  {
+    "filterData": "youtube-square|video|film",
+    "prefix": "fa",
+    "icon": "fa fa-youtube-square"
+  },
+  {
+    "filterData": "youtube|video|film",
+    "prefix": "fa",
+    "icon": "fa fa-youtube"
+  },
+  {
+    "filterData": "xing",
+    "prefix": "fa",
+    "icon": "fa fa-xing"
+  },
+  {
+    "filterData": "xing-square",
+    "prefix": "fa",
+    "icon": "fa fa-xing-square"
+  },
+  {
+    "filterData": "youtube-play|start|playing",
+    "prefix": "fa",
+    "icon": "fa fa-youtube-play"
+  },
+  {
+    "filterData": "dropbox",
+    "prefix": "fa",
+    "icon": "fa fa-dropbox"
+  },
+  {
+    "filterData": "stack-overflow",
+    "prefix": "fa",
+    "icon": "fa fa-stack-overflow"
+  },
+  {
+    "filterData": "instagram",
+    "prefix": "fa",
+    "icon": "fa fa-instagram"
+  },
+  {
+    "filterData": "flickr",
+    "prefix": "fa",
+    "icon": "fa fa-flickr"
+  },
+  {
+    "filterData": "adn",
+    "prefix": "fa",
+    "icon": "fa fa-adn"
+  },
+  {
+    "filterData": "bitbucket|git",
+    "prefix": "fa",
+    "icon": "fa fa-bitbucket"
+  },
+  {
+    "filterData": "bitbucket-square|git",
+    "prefix": "fa",
+    "icon": "fa fa-bitbucket-square"
+  },
+  {
+    "filterData": "tumblr",
+    "prefix": "fa",
+    "icon": "fa fa-tumblr"
+  },
+  {
+    "filterData": "tumblr-square",
+    "prefix": "fa",
+    "icon": "fa fa-tumblr-square"
+  },
+  {
+    "filterData": "long-arrow-down",
+    "prefix": "fa",
+    "icon": "fa fa-long-arrow-down"
+  },
+  {
+    "filterData": "long-arrow-up",
+    "prefix": "fa",
+    "icon": "fa fa-long-arrow-up"
+  },
+  {
+    "filterData": "long-arrow-left|previous|back",
+    "prefix": "fa",
+    "icon": "fa fa-long-arrow-left"
+  },
+  {
+    "filterData": "long-arrow-right",
+    "prefix": "fa",
+    "icon": "fa fa-long-arrow-right"
+  },
+  {
+    "filterData": "apple|osx",
+    "prefix": "fa",
+    "icon": "fa fa-apple"
+  },
+  {
+    "filterData": "windows",
+    "prefix": "fa",
+    "icon": "fa fa-windows"
+  },
+  {
+    "filterData": "android",
+    "prefix": "fa",
+    "icon": "fa fa-android"
+  },
+  {
+    "filterData": "linux|tux",
+    "prefix": "fa",
+    "icon": "fa fa-linux"
+  },
+  {
+    "filterData": "dribbble",
+    "prefix": "fa",
+    "icon": "fa fa-dribbble"
+  },
+  {
+    "filterData": "skype",
+    "prefix": "fa",
+    "icon": "fa fa-skype"
+  },
+  {
+    "filterData": "foursquare",
+    "prefix": "fa",
+    "icon": "fa fa-foursquare"
+  },
+  {
+    "filterData": "trello",
+    "prefix": "fa",
+    "icon": "fa fa-trello"
+  },
+  {
+    "filterData": "female|woman|user|person|profile",
+    "prefix": "fa",
+    "icon": "fa fa-female"
+  },
+  {
+    "filterData": "male|man|user|person|profile",
+    "prefix": "fa",
+    "icon": "fa fa-male"
+  },
+  {
+    "filterData": "gratipay|gittip|heart|like|favorite|love",
+    "prefix": "fa",
+    "icon": "fa fa-gratipay"
+  },
+  {
+    "filterData": "sun-o|weather|contrast|lighter|brighten|day",
+    "prefix": "fa",
+    "icon": "fa fa-sun-o"
+  },
+  {
+    "filterData": "moon-o|night|darker|contrast",
+    "prefix": "fa",
+    "icon": "fa fa-moon-o"
+  },
+  {
+    "filterData": "archive|box|storage",
+    "prefix": "fa",
+    "icon": "fa fa-archive"
+  },
+  {
+    "filterData": "bug|report",
+    "prefix": "fa",
+    "icon": "fa fa-bug"
+  },
+  {
+    "filterData": "vk",
+    "prefix": "fa",
+    "icon": "fa fa-vk"
+  },
+  {
+    "filterData": "weibo",
+    "prefix": "fa",
+    "icon": "fa fa-weibo"
+  },
+  {
+    "filterData": "renren",
+    "prefix": "fa",
+    "icon": "fa fa-renren"
+  },
+  {
+    "filterData": "pagelines|leaf|leaves|tree|plant|eco|nature",
+    "prefix": "fa",
+    "icon": "fa fa-pagelines"
+  },
+  {
+    "filterData": "stack-exchange",
+    "prefix": "fa",
+    "icon": "fa fa-stack-exchange"
+  },
+  {
+    "filterData": "arrow-circle-o-right|next|forward",
+    "prefix": "fa",
+    "icon": "fa fa-arrow-circle-o-right"
+  },
+  {
+    "filterData": "arrow-circle-o-left|previous|back",
+    "prefix": "fa",
+    "icon": "fa fa-arrow-circle-o-left"
+  },
+  {
+    "filterData": "caret-square-o-left|toggle-left|previous|back",
+    "prefix": "fa",
+    "icon": "fa fa-caret-square-o-left"
+  },
+  {
+    "filterData": "dot-circle-o|target|bullseye|notification",
+    "prefix": "fa",
+    "icon": "fa fa-dot-circle-o"
+  },
+  {
+    "filterData": "wheelchair|handicap|person|accessibility|accessibile",
+    "prefix": "fa",
+    "icon": "fa fa-wheelchair"
+  },
+  {
+    "filterData": "vimeo-square",
+    "prefix": "fa",
+    "icon": "fa fa-vimeo-square"
+  },
+  {
+    "filterData": "try|turkish-lira",
+    "prefix": "fa",
+    "icon": "fa fa-try"
+  },
+  {
+    "filterData": "plus-square-o|add|new|create|expand",
+    "prefix": "fa",
+    "icon": "fa fa-plus-square-o"
+  },
+  {
+    "filterData": "space-shuttle",
+    "prefix": "fa",
+    "icon": "fa fa-space-shuttle"
+  },
+  {
+    "filterData": "slack",
+    "prefix": "fa",
+    "icon": "fa fa-slack"
+  },
+  {
+    "filterData": "envelope-square",
+    "prefix": "fa",
+    "icon": "fa fa-envelope-square"
+  },
+  {
+    "filterData": "wordpress",
+    "prefix": "fa",
+    "icon": "fa fa-wordpress"
+  },
+  {
+    "filterData": "openid",
+    "prefix": "fa",
+    "icon": "fa fa-openid"
+  },
+  {
+    "filterData": "university|institution|bank",
+    "prefix": "fa",
+    "icon": "fa fa-university"
+  },
+  {
+    "filterData": "graduation-cap|mortar-board",
+    "prefix": "fa",
+    "icon": "fa fa-graduation-cap"
+  },
+  {
+    "filterData": "yahoo",
+    "prefix": "fa",
+    "icon": "fa fa-yahoo"
+  },
+  {
+    "filterData": "google",
+    "prefix": "fa",
+    "icon": "fa fa-google"
+  },
+  {
+    "filterData": "reddit",
+    "prefix": "fa",
+    "icon": "fa fa-reddit"
+  },
+  {
+    "filterData": "reddit-square",
+    "prefix": "fa",
+    "icon": "fa fa-reddit-square"
+  },
+  {
+    "filterData": "stumbleupon-circle",
+    "prefix": "fa",
+    "icon": "fa fa-stumbleupon-circle"
+  },
+  {
+    "filterData": "stumbleupon",
+    "prefix": "fa",
+    "icon": "fa fa-stumbleupon"
+  },
+  {
+    "filterData": "delicious",
+    "prefix": "fa",
+    "icon": "fa fa-delicious"
+  },
+  {
+    "filterData": "digg",
+    "prefix": "fa",
+    "icon": "fa fa-digg"
+  },
+  {
+    "filterData": "pied-piper",
+    "prefix": "fa",
+    "icon": "fa fa-pied-piper"
+  },
+  {
+    "filterData": "pied-piper-alt",
+    "prefix": "fa",
+    "icon": "fa fa-pied-piper-alt"
+  },
+  {
+    "filterData": "drupal",
+    "prefix": "fa",
+    "icon": "fa fa-drupal"
+  },
+  {
+    "filterData": "joomla",
+    "prefix": "fa",
+    "icon": "fa fa-joomla"
+  },
+  {
+    "filterData": "language",
+    "prefix": "fa",
+    "icon": "fa fa-language"
+  },
+  {
+    "filterData": "fax",
+    "prefix": "fa",
+    "icon": "fa fa-fax"
+  },
+  {
+    "filterData": "building",
+    "prefix": "fa",
+    "icon": "fa fa-building"
+  },
+  {
+    "filterData": "child",
+    "prefix": "fa",
+    "icon": "fa fa-child"
+  },
+  {
+    "filterData": "paw",
+    "prefix": "fa",
+    "icon": "fa fa-paw"
+  },
+  {
+    "filterData": "spoon",
+    "prefix": "fa",
+    "icon": "fa fa-spoon"
+  },
+  {
+    "filterData": "cube",
+    "prefix": "fa",
+    "icon": "fa fa-cube"
+  },
+  {
+    "filterData": "cubes",
+    "prefix": "fa",
+    "icon": "fa fa-cubes"
+  },
+  {
+    "filterData": "behance",
+    "prefix": "fa",
+    "icon": "fa fa-behance"
+  },
+  {
+    "filterData": "behance-square",
+    "prefix": "fa",
+    "icon": "fa fa-behance-square"
+  },
+  {
+    "filterData": "steam",
+    "prefix": "fa",
+    "icon": "fa fa-steam"
+  },
+  {
+    "filterData": "steam-square",
+    "prefix": "fa",
+    "icon": "fa fa-steam-square"
+  },
+  {
+    "filterData": "recycle",
+    "prefix": "fa",
+    "icon": "fa fa-recycle"
+  },
+  {
+    "filterData": "car|automobile|vehicle",
+    "prefix": "fa",
+    "icon": "fa fa-car"
+  },
+  {
+    "filterData": "taxi|cab|vehicle",
+    "prefix": "fa",
+    "icon": "fa fa-taxi"
+  },
+  {
+    "filterData": "tree",
+    "prefix": "fa",
+    "icon": "fa fa-tree"
+  },
+  {
+    "filterData": "spotify",
+    "prefix": "fa",
+    "icon": "fa fa-spotify"
+  },
+  {
+    "filterData": "deviantart",
+    "prefix": "fa",
+    "icon": "fa fa-deviantart"
+  },
+  {
+    "filterData": "soundcloud",
+    "prefix": "fa",
+    "icon": "fa fa-soundcloud"
+  },
+  {
+    "filterData": "database",
+    "prefix": "fa",
+    "icon": "fa fa-database"
+  },
+  {
+    "filterData": "file-pdf-o",
+    "prefix": "fa",
+    "icon": "fa fa-file-pdf-o"
+  },
+  {
+    "filterData": "file-word-o",
+    "prefix": "fa",
+    "icon": "fa fa-file-word-o"
+  },
+  {
+    "filterData": "file-excel-o",
+    "prefix": "fa",
+    "icon": "fa fa-file-excel-o"
+  },
+  {
+    "filterData": "file-powerpoint-o",
+    "prefix": "fa",
+    "icon": "fa fa-file-powerpoint-o"
+  },
+  {
+    "filterData": "file-image-o|file-photo-o|file-picture-o",
+    "prefix": "fa",
+    "icon": "fa fa-file-image-o"
+  },
+  {
+    "filterData": "file-archive-o|file-zip-o",
+    "prefix": "fa",
+    "icon": "fa fa-file-archive-o"
+  },
+  {
+    "filterData": "file-audio-o|file-sound-o",
+    "prefix": "fa",
+    "icon": "fa fa-file-audio-o"
+  },
+  {
+    "filterData": "file-video-o|file-movie-o",
+    "prefix": "fa",
+    "icon": "fa fa-file-video-o"
+  },
+  {
+    "filterData": "file-code-o",
+    "prefix": "fa",
+    "icon": "fa fa-file-code-o"
+  },
+  {
+    "filterData": "vine",
+    "prefix": "fa",
+    "icon": "fa fa-vine"
+  },
+  {
+    "filterData": "codepen",
+    "prefix": "fa",
+    "icon": "fa fa-codepen"
+  },
+  {
+    "filterData": "jsfiddle",
+    "prefix": "fa",
+    "icon": "fa fa-jsfiddle"
+  },
+  {
+    "filterData": "life-ring|life-bouy|life-buoy|life-saver|support",
+    "prefix": "fa",
+    "icon": "fa fa-life-ring"
+  },
+  {
+    "filterData": "circle-o-notch",
+    "prefix": "fa",
+    "icon": "fa fa-circle-o-notch"
+  },
+  {
+    "filterData": "rebel|ra",
+    "prefix": "fa",
+    "icon": "fa fa-rebel"
+  },
+  {
+    "filterData": "empire|ge",
+    "prefix": "fa",
+    "icon": "fa fa-empire"
+  },
+  {
+    "filterData": "git-square",
+    "prefix": "fa",
+    "icon": "fa fa-git-square"
+  },
+  {
+    "filterData": "git",
+    "prefix": "fa",
+    "icon": "fa fa-git"
+  },
+  {
+    "filterData": "hacker-news",
+    "prefix": "fa",
+    "icon": "fa fa-hacker-news"
+  },
+  {
+    "filterData": "tencent-weibo",
+    "prefix": "fa",
+    "icon": "fa fa-tencent-weibo"
+  },
+  {
+    "filterData": "qq",
+    "prefix": "fa",
+    "icon": "fa fa-qq"
+  },
+  {
+    "filterData": "weixin|wechat",
+    "prefix": "fa",
+    "icon": "fa fa-weixin"
+  },
+  {
+    "filterData": "paper-plane|send",
+    "prefix": "fa",
+    "icon": "fa fa-paper-plane"
+  },
+  {
+    "filterData": "paper-plane-o|send-o",
+    "prefix": "fa",
+    "icon": "fa fa-paper-plane-o"
+  },
+  {
+    "filterData": "history",
+    "prefix": "fa",
+    "icon": "fa fa-history"
+  },
+  {
+    "filterData": "circle-thin|genderless",
+    "prefix": "fa",
+    "icon": "fa fa-circle-thin"
+  },
+  {
+    "filterData": "header",
+    "prefix": "fa",
+    "icon": "fa fa-header"
+  },
+  {
+    "filterData": "paragraph",
+    "prefix": "fa",
+    "icon": "fa fa-paragraph"
+  },
+  {
+    "filterData": "sliders",
+    "prefix": "fa",
+    "icon": "fa fa-sliders"
+  },
+  {
+    "filterData": "share-alt",
+    "prefix": "fa",
+    "icon": "fa fa-share-alt"
+  },
+  {
+    "filterData": "share-alt-square",
+    "prefix": "fa",
+    "icon": "fa fa-share-alt-square"
+  },
+  {
+    "filterData": "bomb",
+    "prefix": "fa",
+    "icon": "fa fa-bomb"
+  },
+  {
+    "filterData": "futbol-o|soccer-ball-o",
+    "prefix": "fa",
+    "icon": "fa fa-futbol-o"
+  },
+  {
+    "filterData": "tty",
+    "prefix": "fa",
+    "icon": "fa fa-tty"
+  },
+  {
+    "filterData": "binoculars",
+    "prefix": "fa",
+    "icon": "fa fa-binoculars"
+  },
+  {
+    "filterData": "plug",
+    "prefix": "fa",
+    "icon": "fa fa-plug"
+  },
+  {
+    "filterData": "slideshare",
+    "prefix": "fa",
+    "icon": "fa fa-slideshare"
+  },
+  {
+    "filterData": "twitch",
+    "prefix": "fa",
+    "icon": "fa fa-twitch"
+  },
+  {
+    "filterData": "yelp",
+    "prefix": "fa",
+    "icon": "fa fa-yelp"
+  },
+  {
+    "filterData": "newspaper-o",
+    "prefix": "fa",
+    "icon": "fa fa-newspaper-o"
+  },
+  {
+    "filterData": "wifi",
+    "prefix": "fa",
+    "icon": "fa fa-wifi"
+  },
+  {
+    "filterData": "calculator",
+    "prefix": "fa",
+    "icon": "fa fa-calculator"
+  },
+  {
+    "filterData": "paypal",
+    "prefix": "fa",
+    "icon": "fa fa-paypal"
+  },
+  {
+    "filterData": "google-wallet",
+    "prefix": "fa",
+    "icon": "fa fa-google-wallet"
+  },
+  {
+    "filterData": "cc-visa",
+    "prefix": "fa",
+    "icon": "fa fa-cc-visa"
+  },
+  {
+    "filterData": "cc-mastercard",
+    "prefix": "fa",
+    "icon": "fa fa-cc-mastercard"
+  },
+  {
+    "filterData": "cc-discover",
+    "prefix": "fa",
+    "icon": "fa fa-cc-discover"
+  },
+  {
+    "filterData": "cc-amex",
+    "prefix": "fa",
+    "icon": "fa fa-cc-amex"
+  },
+  {
+    "filterData": "cc-paypal",
+    "prefix": "fa",
+    "icon": "fa fa-cc-paypal"
+  },
+  {
+    "filterData": "cc-stripe",
+    "prefix": "fa",
+    "icon": "fa fa-cc-stripe"
+  },
+  {
+    "filterData": "bell-slash",
+    "prefix": "fa",
+    "icon": "fa fa-bell-slash"
+  },
+  {
+    "filterData": "bell-slash-o",
+    "prefix": "fa",
+    "icon": "fa fa-bell-slash-o"
+  },
+  {
+    "filterData": "trash",
+    "prefix": "fa",
+    "icon": "fa fa-trash"
+  },
+  {
+    "filterData": "copyright",
+    "prefix": "fa",
+    "icon": "fa fa-copyright"
+  },
+  {
+    "filterData": "at",
+    "prefix": "fa",
+    "icon": "fa fa-at"
+  },
+  {
+    "filterData": "eyedropper",
+    "prefix": "fa",
+    "icon": "fa fa-eyedropper"
+  },
+  {
+    "filterData": "paint-brush",
+    "prefix": "fa",
+    "icon": "fa fa-paint-brush"
+  },
+  {
+    "filterData": "birthday-cake",
+    "prefix": "fa",
+    "icon": "fa fa-birthday-cake"
+  },
+  {
+    "filterData": "area-chart",
+    "prefix": "fa",
+    "icon": "fa fa-area-chart"
+  },
+  {
+    "filterData": "pie-chart",
+    "prefix": "fa",
+    "icon": "fa fa-pie-chart"
+  },
+  {
+    "filterData": "line-chart",
+    "prefix": "fa",
+    "icon": "fa fa-line-chart"
+  },
+  {
+    "filterData": "lastfm",
+    "prefix": "fa",
+    "icon": "fa fa-lastfm"
+  },
+  {
+    "filterData": "lastfm-square",
+    "prefix": "fa",
+    "icon": "fa fa-lastfm-square"
+  },
+  {
+    "filterData": "toggle-off",
+    "prefix": "fa",
+    "icon": "fa fa-toggle-off"
+  },
+  {
+    "filterData": "toggle-on",
+    "prefix": "fa",
+    "icon": "fa fa-toggle-on"
+  },
+  {
+    "filterData": "bicycle|vehicle|bike",
+    "prefix": "fa",
+    "icon": "fa fa-bicycle"
+  },
+  {
+    "filterData": "bus|vehicle",
+    "prefix": "fa",
+    "icon": "fa fa-bus"
+  },
+  {
+    "filterData": "ioxhost",
+    "prefix": "fa",
+    "icon": "fa fa-ioxhost"
+  },
+  {
+    "filterData": "angellist",
+    "prefix": "fa",
+    "icon": "fa fa-angellist"
+  },
+  {
+    "filterData": "cc",
+    "prefix": "fa",
+    "icon": "fa fa-cc"
+  },
+  {
+    "filterData": "ils|shekel|sheqel",
+    "prefix": "fa",
+    "icon": "fa fa-ils"
+  },
+  {
+    "filterData": "meanpath",
+    "prefix": "fa",
+    "icon": "fa fa-meanpath"
+  },
+  {
+    "filterData": "buysellads",
+    "prefix": "fa",
+    "icon": "fa fa-buysellads"
+  },
+  {
+    "filterData": "connectdevelop",
+    "prefix": "fa",
+    "icon": "fa fa-connectdevelop"
+  },
+  {
+    "filterData": "dashcube",
+    "prefix": "fa",
+    "icon": "fa fa-dashcube"
+  },
+  {
+    "filterData": "forumbee",
+    "prefix": "fa",
+    "icon": "fa fa-forumbee"
+  },
+  {
+    "filterData": "leanpub",
+    "prefix": "fa",
+    "icon": "fa fa-leanpub"
+  },
+  {
+    "filterData": "sellsy",
+    "prefix": "fa",
+    "icon": "fa fa-sellsy"
+  },
+  {
+    "filterData": "shirtsinbulk",
+    "prefix": "fa",
+    "icon": "fa fa-shirtsinbulk"
+  },
+  {
+    "filterData": "simplybuilt",
+    "prefix": "fa",
+    "icon": "fa fa-simplybuilt"
+  },
+  {
+    "filterData": "skyatlas",
+    "prefix": "fa",
+    "icon": "fa fa-skyatlas"
+  },
+  {
+    "filterData": "cart-plus|add|shopping",
+    "prefix": "fa",
+    "icon": "fa fa-cart-plus"
+  },
+  {
+    "filterData": "cart-arrow-down|shopping",
+    "prefix": "fa",
+    "icon": "fa fa-cart-arrow-down"
+  },
+  {
+    "filterData": "diamond|gem|gemstone",
+    "prefix": "fa",
+    "icon": "fa fa-diamond"
+  },
+  {
+    "filterData": "ship|boat|sea",
+    "prefix": "fa",
+    "icon": "fa fa-ship"
+  },
+  {
+    "filterData": "user-secret|whisper|spy|incognito",
+    "prefix": "fa",
+    "icon": "fa fa-user-secret"
+  },
+  {
+    "filterData": "motorcycle|vehicle|bike",
+    "prefix": "fa",
+    "icon": "fa fa-motorcycle"
+  },
+  {
+    "filterData": "street-view|map",
+    "prefix": "fa",
+    "icon": "fa fa-street-view"
+  },
+  {
+    "filterData": "heartbeat|ekg",
+    "prefix": "fa",
+    "icon": "fa fa-heartbeat"
+  },
+  {
+    "filterData": "venus|female",
+    "prefix": "fa",
+    "icon": "fa fa-venus"
+  },
+  {
+    "filterData": "mars|male",
+    "prefix": "fa",
+    "icon": "fa fa-mars"
+  },
+  {
+    "filterData": "mercury|transgender",
+    "prefix": "fa",
+    "icon": "fa fa-mercury"
+  },
+  {
+    "filterData": "transgender",
+    "prefix": "fa",
+    "icon": "fa fa-transgender"
+  },
+  {
+    "filterData": "transgender-alt",
+    "prefix": "fa",
+    "icon": "fa fa-transgender-alt"
+  },
+  {
+    "filterData": "venus-double",
+    "prefix": "fa",
+    "icon": "fa fa-venus-double"
+  },
+  {
+    "filterData": "mars-double",
+    "prefix": "fa",
+    "icon": "fa fa-mars-double"
+  },
+  {
+    "filterData": "venus-mars",
+    "prefix": "fa",
+    "icon": "fa fa-venus-mars"
+  },
+  {
+    "filterData": "mars-stroke",
+    "prefix": "fa",
+    "icon": "fa fa-mars-stroke"
+  },
+  {
+    "filterData": "mars-stroke-v",
+    "prefix": "fa",
+    "icon": "fa fa-mars-stroke-v"
+  },
+  {
+    "filterData": "mars-stroke-h",
+    "prefix": "fa",
+    "icon": "fa fa-mars-stroke-h"
+  },
+  {
+    "filterData": "neuter",
+    "prefix": "fa",
+    "icon": "fa fa-neuter"
+  },
+  {
+    "filterData": "facebook-official",
+    "prefix": "fa",
+    "icon": "fa fa-facebook-official"
+  },
+  {
+    "filterData": "pinterest-p",
+    "prefix": "fa",
+    "icon": "fa fa-pinterest-p"
+  },
+  {
+    "filterData": "whatsapp",
+    "prefix": "fa",
+    "icon": "fa fa-whatsapp"
+  },
+  {
+    "filterData": "server",
+    "prefix": "fa",
+    "icon": "fa fa-server"
+  },
+  {
+    "filterData": "user-plus",
+    "prefix": "fa",
+    "icon": "fa fa-user-plus"
+  },
+  {
+    "filterData": "user-times",
+    "prefix": "fa",
+    "icon": "fa fa-user-times"
+  },
+  {
+    "filterData": "bed|hotel|travel",
+    "prefix": "fa",
+    "icon": "fa fa-bed"
+  },
+  {
+    "filterData": "viacoin",
+    "prefix": "fa",
+    "icon": "fa fa-viacoin"
+  },
+  {
+    "filterData": "train",
+    "prefix": "fa",
+    "icon": "fa fa-train"
+  },
+  {
+    "filterData": "subway",
+    "prefix": "fa",
+    "icon": "fa fa-subway"
+  },
+  {
+    "filterData": "medium",
+    "prefix": "fa",
+    "icon": "fa fa-medium"
+  },
+  {
+    "filterData": "asterisk",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-asterisk"
+  },
+  {
+    "filterData": "plus",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-plus"
+  },
+  {
+    "filterData": "euro",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-euro"
+  },
+  {
+    "filterData": "eur",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-eur"
+  },
+  {
+    "filterData": "minus",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-minus"
+  },
+  {
+    "filterData": "cloud",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-cloud"
+  },
+  {
+    "filterData": "envelope",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-envelope"
+  },
+  {
+    "filterData": "pencil",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-pencil"
+  },
+  {
+    "filterData": "glass",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-glass"
+  },
+  {
+    "filterData": "music",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-music"
+  },
+  {
+    "filterData": "search",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-search"
+  },
+  {
+    "filterData": "heart",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-heart"
+  },
+  {
+    "filterData": "star",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-star"
+  },
+  {
+    "filterData": "star-empty",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-star-empty"
+  },
+  {
+    "filterData": "user",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-user"
+  },
+  {
+    "filterData": "film",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-film"
+  },
+  {
+    "filterData": "th-large",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-th-large"
+  },
+  {
+    "filterData": "th",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-th"
+  },
+  {
+    "filterData": "th-list",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-th-list"
+  },
+  {
+    "filterData": "ok",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-ok"
+  },
+  {
+    "filterData": "remove",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-remove"
+  },
+  {
+    "filterData": "zoom-in",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-zoom-in"
+  },
+  {
+    "filterData": "zoom-out",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-zoom-out"
+  },
+  {
+    "filterData": "off",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-off"
+  },
+  {
+    "filterData": "signal",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-signal"
+  },
+  {
+    "filterData": "cog",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-cog"
+  },
+  {
+    "filterData": "trash",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-trash"
+  },
+  {
+    "filterData": "home",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-home"
+  },
+  {
+    "filterData": "file",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-file"
+  },
+  {
+    "filterData": "time",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-time"
+  },
+  {
+    "filterData": "road",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-road"
+  },
+  {
+    "filterData": "download-alt",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-download-alt"
+  },
+  {
+    "filterData": "download",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-download"
+  },
+  {
+    "filterData": "upload",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-upload"
+  },
+  {
+    "filterData": "inbox",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-inbox"
+  },
+  {
+    "filterData": "play-circle",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-play-circle"
+  },
+  {
+    "filterData": "repeat",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-repeat"
+  },
+  {
+    "filterData": "refresh",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-refresh"
+  },
+  {
+    "filterData": "list-alt",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-list-alt"
+  },
+  {
+    "filterData": "lock",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-lock"
+  },
+  {
+    "filterData": "flag",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-flag"
+  },
+  {
+    "filterData": "headphones",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-headphones"
+  },
+  {
+    "filterData": "volume-off",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-volume-off"
+  },
+  {
+    "filterData": "volume-down",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-volume-down"
+  },
+  {
+    "filterData": "volume-up",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-volume-up"
+  },
+  {
+    "filterData": "qrcode",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-qrcode"
+  },
+  {
+    "filterData": "barcode",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-barcode"
+  },
+  {
+    "filterData": "tag",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-tag"
+  },
+  {
+    "filterData": "tags",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-tags"
+  },
+  {
+    "filterData": "book",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-book"
+  },
+  {
+    "filterData": "bookmark",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-bookmark"
+  },
+  {
+    "filterData": "print",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-print"
+  },
+  {
+    "filterData": "camera",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-camera"
+  },
+  {
+    "filterData": "font",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-font"
+  },
+  {
+    "filterData": "bold",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-bold"
+  },
+  {
+    "filterData": "italic",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-italic"
+  },
+  {
+    "filterData": "text-height",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-text-height"
+  },
+  {
+    "filterData": "text-width",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-text-width"
+  },
+  {
+    "filterData": "align-left",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-align-left"
+  },
+  {
+    "filterData": "align-center",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-align-center"
+  },
+  {
+    "filterData": "align-right",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-align-right"
+  },
+  {
+    "filterData": "align-justify",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-align-justify"
+  },
+  {
+    "filterData": "list",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-list"
+  },
+  {
+    "filterData": "indent-left",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-indent-left"
+  },
+  {
+    "filterData": "indent-right",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-indent-right"
+  },
+  {
+    "filterData": "facetime-video",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-facetime-video"
+  },
+  {
+    "filterData": "picture",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-picture"
+  },
+  {
+    "filterData": "map-marker",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-map-marker"
+  },
+  {
+    "filterData": "adjust",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-adjust"
+  },
+  {
+    "filterData": "tint",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-tint"
+  },
+  {
+    "filterData": "edit",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-edit"
+  },
+  {
+    "filterData": "share",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-share"
+  },
+  {
+    "filterData": "check",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-check"
+  },
+  {
+    "filterData": "move",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-move"
+  },
+  {
+    "filterData": "step-backward",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-step-backward"
+  },
+  {
+    "filterData": "fast-backward",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-fast-backward"
+  },
+  {
+    "filterData": "backward",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-backward"
+  },
+  {
+    "filterData": "play",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-play"
+  },
+  {
+    "filterData": "pause",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-pause"
+  },
+  {
+    "filterData": "stop",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-stop"
+  },
+  {
+    "filterData": "forward",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-forward"
+  },
+  {
+    "filterData": "fast-forward",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-fast-forward"
+  },
+  {
+    "filterData": "step-forward",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-step-forward"
+  },
+  {
+    "filterData": "eject",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-eject"
+  },
+  {
+    "filterData": "chevron-left",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-chevron-left"
+  },
+  {
+    "filterData": "chevron-right",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-chevron-right"
+  },
+  {
+    "filterData": "plus-sign",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-plus-sign"
+  },
+  {
+    "filterData": "minus-sign",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-minus-sign"
+  },
+  {
+    "filterData": "remove-sign",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-remove-sign"
+  },
+  {
+    "filterData": "ok-sign",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-ok-sign"
+  },
+  {
+    "filterData": "question-sign",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-question-sign"
+  },
+  {
+    "filterData": "info-sign",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-info-sign"
+  },
+  {
+    "filterData": "screenshot",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-screenshot"
+  },
+  {
+    "filterData": "remove-circle",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-remove-circle"
+  },
+  {
+    "filterData": "ok-circle",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-ok-circle"
+  },
+  {
+    "filterData": "ban-circle",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-ban-circle"
+  },
+  {
+    "filterData": "arrow-left",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-arrow-left"
+  },
+  {
+    "filterData": "arrow-right",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-arrow-right"
+  },
+  {
+    "filterData": "arrow-up",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-arrow-up"
+  },
+  {
+    "filterData": "arrow-down",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-arrow-down"
+  },
+  {
+    "filterData": "share-alt",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-share-alt"
+  },
+  {
+    "filterData": "resize-full",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-resize-full"
+  },
+  {
+    "filterData": "resize-small",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-resize-small"
+  },
+  {
+    "filterData": "exclamation-sign",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-exclamation-sign"
+  },
+  {
+    "filterData": "gift",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-gift"
+  },
+  {
+    "filterData": "leaf",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-leaf"
+  },
+  {
+    "filterData": "fire",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-fire"
+  },
+  {
+    "filterData": "eye-open",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-eye-open"
+  },
+  {
+    "filterData": "eye-close",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-eye-close"
+  },
+  {
+    "filterData": "warning-sign",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-warning-sign"
+  },
+  {
+    "filterData": "plane",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-plane"
+  },
+  {
+    "filterData": "calendar",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-calendar"
+  },
+  {
+    "filterData": "random",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-random"
+  },
+  {
+    "filterData": "comment",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-comment"
+  },
+  {
+    "filterData": "magnet",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-magnet"
+  },
+  {
+    "filterData": "chevron-up",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-chevron-up"
+  },
+  {
+    "filterData": "chevron-down",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-chevron-down"
+  },
+  {
+    "filterData": "retweet",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-retweet"
+  },
+  {
+    "filterData": "shopping-cart",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-shopping-cart"
+  },
+  {
+    "filterData": "folder-close",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-folder-close"
+  },
+  {
+    "filterData": "folder-open",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-folder-open"
+  },
+  {
+    "filterData": "resize-vertical",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-resize-vertical"
+  },
+  {
+    "filterData": "resize-horizontal",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-resize-horizontal"
+  },
+  {
+    "filterData": "hdd",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-hdd"
+  },
+  {
+    "filterData": "bullhorn",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-bullhorn"
+  },
+  {
+    "filterData": "bell",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-bell"
+  },
+  {
+    "filterData": "certificate",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-certificate"
+  },
+  {
+    "filterData": "thumbs-up",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-thumbs-up"
+  },
+  {
+    "filterData": "thumbs-down",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-thumbs-down"
+  },
+  {
+    "filterData": "hand-right",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-hand-right"
+  },
+  {
+    "filterData": "hand-left",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-hand-left"
+  },
+  {
+    "filterData": "hand-up",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-hand-up"
+  },
+  {
+    "filterData": "hand-down",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-hand-down"
+  },
+  {
+    "filterData": "circle-arrow-right",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-circle-arrow-right"
+  },
+  {
+    "filterData": "circle-arrow-left",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-circle-arrow-left"
+  },
+  {
+    "filterData": "circle-arrow-up",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-circle-arrow-up"
+  },
+  {
+    "filterData": "circle-arrow-down",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-circle-arrow-down"
+  },
+  {
+    "filterData": "globe",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-globe"
+  },
+  {
+    "filterData": "wrench",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-wrench"
+  },
+  {
+    "filterData": "tasks",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-tasks"
+  },
+  {
+    "filterData": "filter",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-filter"
+  },
+  {
+    "filterData": "briefcase",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-briefcase"
+  },
+  {
+    "filterData": "fullscreen",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-fullscreen"
+  },
+  {
+    "filterData": "dashboard",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-dashboard"
+  },
+  {
+    "filterData": "paperclip",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-paperclip"
+  },
+  {
+    "filterData": "heart-empty",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-heart-empty"
+  },
+  {
+    "filterData": "link",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-link"
+  },
+  {
+    "filterData": "phone",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-phone"
+  },
+  {
+    "filterData": "pushpin",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-pushpin"
+  },
+  {
+    "filterData": "usd",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-usd"
+  },
+  {
+    "filterData": "gbp",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-gbp"
+  },
+  {
+    "filterData": "sort",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-sort"
+  },
+  {
+    "filterData": "sort-by-alphabet",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-sort-by-alphabet"
+  },
+  {
+    "filterData": "sort-by-alphabet-alt",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-sort-by-alphabet-alt"
+  },
+  {
+    "filterData": "sort-by-order",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-sort-by-order"
+  },
+  {
+    "filterData": "sort-by-order-alt",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-sort-by-order-alt"
+  },
+  {
+    "filterData": "sort-by-attributes",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-sort-by-attributes"
+  },
+  {
+    "filterData": "sort-by-attributes-alt",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-sort-by-attributes-alt"
+  },
+  {
+    "filterData": "unchecked",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-unchecked"
+  },
+  {
+    "filterData": "expand",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-expand"
+  },
+  {
+    "filterData": "collapse-down",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-collapse-down"
+  },
+  {
+    "filterData": "collapse-up",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-collapse-up"
+  },
+  {
+    "filterData": "log-in",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-log-in"
+  },
+  {
+    "filterData": "flash",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-flash"
+  },
+  {
+    "filterData": "log-out",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-log-out"
+  },
+  {
+    "filterData": "new-window",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-new-window"
+  },
+  {
+    "filterData": "record",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-record"
+  },
+  {
+    "filterData": "save",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-save"
+  },
+  {
+    "filterData": "open",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-open"
+  },
+  {
+    "filterData": "saved",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-saved"
+  },
+  {
+    "filterData": "import",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-import"
+  },
+  {
+    "filterData": "export",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-export"
+  },
+  {
+    "filterData": "send",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-send"
+  },
+  {
+    "filterData": "floppy-disk",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-floppy-disk"
+  },
+  {
+    "filterData": "floppy-saved",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-floppy-saved"
+  },
+  {
+    "filterData": "floppy-remove",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-floppy-remove"
+  },
+  {
+    "filterData": "floppy-save",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-floppy-save"
+  },
+  {
+    "filterData": "floppy-open",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-floppy-open"
+  },
+  {
+    "filterData": "credit-card",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-credit-card"
+  },
+  {
+    "filterData": "transfer",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-transfer"
+  },
+  {
+    "filterData": "cutlery",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-cutlery"
+  },
+  {
+    "filterData": "header",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-header"
+  },
+  {
+    "filterData": "compressed",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-compressed"
+  },
+  {
+    "filterData": "earphone",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-earphone"
+  },
+  {
+    "filterData": "phone-alt",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-phone-alt"
+  },
+  {
+    "filterData": "tower",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-tower"
+  },
+  {
+    "filterData": "stats",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-stats"
+  },
+  {
+    "filterData": "sd-video",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-sd-video"
+  },
+  {
+    "filterData": "hd-video",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-hd-video"
+  },
+  {
+    "filterData": "subtitles",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-subtitles"
+  },
+  {
+    "filterData": "sound-stereo",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-sound-stereo"
+  },
+  {
+    "filterData": "sound-dolby",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-sound-dolby"
+  },
+  {
+    "filterData": "sound-5-1",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-sound-5-1"
+  },
+  {
+    "filterData": "sound-6-1",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-sound-6-1"
+  },
+  {
+    "filterData": "sound-7-1",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-sound-7-1"
+  },
+  {
+    "filterData": "copyright-mark",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-copyright-mark"
+  },
+  {
+    "filterData": "registration-mark",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-registration-mark"
+  },
+  {
+    "filterData": "cloud-download",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-cloud-download"
+  },
+  {
+    "filterData": "cloud-upload",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-cloud-upload"
+  },
+  {
+    "filterData": "tree-conifer",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-tree-conifer"
+  },
+  {
+    "filterData": "tree-deciduous",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-tree-deciduous"
+  },
+  {
+    "filterData": "cd",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-cd"
+  },
+  {
+    "filterData": "save-file",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-save-file"
+  },
+  {
+    "filterData": "open-file",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-open-file"
+  },
+  {
+    "filterData": "level-up",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-level-up"
+  },
+  {
+    "filterData": "copy",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-copy"
+  },
+  {
+    "filterData": "paste",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-paste"
+  },
+  {
+    "filterData": "alert",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-alert"
+  },
+  {
+    "filterData": "equalizer",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-equalizer"
+  },
+  {
+    "filterData": "king",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-king"
+  },
+  {
+    "filterData": "queen",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-queen"
+  },
+  {
+    "filterData": "pawn",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-pawn"
+  },
+  {
+    "filterData": "bishop",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-bishop"
+  },
+  {
+    "filterData": "knight",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-knight"
+  },
+  {
+    "filterData": "baby-formula",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-baby-formula"
+  },
+  {
+    "filterData": "tent",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-tent"
+  },
+  {
+    "filterData": "blackboard",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-blackboard"
+  },
+  {
+    "filterData": "bed",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-bed"
+  },
+  {
+    "filterData": "apple",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-apple"
+  },
+  {
+    "filterData": "erase",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-erase"
+  },
+  {
+    "filterData": "hourglass",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-hourglass"
+  },
+  {
+    "filterData": "lamp",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-lamp"
+  },
+  {
+    "filterData": "duplicate",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-duplicate"
+  },
+  {
+    "filterData": "piggy-bank",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-piggy-bank"
+  },
+  {
+    "filterData": "scissors",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-scissors"
+  },
+  {
+    "filterData": "bitcoin",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-bitcoin"
+  },
+  {
+    "filterData": "yen",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-yen"
+  },
+  {
+    "filterData": "ruble",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-ruble"
+  },
+  {
+    "filterData": "scale",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-scale"
+  },
+  {
+    "filterData": "ice-lolly",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-ice-lolly"
+  },
+  {
+    "filterData": "ice-lolly-tasted",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-ice-lolly-tasted"
+  },
+  {
+    "filterData": "education",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-education"
+  },
+  {
+    "filterData": "option-horizontal",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-option-horizontal"
+  },
+  {
+    "filterData": "option-vertical",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-option-vertical"
+  },
+  {
+    "filterData": "menu-hamburger",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-menu-hamburger"
+  },
+  {
+    "filterData": "modal-window",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-modal-window"
+  },
+  {
+    "filterData": "oil",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-oil"
+  },
+  {
+    "filterData": "grain",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-grain"
+  },
+  {
+    "filterData": "sunglasses",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-sunglasses"
+  },
+  {
+    "filterData": "text-size",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-text-size"
+  },
+  {
+    "filterData": "text-color",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-text-color"
+  },
+  {
+    "filterData": "text-background",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-text-background"
+  },
+  {
+    "filterData": "object-align-top",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-object-align-top"
+  },
+  {
+    "filterData": "object-align-bottom",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-object-align-bottom"
+  },
+  {
+    "filterData": "object-align-horizontal",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-object-align-horizontal"
+  },
+  {
+    "filterData": "object-align-left",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-object-align-left"
+  },
+  {
+    "filterData": "object-align-vertical",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-object-align-vertical"
+  },
+  {
+    "filterData": "object-align-right",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-object-align-right"
+  },
+  {
+    "filterData": "triangle-right",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-triangle-right"
+  },
+  {
+    "filterData": "triangle-left",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-triangle-left"
+  },
+  {
+    "filterData": "triangle-bottom",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-triangle-bottom"
+  },
+  {
+    "filterData": "triangle-top",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-triangle-top"
+  },
+  {
+    "filterData": "console",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-console"
+  },
+  {
+    "filterData": "superscript",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-superscript"
+  },
+  {
+    "filterData": "subscript",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-subscript"
+  },
+  {
+    "filterData": "menu-left",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-menu-left"
+  },
+  {
+    "filterData": "menu-right",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-menu-right"
+  },
+  {
+    "filterData": "menu-down",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-menu-down"
+  },
+  {
+    "filterData": "menu-up",
+    "prefix": "glyphicon",
+    "icon": "glyphicon glyphicon-menu-up"
+  }
+]

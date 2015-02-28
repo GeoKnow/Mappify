@@ -5,9 +5,12 @@
             'ui.router',
             'mappifyApp.sidebar.layout',
             'mappifyApp.sidebar.load',
+            'mappifyApp.sidebar.download',
             'mappifyApp.sidebar.tileLayer',
             'mappifyApp.sidebar.dataSource',
+            'mappifyApp.sidebar.markerStyle',
             'mappifyApp.models.dataSourceService',
+            'mappifyApp.models.markerStyleModel',
             'mappifyApp.models.tileLayer',
             'mappifyApp.models.scaffoldingConfigModel'
         ])
@@ -19,12 +22,13 @@
 
         var sidebar = this;
 
-        sidebar.changeLayout = configService.changeLayout;
-        sidebar.loadConfig = configService.loadConfig;
-        sidebar.changeTileLayers = configService.changeTileLayers;
-        sidebar.changeDataSource = configService.changeDataSource;
-
-        sidebar.getConfigModel = scaffoldingConfigModel.getCurrentConfig;
+        sidebar.changeDataSource  = configService.changeDataSource;
+        sidebar.changeLayout      = configService.changeLayout;
+        sidebar.changeTileLayers  = configService.changeTileLayers;
+        sidebar.downloadConfig    = configService.downloadConfig;
+        sidebar.getConfigModel    = scaffoldingConfigModel.getCurrentConfig;
+        sidebar.loadConfig        = configService.loadConfig;
+        sidebar.selectMarkerStyle = configService.selectMarkerStyle;
     }
 
     // the map config
@@ -57,14 +61,30 @@
         service.changeLayout = changeLayout;
         service.changeTileLayers = changeTileLayers;
         service.changeDataSource = changeDataSource;
+        service.downloadConfig = downloadConfig;
         service.loadConfig = loadConfig;
+        service.selectMarkerStyle = selectMarkerStyle;
 
         return service;
 
+        function downloadConfig(){
+            return openModal({
+                template: '/subsection-sidebar/modals/download/download.tpl.html',
+                controller: 'DownloadCtrl',
+                controllerAs: 'modal',
+                resolve: {
+                    config: function(scaffoldingConfigModel) {
+                        return scaffoldingConfigModel.getCurrentConfig();
+                    }
+                }
+            }).then(function (data) {
+                // intentionally left blank
+            });
+        }
 
         function loadConfig(){
             return openModal({
-                template: '/subsection-sidebar/modals/load.tpl.html',
+                template: '/subsection-sidebar/modals/load/load.tpl.html',
                 controller: 'LoadCtrl',
                 controllerAs: 'modal'
             }).then(function (data) {
@@ -74,7 +94,7 @@
 
         function changeLayout() {
             return openModal({
-                template: '/subsection-sidebar/modals/layout.tpl.html',
+                template: '/subsection-sidebar/modals/layout/layout.tpl.html',
                 controller: 'LayoutCtrl',
                 controllerAs: 'modal',
                 resolve: {
@@ -95,13 +115,13 @@
 
         function changeDataSource() {
             return openModal({
-                template: '/subsection-sidebar/modals/dataSource.tpl.html',
+                template: '/subsection-sidebar/modals/dataSource/dataSource.tpl.html',
                 controller: 'DataSourceCtrl',
                 controllerAs: 'modal',
                 resolve: {
                    availableServices: function(dataSourceServiceModel) {
                         return dataSourceServiceModel.getDataSourceServices();
-                    }
+                   }
                 }
             }).then(function (data) {
                 scaffoldingConfigModel.setSetDataSource(data);
@@ -110,7 +130,7 @@
 
         function changeTileLayers() {
             return openModal({
-                template: '/subsection-sidebar/modals/tileLayer.tpl.html',
+                template: '/subsection-sidebar/modals/tileLayer/tileLayer.tpl.html',
                 controller: 'TileLayerCtrl',
                 controllerAs: 'modal',
                 resolve: {
@@ -126,10 +146,24 @@
                 }
             }).then(function (data) {
                 // validation point ?
-                // todo remove log
-                $log.warn(data);
 
                 scaffoldingConfigModel.setTileLayer(data);
+            });
+        }
+
+        function selectMarkerStyle() {
+            return openModal({
+                template: '/subsection-sidebar/modals/markerStyle/markerStyle.tpl.html',
+                controller: 'MarkerStyleCtrl',
+                controllerAs: 'modal',
+                resolve: {
+                    availableMarkerStyles: function(markerStyleModel) {
+                        return markerStyleModel.getMarkerStyles();
+                    }
+                }
+            }).then(function (data) {
+                // ToDo
+                //scaffoldingConfigModel.setSetDataSource(data);
             });
         }
 
