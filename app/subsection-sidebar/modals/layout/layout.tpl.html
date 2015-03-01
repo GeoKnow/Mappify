@@ -2,13 +2,13 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                Layout
+                {{modal.title}}
                 <i class="fa fa-times close"
                    ng-click="modal.cancel()"></i>
             </div>
-            <zenubu-form submit-function="modal.close" model="modal.layout" validation-object="{}">
+            <zenubu-form submit-function="modal.close" model="modal.layout" validation-object="modal.validation">
                 <div class="modal-body">
-
+                    <label> Please define the center of your map below.</label>
                     <div class="row">
                         <zenubu-input class="col-xs-4" field="lat" placeholder="Latitude" label="Latitude"></zenubu-input>
                         <zenubu-input class="col-xs-4" field="lng" placeholder="Longitude" label="Longitude"></zenubu-input>
@@ -17,9 +17,8 @@
 
                     <div  style="margin-bottom: 5px;"><strong>Preview</strong></div>
 
-                    <div id="map-preview-image" style="background: url(images/preview.png) no-repeat center center; height:300px; width: 100%">
-
-                    </div>
+                    <!--TODO: Use Real Mappify Map-->
+                    <leaflet defaults="modal.mapDefaults" center="modal.layout" layers="modal.layers" width="100%" height="300"></leaflet>
 
                 </div>
                 <div class="modal-footer">

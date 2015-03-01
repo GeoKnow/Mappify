@@ -6,6 +6,9 @@
         'mappifyApp.sidebar.layout',
         'mappifyApp.sidebar.configService',
         'mappifyApp.sidebar.load',
+        'mappifyApp.sidebar.sponate',
+        'mappifyApp.sidebar.mapSettings',
+        'mappifyApp.sidebar.popups',
         'mappifyApp.sidebar.download',
         'mappifyApp.sidebar.tileLayer',
         'mappifyApp.sidebar.dataSource',
@@ -22,15 +25,9 @@
 
         var sidebar = this;
 
-        sidebar.changeDataSource = configService.changeDataSource;
-        sidebar.changeLayout = configService.changeLayout;
-        sidebar.changeTileLayers = configService.changeTileLayers;
-        sidebar.downloadConfig = configService.downloadConfig;
-        sidebar.getConfigModel = scaffoldingConfigModel.getCurrentConfig;
-        sidebar.loadConfig = configService.loadConfig;
-        sidebar.selectMarkerStyle = configService.selectMarkerStyle;
+        sidebar.availableConfigs = configService.availableConfigs;
 
-        sidebar.selectMarkerStyle();
+        sidebar.getConfigModel = scaffoldingConfigModel.getCurrentConfig;
 
     }
 

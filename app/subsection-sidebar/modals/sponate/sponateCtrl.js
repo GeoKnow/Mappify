@@ -1,32 +1,32 @@
 (function () {
     'use strict';
 
-    var title = 'Load Config';
+    var title = 'Change Sponate Mapping';
 
-    angular.module('mappifyApp.sidebar.load', [
+    angular.module('mappifyApp.sidebar.sponate', [
         'mappifyApp.sidebar.configService'
     ])
 
         .config(function (configServiceProvider) {
             var description = {
-                order: 0,
+                order: 30,
                 title: title,
-                fileName: 'load',
-                icon: 'cloud-upload',
-                ctrl: LoadCtrl
+                fileName: 'sponate',
+                icon: 'random',
+                ctrl: SponateCtrl
             };
 
             configServiceProvider.registerConfig(description);
         });
 
     /*@ngInject*/
-    function LoadCtrl($modalInstance, scaffoldingConfigModel) {
+    function SponateCtrl($modalInstance) {
 
         var modal = this;
 
         modal.title = title;
 
-        modal.json = '';
+        modal.sponate = '';
 
         modal.cancel = function () {
             $modalInstance.dismiss();
@@ -34,8 +34,7 @@
 
         // modalInstance resolves the promise
         modal.close = function () {
-            scaffoldingConfigModel.loadConfigModelFromJSON(modal.json);
-            $modalInstance.close(modal.json);
+            $modalInstance.close(modal.sponate);
         };
 
     }

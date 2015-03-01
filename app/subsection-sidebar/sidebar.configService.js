@@ -1,129 +1,79 @@
 (function () {
     'use strict';
 
-    angular.module('mappifyApp.sidebar.configService', [
-            'mappifyApp.models.scaffoldingConfigModel'
-        ])
-        .factory('configService', configService);
+    angular.module('mappifyApp.sidebar.configService', [])
+        .provider('configService', configServiceProvider);
 
-    function configService($modal, scaffoldingConfigModel) {
+    function configServiceProvider() {
 
-        var service = {};
+        var configs = {};
 
-        service.changeLayout = changeLayout;
-        service.changeTileLayers = changeTileLayers;
-        service.changeDataSource = changeDataSource;
-        service.downloadConfig = downloadConfig;
-        service.loadConfig = loadConfig;
-        service.selectMarkerStyle = selectMarkerStyle;
+        //changeLayout();
 
-        return service;
+        return {
+            registerConfig: registerConfig,
+            $get: configService
+        };
 
-        function downloadConfig(){
-            return openModal({
-                template: '/subsection-sidebar/modals/download/download.tpl.html',
-                controller: 'DownloadCtrl',
-                controllerAs: 'modal',
-                resolve: {
-                    config: /*@ngInject*/ function(scaffoldingConfigModel) {
-                        return scaffoldingConfigModel.getCurrentConfig();
+        function registerConfig(description, resolveFunctions, callbackFunction) {
+            if (_.isFunction(resolveFunctions)) {
+                callbackFunction = resolveFunctions;
+                resolveFunctions = {};
+            }
+
+            if (!_.isFunction(callbackFunction)) {
+                callbackFunction = function () {
+                };
+            }
+
+            configs[description.order + description.fileName] = {
+                description: description,
+                resolveFunctions: resolveFunctions,
+                callbackFunction: callbackFunction
+            };
+        }
+
+        /*@ngInject*/
+        function configService($modal) {
+            var service = {};
+
+            service.availableConfigs = [];
+
+            _(configs)
+                .sortBy(function (config) {
+                    return config.description.order;
+                })
+                .forEach(function (config) {
+                    createConfig(config.description, config.resolveFunctions, config.callbackFunction);
+                })
+                .value();
+
+            return service;
+
+            function createConfig(description, resolveFunctions, callbackFunction) {
+
+                service.availableConfigs.push({
+                    title: description.title,
+                    icon: description.icon,
+                    open: function () {
+                        return openModal({
+                            template: '/subsection-sidebar/modals/' + description.fileName + '/' + description.fileName + '.tpl.html',
+                            controller: description.ctrl,
+                            controllerAs: 'modal',
+                            resolve: resolveFunctions
+                        }).then(callbackFunction);
                     }
-                }
-            }).then(function () {
-                // intentionally left blank
-            });
+                });
+            }
+
+            function openModal(options) {
+                return $modal.open(options).then(function (modalInstance) {
+                    return modalInstance.result;
+                });
+            }
+
         }
 
-        function loadConfig(){
-            return openModal({
-                template: '/subsection-sidebar/modals/load/load.tpl.html',
-                controller: 'LoadCtrl',
-                controllerAs: 'modal'
-            }).then(function (data) {
-                scaffoldingConfigModel.loadConfigModelFromJSON(data);
-            });
-        }
-
-        function changeLayout() {
-            return openModal({
-                template: '/subsection-sidebar/modals/layout/layout.tpl.html',
-                controller: 'LayoutCtrl',
-                controllerAs: 'modal',
-                resolve: {
-                    layout: /*@ngInject*/ function (scaffoldingConfigModel) {
-                        var currentLayout = scaffoldingConfigModel.getCurrentConfig('layout');
-                        return {
-                            zoom: currentLayout.zoom,
-                            lat: currentLayout.viewCenter.latitude,
-                            lng: currentLayout.viewCenter.longitude
-                        };
-                    }
-                }
-            }).then(function (data) {
-                scaffoldingConfigModel.setZoom(data.zoom);
-                scaffoldingConfigModel.setViewCenter(data.lat, data.lng);
-            });
-        }
-
-        function changeDataSource() {
-            return openModal({
-                template: '/subsection-sidebar/modals/dataSource/dataSource.tpl.html',
-                controller: 'DataSourceCtrl',
-                controllerAs: 'modal',
-                resolve: {
-                   availableServices: /*@ngInject*/ function(dataSourceServiceModel) {
-                        return dataSourceServiceModel.getDataSourceServices();
-                   }
-                }
-            }).then(function (data) {
-                scaffoldingConfigModel.setSetDataSource(data);
-            });
-        }
-
-        function changeTileLayers() {
-            return openModal({
-                template: '/subsection-sidebar/modals/tileLayer/tileLayer.tpl.html',
-                controller: 'TileLayerCtrl',
-                controllerAs: 'modal',
-                resolve: {
-                    tileLayer: /*@ngInject*/ function (scaffoldingConfigModel) {
-                        var currentLayoutTileLayer = scaffoldingConfigModel.getCurrentConfig('tileLayer');
-                        return {
-                            tileLayer: currentLayoutTileLayer
-                        };
-                    },
-                    availableTileLayer: /*@ngInject*/ function(tileLayerModel) {
-                        return tileLayerModel.getTileLayers();
-                    }
-                }
-            }).then(function (data) {
-                // validation point ?
-
-                scaffoldingConfigModel.setTileLayer(data);
-            });
-        }
-
-        function selectMarkerStyle() {
-            return openModal({
-                template: '/subsection-sidebar/modals/markerStyle/markerStyle.tpl.html',
-                controller: 'MarkerStyleCtrl',
-                controllerAs: 'modal',
-                resolve: {
-                    availableMarkerStyles: /*@ngInject*/ function(markerStyleModel) {
-                        return markerStyleModel.getMarkerStyles();
-                    }
-                }
-            }).then(function () {
-                // ToDo
-                //scaffoldingConfigModel.setSetDataSource(data);
-            });
-        }
-
-        function openModal(options){
-            return $modal.open(options).then(function (modalInstance) {
-                return modalInstance.result;
-            });
-        }
     }
 
 

@@ -1,32 +1,32 @@
 (function () {
     'use strict';
 
-    var title = 'Load Config';
+    var title = 'Map Settings';
 
-    angular.module('mappifyApp.sidebar.load', [
+    angular.module('mappifyApp.sidebar.mapSettings', [
         'mappifyApp.sidebar.configService'
     ])
 
         .config(function (configServiceProvider) {
             var description = {
-                order: 0,
+                order: 95,
                 title: title,
-                fileName: 'load',
-                icon: 'cloud-upload',
-                ctrl: LoadCtrl
+                fileName: 'mapSettings',
+                icon: 'cog',
+                ctrl: MapSettingsCtrl
             };
 
             configServiceProvider.registerConfig(description);
         });
 
     /*@ngInject*/
-    function LoadCtrl($modalInstance, scaffoldingConfigModel) {
+    function MapSettingsCtrl($modalInstance) {
 
         var modal = this;
 
         modal.title = title;
 
-        modal.json = '';
+        modal.mapSettings = '';
 
         modal.cancel = function () {
             $modalInstance.dismiss();
@@ -34,8 +34,7 @@
 
         // modalInstance resolves the promise
         modal.close = function () {
-            scaffoldingConfigModel.loadConfigModelFromJSON(modal.json);
-            $modalInstance.close(modal.json);
+            $modalInstance.close(modal.mapSettings);
         };
 
     }

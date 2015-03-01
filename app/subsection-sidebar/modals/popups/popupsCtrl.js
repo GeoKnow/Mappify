@@ -1,32 +1,32 @@
 (function () {
     'use strict';
 
-    var title = 'Load Config';
+    var title = 'Change Popup Template';
 
-    angular.module('mappifyApp.sidebar.load', [
+    angular.module('mappifyApp.sidebar.popups', [
         'mappifyApp.sidebar.configService'
     ])
 
         .config(function (configServiceProvider) {
             var description = {
-                order: 0,
+                order: 90,
                 title: title,
-                fileName: 'load',
-                icon: 'cloud-upload',
-                ctrl: LoadCtrl
+                fileName: 'popups',
+                icon: 'share-square-o',
+                ctrl: PopupCtrl
             };
 
             configServiceProvider.registerConfig(description);
         });
 
     /*@ngInject*/
-    function LoadCtrl($modalInstance, scaffoldingConfigModel) {
+    function PopupCtrl($modalInstance) {
 
         var modal = this;
 
         modal.title = title;
 
-        modal.json = '';
+        modal.popups = '';
 
         modal.cancel = function () {
             $modalInstance.dismiss();
@@ -34,8 +34,7 @@
 
         // modalInstance resolves the promise
         modal.close = function () {
-            scaffoldingConfigModel.loadConfigModelFromJSON(modal.json);
-            $modalInstance.close(modal.json);
+            $modalInstance.close(modal.popups);
         };
 
     }

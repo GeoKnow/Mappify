@@ -2,17 +2,16 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                download json
+                {{modal.title}}
                 <i class="fa fa-times close"
                    ng-click="modal.cancel()"></i>
             </div>
             <div class="modal-body">
-                <textarea>
-                    {{modal.config | json}}
-                </textarea>
+                <textarea readonly style="resize: none">{{modal.config | json}}</textarea>
 
                 <a class="list-group-item" ng-href="{{ modal.blobURL }}" download="config.json" target="_blank">
-                    download - link
+                    <i class="fa fa-fw fa-cloud-download"></i>
+                    Download config.json
                 </a>
             </div>
             <div class="modal-footer">

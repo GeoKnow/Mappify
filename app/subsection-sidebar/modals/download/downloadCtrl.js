@@ -1,17 +1,38 @@
 (function () {
     'use strict';
 
-    angular.module('mappifyApp.sidebar.download', [])
+    var title = 'Download Config';
 
-        .controller('DownloadCtrl', DownLoadCtrl)
+    angular.module('mappifyApp.sidebar.download', [
+        'mappifyApp.sidebar.configService'
+    ])
+
+        .config(function (configServiceProvider) {
+            var description = {
+                order: 100,
+                title: title,
+                fileName: 'download',
+                icon: 'cloud-download',
+                ctrl: DownLoadCtrl
+            };
+
+            var resolve = {
+                config: /*@ngInject*/ function (scaffoldingConfigModel) {
+                    return scaffoldingConfigModel.getCurrentConfig();
+                }
+            };
+
+            configServiceProvider.registerConfig(description, resolve);
+        })
         .config(function ($compileProvider) {
             $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|tel|file|blob):/);
-        })
-    ;
+        });
 
     function DownLoadCtrl($modalInstance, config) {
 
         var modal = this;
+
+        modal.title = title;
 
         modal.config = config;
 
@@ -22,12 +43,12 @@
 
         modal.blobURL = getBlobURL();
 
-        modal.cancel = function(){
+        modal.cancel = function () {
             $modalInstance.dismiss();
         };
 
         // modalInstance resolves the promise
-        modal.close = function(){
+        modal.close = function () {
             $modalInstance.close(modal.json);
         };
 

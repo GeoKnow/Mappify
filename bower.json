@@ -9,9 +9,10 @@
     "angular-cookies": "~1.3.0",
     "angular-resource": "~1.3.0",
     "angular-sanitize": "~1.3.0",
+    "angular-leaflet-directive": "~0.7.11",
     "angular-strap": "2.1.6",
     "angular-strap-patches": "~0.1.3",
-    "angular-bootstrap-forms": "~0.1.2",
+    "angular-bootstrap-forms": "~0.1.4",
     "ui-router": "~0.2.13",
     "bootstrap": "3.2.0",
     "font-awesome": "4.3.0",
@@ -44,5 +45,8 @@
     "jassa": {
       "main": []
     }
+  },
+  "resolutions": {
+    "font-awesome": "4.3.0"
   }
 }
