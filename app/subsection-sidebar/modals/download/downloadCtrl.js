@@ -3,7 +3,11 @@
 
     angular.module('mappifyApp.sidebar.download', [])
 
-        .controller('DownloadCtrl', DownLoadCtrl);
+        .controller('DownloadCtrl', DownLoadCtrl)
+        .config(function ($compileProvider) {
+            $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|tel|file|blob):/);
+        })
+    ;
 
     function DownLoadCtrl($modalInstance, config) {
 
@@ -11,10 +15,12 @@
 
         modal.config = config;
 
-        modal.getBlobURL = function () {
+        function getBlobURL() {
             var blob = new Blob([modal.config], {type: 'application/json'});
             return URL.createObjectURL(blob);
-        };
+        }
+
+        modal.blobURL = getBlobURL();
 
         modal.cancel = function(){
             $modalInstance.dismiss();

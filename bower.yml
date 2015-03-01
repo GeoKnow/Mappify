@@ -35,9 +35,11 @@
       main:
         - "fonts/*"
     leaflet:
-          main:
-            - "dist/leaflet-src.js"
-            - "dist/leaflet.css"
+      main:
+        - "dist/leaflet-src.js"
+        - "dist/leaflet.css"
     leaflet-plugins:
-          main:
-            - layer/tile/Google.js
+      main:
+        - layer/tile/Google.js
+    jassa:
+      main: []

@@ -9,10 +9,13 @@
 
         var modal = this;
 
+        modal.search = {};
+
         modal.availableMarkerStyles = availableMarkerStyles;
+
         modal.unSelectedColor = '#3887be';
         modal.selectedColor   = '#56b881';
-        modal.icon = 'fa fa-flask';
+        modal.icon = 'flask';
 
         modal.cancel = function(){
             $modalInstance.dismiss();

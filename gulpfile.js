@@ -5,11 +5,18 @@ var _ = require('lodash');
 var $ = require('gulp-stack').plugins;
 
 $.bower = require('gulp-bower');
+$.download = require('gulp-download');
 $.flatten = require('gulp-flatten');
+$.rename = require('gulp-rename');
 $.less = require('gulp-less');
 $.yaml = require('gulp-yaml');
 
 var staticFiles = [
+    {
+        name: 'jassa',
+        folder: 'dist/bower_components/jassa',
+        src: 'app/bower_components/jassa/*.min.js'
+    },
     {
         name: 'fonts',
         folder: 'dist/fonts',
@@ -21,6 +28,11 @@ var staticFiles = [
         folder: 'dist/images',
         src: ['app/images/*', '**/leaflet/dist/images/**'],
         pipe: $.lazypipe().pipe($.flatten).pipe($.imagemin)
+    },
+    {
+        name: 'data jsons',
+        folder: 'dist/data',
+        src: 'data/*'
     }
 ];
 
@@ -42,7 +54,7 @@ var gulp = require('gulp-stack').gulp([
             }
         },
         bower: 'app/bower_components/**', // String of bower directory string
-        templateCacheOptions: {root: '/', module: 'easyagent'}
+        templateCacheOptions: {root: '/', module: 'mappifyApp'}
     }
 );
 
@@ -100,3 +112,11 @@ function mainLess() {
     return gulp.src('app/styles/app.less')
         .pipe($.less())
 }
+
+
+gulp.task('generateIconJSON', function () {
+    return $.download('https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/src/icons.yml')
+        .pipe($.yaml({safe: true, space: 2}))
+        .pipe($.rename('markerStyle.json'))
+        .pipe(gulp.dest('data'));
+});

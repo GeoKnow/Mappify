@@ -13,12 +13,12 @@
             };
         
         function extract(result) {
-            return result.data;
+            return result.data.icons;
         }
 
         function cacheMarkerStyle(result) {
             markerStyle = extract(result);
-            return cacheMarkerStyle;
+            return markerStyle;
         }
 
         model.getMarkerStyles = function () {

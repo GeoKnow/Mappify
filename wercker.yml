@@ -12,7 +12,7 @@ build:
     # Actually build with gulp and run tests
     - script:
         name: Run gulp build & test
-        code: gulp
+        code: gulp generateIconJSON && gulp
     - script:
         name: Cleanup build output
         code: ls -A | grep -v dist | xargs rm -rf
