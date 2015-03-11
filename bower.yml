@@ -24,6 +24,7 @@
     font-awesome: "4.3.0"
     # JS Dependencies
     lodash: "~3.2"
+    "jszip": "Stuk/jszip#~2.4.0"
   devDependencies:
   overrides:
     mappify-map:

@@ -19,20 +19,45 @@
         'mappifyApp.models.tileLayer',
         'mappifyApp.models.scaffoldingConfigModel',
         'mappifyApp.generator'
-
     ])
         .controller('SidebarController', SidebarController);
 
+    /* @ngInject */
     function SidebarController(scaffoldingConfigModel, configService, generatorService) {
 
         var sidebar = this;
 
         sidebar.availableConfigs = configService.availableConfigs;
+        sidebar.getConfigModel   = scaffoldingConfigModel.getCurrentConfig;
+        sidebar.generateApp      = function(name) {
+            generatorService.generateApp(name).then(function(result) {
 
-        sidebar.getConfigModel = scaffoldingConfigModel.getCurrentConfig;
+                var zip = result;
 
-        sidebar.generateApp = generatorService.generateApp;
+                console.log(result);
+                var content = null;
+                if (JSZip.support.uint8array) {
+                    content = zip.generate({type : "uint8array"});
+                } else {
+                    content = zip.generate({type : "string"});
+                }
+
+
+                var blob = new Blob([content], {type: ' application/zip'});
+                sidebar.zipBlobURL =  URL.createObjectURL(blob);
+
+                sidebar.zipIsReady  = true;
+            });
+        };
+
+        sidebar.zipBlobURL = null;
+        sidebar.zipIsReady  = false;
+        sidebar.autoRefresh = false;
+
+        sidebar.toggleAutoRefresh = function() {
+            sidebar.autoRefresh = !sidebar.autoRefresh;
+        }
+
     }
-
 
 })();

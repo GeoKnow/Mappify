@@ -16,10 +16,5 @@
   },
   "engines": {
     "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "echo test",
-    "precommit": "gulp jshint",
-    "prepush": "gulp test"
   }
 }

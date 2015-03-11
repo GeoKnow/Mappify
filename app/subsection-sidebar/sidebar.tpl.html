@@ -5,6 +5,7 @@
     <br>
 </div>
 <div class="clearfix"></div>
+
 <ul class="navigation">
     <li ng-repeat="config in sidebar.availableConfigs">
         <a href="" ng-click="config.open()">
@@ -14,26 +15,32 @@
         </a>
     </li>
 </ul>
+
 <div class="col-xs-12">
     <hr>
     <button ng-click="sidebar.generateApp('jassa')" class="btn btn-primary btn-block text-left"><i class="fa fa-fw fa-cogs"></i> Generate
         AngularJS App
     </button>
 </div>
+
+
+<div class="col-xs-12" ng-if="sidebar.zipIsReady">
+    <hr>
+    <a ng-href="{{ sidebar.zipBlobURL }}" download="app.zip" target="_blank">
+        <i class="fa fa-fw fa-cloud-download"></i>
+        Download App
+    </a>
+</div>
+
 <div class="col-xs-12" style="position: absolute; bottom: 15px;">
     <button class="btn btn-info btn-block text-left" ng-click="main.refreshConfig()" id="refreshButton">
         <i class="fa fa-fw fa-refresh"></i> Refresh map
     </button>
     <hr>
-    <button class="btn btn-block text-left" ng-class="(main.autoRefresh)?'btn-success':'btn-warning'"
-            ng-click="main.refreshConfig()" id="autoRefresh">
-        <i class="fa fa-fw " ng-class="(main.autoRefresh)?'fa-toggle-on':'fa-toggle-off'"></i> Autorefresh
-        <span ng-if="main.autoRefresh">on</span>
-        <span ng-if="!main.autoRefresh">off</span>
+    <button class="btn btn-block text-left" ng-class="(sidebar.autoRefresh)?'btn-success':'btn-warning'"
+            ng-click="sidebar.toggleAutoRefresh()" id="autoRefresh">
+        <i class="fa fa-fw " ng-class="(sidebar.autoRefresh)?'fa-toggle-on':'fa-toggle-off'"></i> Autorefresh
+        <span ng-if="sidebar.autoRefresh">on</span>
+        <span ng-if="!sidebar.autoRefresh">off</span>
     </button>
 </div>
-
-
-<!--<pre>-->
-<!--{{sidebar.getConfigModel() | json}}-->
-<!--</pre>-->

@@ -25,6 +25,8 @@
     "L": false,
     "FastClick": false,
     "alert": false,
-    "_": false
+    "_": false,
+    "console": false,
+    "JSZip": true
   }
 }
