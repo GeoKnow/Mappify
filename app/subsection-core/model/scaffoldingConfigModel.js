@@ -18,11 +18,12 @@
             },
             tileLayer: {
                 google: {
-                    true: false
+                    hybrid: false
                 }
             }
         };
 
+        // the public api / public methods
         model.setZoom = setZoom;
         model.setViewCenter = setViewCenter;
         model.getCurrentConfig = getCurrentConfig;
@@ -30,7 +31,7 @@
         model.setTileLayer = setTileLayer;
         model.setSetDataSource = setSetDataSource;
 
-        // @important we return an copy to prevent the card from changed while working on one
+        // @important we return an copy to prevent the map from changed while working on one
         // part of the config
         function getCurrentConfig(key) {
             if(key && data.hasOwnProperty(key)){

@@ -17,11 +17,13 @@
         'mappifyApp.models.markerStyleModel',
         'mappifyApp.models.mapConfigModel',
         'mappifyApp.models.tileLayer',
-        'mappifyApp.models.scaffoldingConfigModel'
+        'mappifyApp.models.scaffoldingConfigModel',
+        'mappifyApp.generator'
+
     ])
         .controller('SidebarController', SidebarController);
 
-    function SidebarController(scaffoldingConfigModel, configService) {
+    function SidebarController(scaffoldingConfigModel, configService, generatorService) {
 
         var sidebar = this;
 
@@ -29,6 +31,7 @@
 
         sidebar.getConfigModel = scaffoldingConfigModel.getCurrentConfig;
 
+        sidebar.generateApp = generatorService.generateApp;
     }
 
 
