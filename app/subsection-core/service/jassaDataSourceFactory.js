@@ -10,7 +10,7 @@
 
         factory.create = function() {
 
-            var sparqlService = createSparqlService('http://akswnc3.informatik.uni-leipzig.de/data/dbpedia/sparql', ['http://dbpedia.org']);
+            var sparqlService = createSparqlService('http://dbpedia.org/sparql', ['http://dbpedia.org']);
             var geoMapFactory = createGeoMapFactory('wkt');
             var concept = createConcept('http://dbpedia.org/ontology/University');
 
@@ -20,11 +20,7 @@
         };
 
         function createMapDataSource(sparqlService, geoMapFactory, concept) {
-
-            var attributes = {};
-
-            var mapDataSource = jassa.geo.GeoDataSourceUtils.createGeoDataSourceLabels(sparqlService, geoMapFactory, concept, attributes);
-            return mapDataSource;
+            return jassa.geo.GeoDataSourceUtils.createGeoDataSourceLabels(sparqlService, geoMapFactory, concept, {});
         }
 
         function createConcept(conceptString) {

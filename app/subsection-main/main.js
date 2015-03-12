@@ -4,58 +4,38 @@
     angular.module('mappifyApp.main',
         [
             'ui.router',
-            'mappifyApp.service.jassaDataSourceFactory'
+            'mappifyApp.service.jassaDataSourceFactory',
+            'mappifyApp.service.mapService'
         ])
         .controller('MainController', MainController);
 
-    function MainController(mapConfigModel, $timeout, jassaDataSourceFactory) {
+    function MainController($rootScope, mapService) {
 
         var main = this;
-        main.showMap = true;
 
-        main.getMapConfig = function() {
-            return mapConfigModel.createMapConfigFromScafoldingConfig();
-        };
+        main.showMap    = mapService.showMap;
+        main.config     = mapService.config;
+        main.datasource = mapService.datasource;
 
-        // @notice add other data source here
-        // we only handle jassa
-        main.getDataSource = function() {
-            return handleJassaDataSource(main.getMapConfig(), jassaDataSourceFactory);
-        };
+        $rootScope.$on('mapVisibilityChanged', function(event, visibility) {
+            main.showMap = visibility;
+        });
 
-        main.refreshConfig = function(){
-            main.showMap = false;
-            main.config = main.getMapConfig();
-            main.datasource = main.getDataSource();
+        $rootScope.$on('mapConfigChanged', function() {
+            main.config = mapService.getMapConfig();
+        });
 
+        $rootScope.$on('mapDatSourceConfigChanged', function() {
+            main.datasource = mapService.getDataSource();
 
-            $timeout(function(){
-                main.showMap = true;
-            },500);
-        };
+            console.log(main.datasource);
+            console.log(main.datasource);
+            console.log(main.datasource);
+            console.log(main.datasource);
+            console.log(main.datasource);
+            console.log(main.datasource);
 
-        main.config = {
-            viewCenter: {
-                latitude:  51.339018,
-                longitude: 12.3797776
-            },
-            zoom: 15
-        };
-
-        main.datasource = {};
-        main.datasource.fetchData = function () {
-            return [
-            ];
-        };
-    }
-
-    function handleJassaDataSource(dataSourceConfig, jassaDataSourceFactory) {
-
-        var dataSource = jassaDataSourceFactory.create(dataSourceConfig);
-
-        return [
-            dataSource
-        ];
+        });
     }
 
 })();

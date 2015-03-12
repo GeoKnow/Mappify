@@ -20,12 +20,21 @@
 
             // todo - move te separate service
             var currentScaffoldingConfig = scaffoldingConfigModel.getCurrentConfig();
-            data.zoom = currentScaffoldingConfig.layout.zoom;
+
+
+
+            //data.zoom = currentScaffoldingConfig.layout.zoom;
+            data.zoom = 1;
+
             data.viewCenter = currentScaffoldingConfig.layout.viewCenter;
 
             // next
 
             return data;
+        }
+
+        function getRandomArbitrary(min, max) {
+            return Math.random() * (max - min) + min;
         }
     }
 

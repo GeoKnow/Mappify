@@ -18,12 +18,13 @@
         'mappifyApp.models.mapConfigModel',
         'mappifyApp.models.tileLayer',
         'mappifyApp.models.scaffoldingConfigModel',
-        'mappifyApp.generator'
+        'mappifyApp.generator',
+        'mappifyApp.service.mapService'
     ])
         .controller('SidebarController', SidebarController);
 
     /* @ngInject */
-    function SidebarController(scaffoldingConfigModel, configService, generatorService) {
+    function SidebarController(scaffoldingConfigModel, configService, generatorService, mapService) {
 
         var sidebar = this;
 
@@ -53,6 +54,8 @@
         sidebar.zipBlobURL = null;
         sidebar.zipIsReady  = false;
         sidebar.autoRefresh = false;
+
+        sidebar.refreshConfig = mapService.refreshConfig;
 
         sidebar.toggleAutoRefresh = function() {
             sidebar.autoRefresh = !sidebar.autoRefresh;
