@@ -4,39 +4,25 @@
     angular.module('mappifyApp.models.mapConfigModel', [
         'mappifyApp.models.scaffoldingConfigModel'
     ])
-        .factory('mapConfigModel', mapConfigModel);
+        .service('mapConfigModel', mapConfigModel);
 
     // the map config
     function mapConfigModel(scaffoldingConfigModel) {
 
-        var data = {};
-
-        var mapConfig = {};
+        var mapConfig = this;
         mapConfig.createMapConfigFromScafoldingConfig = createMapConfigFromScaffoldingConfig;
-
-        return mapConfig;
 
         function createMapConfigFromScaffoldingConfig() {
 
-            // todo - move te separate service
+            var data = {};
             var currentScaffoldingConfig = scaffoldingConfigModel.getCurrentConfig();
 
-
-
-            //data.zoom = currentScaffoldingConfig.layout.zoom;
-            data.zoom = 1;
-
+            data.zoom = currentScaffoldingConfig.layout.zoom;
             data.viewCenter = currentScaffoldingConfig.layout.viewCenter;
 
             // next
 
             return data;
         }
-
-        function getRandomArbitrary(min, max) {
-            return Math.random() * (max - min) + min;
-        }
     }
-
-
 })();

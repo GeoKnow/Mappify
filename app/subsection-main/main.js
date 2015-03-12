@@ -1,8 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('mappifyApp.main',
-        [
+    angular.module('mappifyApp.main', [
             'ui.router',
             'mappifyApp.service.jassaDataSourceFactory',
             'mappifyApp.service.mapService'
@@ -17,6 +16,9 @@
         main.config     = mapService.config;
         main.datasource = mapService.datasource;
 
+        // the mapService emits change notifications if one of it's properties
+        // changes. This controller listens for those events and updates
+        // it values accordingly
         $rootScope.$on('mapVisibilityChanged', function(event, visibility) {
             main.showMap = visibility;
         });
@@ -27,14 +29,6 @@
 
         $rootScope.$on('mapDatSourceConfigChanged', function() {
             main.datasource = mapService.getDataSource();
-
-            console.log(main.datasource);
-            console.log(main.datasource);
-            console.log(main.datasource);
-            console.log(main.datasource);
-            console.log(main.datasource);
-            console.log(main.datasource);
-
         });
     }
 

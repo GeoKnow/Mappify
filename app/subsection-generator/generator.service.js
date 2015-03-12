@@ -51,7 +51,6 @@
                 var zip = new JSZip();
                 _.each(data, function(file){
 
-                    console.log(file);
 
                     if (file.hasOwnProperty('folder')) {
                         zip.folder(file.folder).file(file.fileName, file.fileContent);

@@ -30,7 +30,7 @@
 
             $timeout(function(){
                 emitMapVisibilityChangedToEvent($rootScope, true);
-            },1500);
+            }, 1500);
         }
 
         // start values
@@ -39,7 +39,7 @@
                 latitude:  51.339018,
                 longitude: 12.3797776
             },
-            zoom: 7
+            zoom: 12
         };
 
         service.datasource = {};
