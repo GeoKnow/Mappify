@@ -8,19 +8,22 @@
 
         var factory = this;
 
-        factory.create = function() {
+        // default value overwritable via the definition object
+        var paginateValue = 100;
 
-            var sparqlService = createSparqlService('http://dbpedia.org/sparql', ['http://dbpedia.org']);
-            var geoMapFactory = createGeoMapFactory('wkt');
-            var concept = createConcept('http://dbpedia.org/ontology/University');
+        // default value overwritable via the definition object
+        var pageExpand = 200;
 
-            var dataSource = createMapDataSource(sparqlService, geoMapFactory, concept);
-
-            return dataSource;
+        // default value overwritable via the definition object
+        var wktMapFactoryOptions = {
+            wktPredicateName: 'http://www.w3.org/2003/01/geo/wgs84_pos#geometry',
+            intersectsFnName:  'bif:st_intersects',
+            geomFromTextFnName: 'bif:st_geomFromText'
         };
 
         function createMapDataSource(sparqlService, geoMapFactory, concept) {
-            return jassa.geo.GeoDataSourceUtils.createGeoDataSourceLabels(sparqlService, geoMapFactory, concept, {});
+            return jassa.geo.GeoDataSourceUtils
+                .createGeoDataSourceLabels(sparqlService, geoMapFactory, concept, {});
         }
 
         function createConcept(conceptString) {
@@ -28,13 +31,9 @@
         }
 
         function createSparqlService(url, graphUris) {
-
-            var sparqlService = jassa.service.SparqlServiceBuilder.http(url, graphUris, {type: 'POST'})
-                .cache().virtFix().paginate(1000).pageExpand(100).create();
-
-            return sparqlService;
+            return jassa.service.SparqlServiceBuilder.http(url, graphUris, {type: 'POST'})
+                .cache().virtFix().paginate(paginateValue).pageExpand(pageExpand).create();
         }
-
 
         function createGeoMapFactory(type)
         {
@@ -44,12 +43,53 @@
                 return jassa.geo.GeoMapFactoryUtils
                     .wgs84MapFactory;
             } else if (type === 'wkt') {
-                return jassa.geo.GeoMapFactoryUtils
-                    .createWktMapFactory('http://www.w3.org/2003/01/geo/wgs84_pos#geometry', 'bif:st_intersects', 'bif:st_geomFromText');
+                return jassa.geo.GeoMapFactoryUtils.createWktMapFactory(
+                    wktMapFactoryOptions.wktPredicateName,
+                    wktMapFactoryOptions.intersectsFnName,
+                    wktMapFactoryOptions.geomFromTextFnName
+                );
             } else {
-                throw new Error('unsupported GeoMapFactory type');
+                throw new Error('unsupported GeoMapFactory type: ' + type);
             }
         }
-    }
 
+        // @improvement move this to a tool belt library
+        // returns true if the passed value is an positive integer or zero
+        function isNormalInteger(str) {
+            var n = ~~Number(str);
+            return String(n) === str && n >= 0;
+        }
+
+        // checks if the provided definition object contains any value with
+        // should over right a default value
+        function handlePassConfigValues(definition) {
+
+            if (definition.hasOwnProperty('paginateValue') && isNormalInteger(definition.paginateValue)) {
+                paginateValue = definition.paginateValue;
+            }
+
+            if (definition.hasOwnProperty('pageExpand') && isNormalInteger(definition.pageExpand)) {
+                paginateValue = definition.pageExpand;
+            }
+
+            // @note interface in js would be awesome
+            if (definition.hasOwnProperty('wktMapFactoryOptions')) {
+                wktMapFactoryOptions =  definition.pageExpand;
+            }
+        }
+
+        // public methods
+        factory.createDataSource = function(definition) {
+
+            handlePassConfigValues(handlePassConfigValues);
+
+            return createMapDataSource(
+                createSparqlService(definition.service, definition.graphUriSet)    ,
+                createGeoMapFactory(definition.geoMapType),
+                createConcept(definition.concept)
+            );
+        };
+
+
+    }
 })();

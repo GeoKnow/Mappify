@@ -2,17 +2,17 @@
     'use strict';
 
     angular.module('mappifyApp.models.mapConfigModel', [
-        'mappifyApp.models.scaffoldingConfigModel'
-    ])
+            'mappifyApp.models.scaffoldingConfigModel',
+        ])
         .service('mapConfigModel', mapConfigModel);
 
     // the map config
     function mapConfigModel(scaffoldingConfigModel) {
 
         var mapConfig = this;
-        mapConfig.createMapConfigFromScafoldingConfig = createMapConfigFromScaffoldingConfig;
+        mapConfig.createFromScafoldingConfig = createFromScaffoldingConfig;
 
-        function createMapConfigFromScaffoldingConfig() {
+        function createFromScaffoldingConfig() {
 
             var data = {};
             var currentScaffoldingConfig = scaffoldingConfigModel.getCurrentConfig();

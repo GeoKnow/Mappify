@@ -2,11 +2,13 @@
     'use strict';
 
     angular.module('mappifyApp.service.mapService', [
-            'mappifyApp.service.jassaDataSourceFactory'
+            'mappifyApp.service.jassaDataSourceFactory',
+            'mappifyApp.models.dataSourceConfigModel',
+            'mappifyApp.models.mapConfigModel'
         ])
         .service('mapService', mapService);
 
-    function mapService($rootScope, $timeout, mapConfigModel, jassaDataSourceFactory) {
+    function mapService($rootScope, $timeout, mapConfigModel, dataSourceConfigModel, jassaDataSourceFactory) {
 
         var service = this;
 
@@ -14,12 +16,18 @@
         service.showMap = true;
 
         service.getMapConfig = function() {
-            service.config =  mapConfigModel.createMapConfigFromScafoldingConfig();
+            service.config =  mapConfigModel.createFromScafoldingConfig();
+
             return service.config;
         };
 
+        // todo there are two cases 1) jassa 2) sponate
         service.getDataSource = function() {
-            service.datasource = handleJassaDataSource(service.getMapConfig(), jassaDataSourceFactory);
+            service.datasource = handleJassaDataSource(
+                dataSourceConfigModel.createFromScaffoldingConfig(),
+                jassaDataSourceFactory
+            );
+
             return service.datasource;
         };
 
@@ -58,12 +66,17 @@
     }
 
     function emitDatSourceConfigChanged($rootScope) {
-        $rootScope.$emit('mapDatSourceConfigChanged');
+        $rootScope.$emit('mapDataSourceConfigChanged');
     }
 
-    function handleJassaDataSource(dataSourceConfig, jassaDataSourceFactory) {
+    function handleJassaDataSource(dataSourceConfig, factory) {
 
-        var dataSource = jassaDataSourceFactory.create(dataSourceConfig);
+        // check if the passed factory provides a createDataSource method
+        if (typeof factory.createDataSource !== 'function') {
+            throw new Error('mapService: the passed datasourcefactory does not provide the required createDataSource method');
+        }
+
+        var dataSource = factory.createDataSource(dataSourceConfig);
 
         return [
             dataSource

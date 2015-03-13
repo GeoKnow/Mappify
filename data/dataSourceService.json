@@ -5,7 +5,14 @@
     "type": "sparql",
     "serviceUrl": "http://dbpedia.org/sparql",
     "defaultGraphUris": ["http://dbpedia.org"],
-    "GeoMapFactory": "WktMapFactory"
+    "geoMapFactory": "wkt",
+    "exampleConcepts": {
+      "Bridge": "http://dbpedia.org/ontology/Bridge",
+      "Castle": "http://dbpedia.org/ontology/Castle",
+      "GolfCourse": "http://dbpedia.org/ontology/GolfCourse",
+      "RollerCoaster": "http://dbpedia.org/ontology/RollerCoaster",
+      "RaceTrack": "http://dbpedia.org/ontology/RaceTrack",
+      "RailwayStation": "http://dbpedia.org/ontology/Tunnel"
+    }
   }
-
 ]

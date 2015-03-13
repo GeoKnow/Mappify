@@ -14,7 +14,7 @@
                     latitude:  51.339018,
                     longitude: 12.3797776
                 },
-                zoom: 15
+                zoom: 6
             },
             tileLayer: {
                 google: {
@@ -37,7 +37,6 @@
             if(key && data.hasOwnProperty(key)){
                 return angular.copy(data[key]);
             }
-
             return angular.copy(data);
         }
 
@@ -62,11 +61,7 @@
         function setSetDataSource(newDataSource) {
 
             data.dataSources = data.dataSources || [];
-
-            // todo change to id
-            var index = _.findIndex(data.dataSources, function (dataSource) {
-                return dataSource.displayName === newDataSource.displayName;
-            });
+            var index = getDataSourceIndexInSet(newDataSource);
 
             // handle as create
             if (-1 === index) {
@@ -76,6 +71,14 @@
             else {
                 data.dataSources[index] = newDataSource;
             }
+        }
+
+        // return the index if a dataSource with the same unique identifier is already present
+        // or -1 if not
+        function getDataSourceIndexInSet(newDataSource) {
+            return _.findIndex(data.dataSources, function (dataSource) {
+                return dataSource.displayName === newDataSource.displayName;
+            });
         }
 
         return model;

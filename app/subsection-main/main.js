@@ -27,8 +27,11 @@
             main.config = mapService.getMapConfig();
         });
 
-        $rootScope.$on('mapDatSourceConfigChanged', function() {
+        $rootScope.$on('mapDataSourceConfigChanged', function() {
             main.datasource = mapService.getDataSource();
+
+
+
         });
     }
 

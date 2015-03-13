@@ -3,11 +3,10 @@
 
     var title = 'Change DataSource';
 
-
     angular.module('mappifyApp.sidebar.dataSource', [
-        'zenubu.input',
-        'mappifyApp.sidebar.configService'
-    ])
+            'zenubu.input',
+            'mappifyApp.sidebar.configService'
+        ])
         .config(function (configServiceProvider) {
             var description = {
                 order: 20,
@@ -21,7 +20,6 @@
                 availableServices: /*@ngInject*/ function (dataSourceServiceModel) {
                     return dataSourceServiceModel.getDataSourceServices();
                 }
-
             };
 
             configServiceProvider.registerConfig(description, resolve);
@@ -29,11 +27,11 @@
         });
 
     /*@ngInject*/
-    function  DataSourceCtrl($modalInstance, availableServices, scaffoldingConfigModel) {
+    function DataSourceCtrl($modalInstance, availableServices, scaffoldingConfigModel) {
 
         var modal = this;
 
-       modal.title = title;
+        modal.title = title;
 
         modal.ds = {};
         modal.selectedService = null;
@@ -71,6 +69,7 @@
 
         modal.close = function () {
             appendSelectedServiceToDataSource();
+
             scaffoldingConfigModel.setSetDataSource(modal.ds);
             $modalInstance.close(modal.ds);
         };
