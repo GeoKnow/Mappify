@@ -2,25 +2,29 @@
     'use strict';
 
     angular.module('mappifyApp.sidebar', [
-        'ui.router',
-        'mappifyApp.sidebar.layout',
-        'mappifyApp.sidebar.configService',
-        'mappifyApp.sidebar.load',
-        'mappifyApp.sidebar.sponate',
-        'mappifyApp.sidebar.mapSettings',
-        'mappifyApp.sidebar.popups',
-        'mappifyApp.sidebar.download',
-        'mappifyApp.sidebar.tileLayer',
-        'mappifyApp.sidebar.dataSource',
-        'mappifyApp.sidebar.markerStyle',
-        'mappifyApp.models.dataSourceService',
-        'mappifyApp.models.markerStyleModel',
-        'mappifyApp.models.mapConfigModel',
-        'mappifyApp.models.tileLayer',
-        'mappifyApp.models.scaffoldingConfigModel',
-        'mappifyApp.generator',
-        'mappifyApp.service.mapService'
-    ])
+            'ui.router',
+
+            'mappifyApp.generator',
+
+            'mappifyApp.models.dataSourceService',
+            'mappifyApp.models.exampleContainerModel',
+            'mappifyApp.models.mapConfigModel',
+            'mappifyApp.models.markerStyleModel',
+            'mappifyApp.models.scaffoldingConfigModel',
+            'mappifyApp.models.tileLayer',
+
+            'mappifyApp.sidebar.configService',
+            'mappifyApp.sidebar.dataSource',
+            'mappifyApp.sidebar.download',
+            'mappifyApp.sidebar.layout',
+            'mappifyApp.sidebar.load',
+            'mappifyApp.sidebar.mapSettings',
+            'mappifyApp.sidebar.markerStyle',
+            'mappifyApp.sidebar.popups',
+            'mappifyApp.sidebar.sponate',
+            'mappifyApp.sidebar.tileLayer',
+            'mappifyApp.service.mapService'
+        ])
         .controller('SidebarController', SidebarController);
 
     /* @ngInject */
@@ -35,14 +39,12 @@
 
                 var zip = result;
 
-                console.log(result);
                 var content = null;
                 if (JSZip.support.uint8array) {
                     content = zip.generate({type : "uint8array"});
                 } else {
                     content = zip.generate({type : "string"});
                 }
-
 
                 var blob = new Blob([content], {type: ' application/zip'});
                 sidebar.zipBlobURL =  URL.createObjectURL(blob);

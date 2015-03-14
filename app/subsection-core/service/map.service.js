@@ -28,6 +28,12 @@
                 jassaDataSourceFactory
             );
 
+            console.log(service.datasource);
+            console.log(service.datasource);
+            console.log(service.datasource);
+            console.log(service.datasource);
+
+
             return service.datasource;
         };
 
@@ -41,8 +47,11 @@
             }, 1500);
         }
 
-        // start values
-        service.config = {
+        service.config = {};
+        service.datasource = {};
+
+        // the default map config values
+        service.initialtMapConfig = {
             viewCenter: {
                 latitude:  51.339018,
                 longitude: 12.3797776
@@ -50,8 +59,9 @@
             zoom: 12
         };
 
-        service.datasource = {};
-        service.datasource.fetchData = function () {
+        // the default data source object
+        service.initialDatasource = {};
+        service.initialDatasource.fetchData = function () {
             return [
             ];
         };

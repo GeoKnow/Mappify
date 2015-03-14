@@ -33,11 +33,11 @@
         var modal = this;
 
         modal.title = title;
-
         modal.config = config;
 
         function getBlobURL() {
-            var blob = new Blob([modal.config], {type: 'application/json'});
+            var json = JSON.stringify(modal.config, null, 2);
+            var blob = new Blob([json], {type: 'application/json'});
             return URL.createObjectURL(blob);
         }
 

@@ -3,11 +3,9 @@
 
     var title = 'Change TileLayers';
 
-
     angular.module('mappifyApp.sidebar.tileLayer', [
-        'mappifyApp.sidebar.configService'
-    ])
-
+            'mappifyApp.sidebar.configService'
+        ])
         .config(function (configServiceProvider) {
             var description = {
                 order: 70,

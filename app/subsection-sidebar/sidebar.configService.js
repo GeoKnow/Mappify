@@ -8,8 +8,6 @@
 
         var configs = {};
 
-        //changeLayout();
-
         return {
             registerConfig: registerConfig,
             $get: configService

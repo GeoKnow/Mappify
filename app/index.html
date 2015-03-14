@@ -35,23 +35,19 @@
 <!-- inject:vendor:js -->
 <!-- endinject -->
 <!-- ref:js js/jassa.min.js -->
-<script src="bower_components/jassa/jassa.min.js"></script>
+<script src="bower_components/jassa/jassa.js"></script>
 <!-- endref -->
 <!-- inject:js -->
 <!-- endinject -->
 <script>
     // global jassa object
-    jassa = new Jassa(Promise, function() {
+    var jassa = new Jassa(Promise, function() {
         var jqXHR = $.ajax.apply(this, arguments);
-
         // todo: move to util method
-        //  - if no second argument is passed use this as default
-
         // r short form for inline result
         var r = Promise.resolve(jqXHR)
                 .cancellable()
                 .catch(Promise.TimeoutError, Promise.CancellationError, function(e) {
-                    //console.log('CANCELLED REQUEST');
                     jqXHR.abort();
                     throw e;
                 });

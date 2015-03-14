@@ -35,7 +35,22 @@
             throw new Error('generatorService: no service found');
         }
 
-        // public methods
+        function createJsZip(data) {
+
+            var zip = new JSZip();
+
+            _.each(data, function(file){
+                if (file.hasOwnProperty('folder')) {
+                    zip.folder(file.folder).file(file.fileName, file.fileContent);
+                } else {
+                    zip.file(file.filename, file.fileContent);
+                }
+            });
+
+            return zip;
+        }
+
+        // public methods / public api
         service.getAllRegisteredStrategies = function() {
             return strategySet;
         };
@@ -47,19 +62,7 @@
 
             // if it does execute it
             return strategy.generate().then(function(data) {
-
-                var zip = new JSZip();
-                _.each(data, function(file){
-
-
-                    if (file.hasOwnProperty('folder')) {
-                        zip.folder(file.folder).file(file.fileName, file.fileContent);
-                    } else {
-                        zip.file(file.filename, file.fileContent);
-                    }
-                });
-
-                return zip;
+                return createJsZip(data);
             });
         };
 

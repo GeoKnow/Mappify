@@ -7,9 +7,20 @@
                    ng-click="modal.cancel()"></i>
             </div>
             <div class="modal-body">
+
+                <h5>Insert your json here</h5>
+
                 <textarea ng-model="modal.json">
 
                 </textarea>
+
+                <h5>or select an example</h5>
+
+                <div ng-repeat="example in modal.exampleContainer" ng-click="modal.selectExample(example)" style="border: 1px solid #ccc; padding: 0 5px ; margin: 5px 0;">
+                    <h6>{{example.name}}</h6>
+                    <p>{{example.description}}</p>
+                </div>
+
             </div>
             <div class="modal-footer">
                 <button class="btn btn-success" ng-click="modal.close()">

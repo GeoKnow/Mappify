@@ -6,11 +6,6 @@
         ])
         .service('jassaStrategyService', jassaStrategyService);
 
-
-    // the jassa strategy used
-    //
-    //   lodash templates
-
     /* @ngInject */
     function jassaStrategyService($http, $q, jassaTemplateValueProvider)  {
 
@@ -41,21 +36,30 @@
             return result.data;
         }
 
-        function render(template, templateFile) {
+        // renders the template and return an object
+        //
+        // var createFile = {
+        //    fileContent: '',
+        //    fileName: '',
+        //    folder: ''
+        // };
+        //
+        function renderTemplate(template, templateFile) {
 
+            // we use lodash template functionality
             var compiled = _.template(template);
             var values   = jassaTemplateValueProvider.getTemplateValueProviderByKey(templateFile.templateValueProviderKey);
 
-            var result = {
+            var createFile = {
                 fileContent: compiled(values),
                 fileName: templateFile.fileName
             };
 
             if (templateFile.hasOwnProperty('folder')) {
-                result.folder = templateFile.folder;
+                createFile.folder = templateFile.folder;
             }
 
-            return result;
+            return createFile;
         }
 
         // load all template file
@@ -65,7 +69,7 @@
                 return $http.get(templateFile.url)
                     .then(extract)
                     .then(function(result) {
-                        return render(result, templateFile);
+                        return renderTemplate(result, templateFile);
                     });
             });
 

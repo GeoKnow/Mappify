@@ -4,9 +4,8 @@
     var title = 'Load Config';
 
     angular.module('mappifyApp.sidebar.load', [
-        'mappifyApp.sidebar.configService'
-    ])
-
+            'mappifyApp.sidebar.configService'
+        ])
         .config(function (configServiceProvider) {
             var description = {
                 order: 0,
@@ -16,17 +15,31 @@
                 ctrl: LoadCtrl
             };
 
-            configServiceProvider.registerConfig(description);
+            var resolve = {
+                exampleContainer: /*@ngInject*/ function (exampleContainerModel) {
+                    return exampleContainerModel.getContainer();
+                }
+            };
+
+            configServiceProvider.registerConfig(description, resolve);
         });
 
+
     /*@ngInject*/
-    function LoadCtrl($modalInstance, scaffoldingConfigModel) {
+    function LoadCtrl($modalInstance, scaffoldingConfigModel, exampleContainer) {
 
         var modal = this;
 
-        modal.title = title;
+        console.log(exampleContainer);
 
+        modal.title = title;
         modal.json = '';
+        modal.exampleContainer = exampleContainer;
+
+        modal.selectExample = function(selectedExample) {
+            modal.json = JSON.stringify(selectedExample.config, null, 2);
+            console.log(selectedExample);
+        };
 
         modal.cancel = function () {
             $modalInstance.dismiss();

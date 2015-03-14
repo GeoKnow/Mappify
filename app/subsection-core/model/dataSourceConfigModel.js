@@ -16,7 +16,7 @@
 
             var config = scaffoldingConfigModel.getCurrentConfig();
 
-            if (! config.hasOwnProperty('dataSources') && _.isArray(config.dataSources)) {
+            if (! config.hasOwnProperty('dataSources') || ! _.isArray(config.dataSources)) {
                 throw new Error('dataSourceConfigModel: the config contains no dataSource definitions');
             }
 
