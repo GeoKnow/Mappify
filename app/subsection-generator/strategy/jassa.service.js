@@ -21,18 +21,33 @@
             }, {
                 templateValueProviderKey: 'index',
                 url: baseUrl + 'index.html.tpl',
-                fileName: 'app.html',
+                fileName: 'index.html',
                 folder: 'app'
             }, {
-                templateValueProviderKey: 'jassa',
+                templateValueProviderKey: 'default',
                 url: baseUrl + 'jassaDataSourceFactory.js.tpl',
                 fileName: 'jassaDataSourceFactory.js',
                 folder: 'app'
+            },  {
+                templateValueProviderKey: 'default',
+                url: baseUrl + 'package.tpl',
+                fileName: 'package.json'
+            }, {
+                templateValueProviderKey: 'default',
+                url: baseUrl + 'bower.tpl',
+                fileName: 'bower.json'
             }
+
         ];
 
         // @improvement check http status code should be 200
         function extract(result) {
+
+            // $http uses Response transformations - If JSON response is detected, deserialize it using a JSON parser.
+            if (_.isObject(result.data)) {
+                return JSON.stringify(result.data , null, 2);
+            }
+
             return result.data;
         }
 
@@ -47,26 +62,31 @@
         function renderTemplate(template, templateFile) {
 
             // we use lodash template functionality
+
             var compiled = _.template(template);
             var values   = jassaTemplateValueProvider.getTemplateValueProviderByKey(templateFile.templateValueProviderKey);
 
-            var createFile = {
+            var createdFile = {
                 fileContent: compiled(values),
                 fileName: templateFile.fileName
             };
 
             if (templateFile.hasOwnProperty('folder')) {
-                createFile.folder = templateFile.folder;
+                createdFile.folder = templateFile.folder;
             }
 
-            return createFile;
+            return createdFile;
+        }
+
+        function loadTemplateFiles(url) {
+            return $http.get(url);
         }
 
         // load all template file
         service.generate = function() {
 
             var promises = templateFileSet.map(function(templateFile) {
-                return $http.get(templateFile.url)
+                return loadTemplateFiles(templateFile.url)
                     .then(extract)
                     .then(function(result) {
                         return renderTemplate(result, templateFile);

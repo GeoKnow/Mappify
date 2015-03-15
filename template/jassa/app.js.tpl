@@ -8,17 +8,12 @@
         ])
         .controller('AppCtrl', AppCtrl);
 
-    // this object contains your specified map configuration
+    // this function return an object containing your specified map configuration
     function getMappifyMapConfig() {
-        return {};
+        return <%= mapConfig %>;
     }
 
-    var dataSourceDefinitionObject = {
-        service: '',
-        graphUris: [''],
-        geoMapType: 'wkt'
-
-    };
+    var dataSourceDefinitionObject = <%= dataSourceDefinitionObject %>;
 
     /* @ngInject */
     function AppCtrl(jassaDataSourceFactory) {

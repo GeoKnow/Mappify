@@ -30,8 +30,6 @@
 
         var modal = this;
 
-        console.log(exampleContainer);
-
         modal.title = title;
         modal.json = '';
         modal.exampleContainer = exampleContainer;

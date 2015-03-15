@@ -1,10 +1,12 @@
 (function () {
     'use strict';
 
-    angular.module('mappifyApp.generator.jassa.templateValueProvider', [])
+    angular.module('mappifyApp.generator.jassa.templateValueProvider', [
+            'mappifyApp.models.dataSourceConfigModel'
+        ])
         .service('jassaTemplateValueProvider', jassaTemplateValueProvider);
 
-    function jassaTemplateValueProvider()  {
+    function jassaTemplateValueProvider(dataSourceConfigModel)  {
 
         var provider = this;
 
@@ -13,26 +15,39 @@
             switch(key) {
                 case ('app'):
                     return appTemplateValueProvider();
-                    break;
+
                 case ('index'):
                     return indexTemplateValueProvider();
-                    break;
-                case ('jassa'):
-                    return jassaTemplateValueProvider();
-                    break;
+
+                case ('default'):
+                    return defaultTemplateValueProvider();
+
                 default:
                     new Error('jassaStrategyService: no TemplateValueProvider found for key ' + key.toString());
-
             }
         };
 
         // private functions
+        function defaultTemplateValueProvider() {
+            return {
+                appName: 'myApp'
+            };
+        }
+
         function appTemplateValueProvider() {
             return {
                 appName: 'myApp',
-                dataSourceDefinitionObject: '{ foo: 12}',
-                getMappifyMapConfig: '{ foo: 121212}'
-            }
+                dataSourceDefinitionObject: generateDataSourceDefinitionObject(dataSourceConfigModel),
+                mapConfig: '{ foo: 121212}'
+            };
+        }
+
+        function generateDataSourceDefinitionObject(dataSourceConfigModel) {
+            var dataSourceDefinitionObject = dataSourceConfigModel.createFromScaffoldingConfig();
+
+            return JSON.stringify(
+                dataSourceDefinitionObject, null, 2
+            );
         }
 
         function indexTemplateValueProvider() {
@@ -40,13 +55,7 @@
                 appName: 'myApp',
                 mappify: '<mappify></mappify>',
                 googleMaps: ''
-            }
-        }
-
-        function jassaTemplateValueProvider() {
-            return {
-                appName: 'myApp'
-            }
+            };
         }
 
     }

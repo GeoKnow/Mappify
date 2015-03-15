@@ -28,12 +28,6 @@
                 jassaDataSourceFactory
             );
 
-            console.log(service.datasource);
-            console.log(service.datasource);
-            console.log(service.datasource);
-            console.log(service.datasource);
-
-
             return service.datasource;
         };
 

@@ -16,9 +16,8 @@
 
 </head>
 <body>
+
 <%= mappify %>
-
-
 
 <!-- inject:vendor:js -->
 <!-- endinject -->
