@@ -10,7 +10,7 @@
     "default": false
   },
   "togglePopUp": {
-    "description": "Only max. one PopUp will be displayed concurrently.",
+    "description": "Toggle PopUps - max. one PopUp will be displayed concurrently.",
     "key": "togglePopUp",
     "default": true
   },
