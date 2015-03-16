@@ -7,9 +7,12 @@
                    ng-click="modal.cancel()"></i>
             </div>
             <div class="modal-body">
-                <textarea ng-model="modal.mapSettings">
+                <div ng-repeat="(optionKey, optionValue) in modal.mapSettings">
+                    <input type="checkbox" ng-model="optionValue" ng-change="modal.setOption(optionKey, optionValue)"/>
+                    {{modal.getDescriptionForOption(optionKey)}}
+                </div>
 
-                </textarea>
+                <div class="clearfix"></div>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-success" ng-click="modal.close()">

@@ -24,12 +24,15 @@
         };
 
         // the public api / public methods
-        model.setZoom = setZoom;
-        model.setViewCenter = setViewCenter;
         model.getCurrentConfig = getCurrentConfig;
+        model.getCurrentConfigForMapOptions = getCurrentConfigForMapOptions;
         model.loadConfigModelFromJSON = loadConfigModelFromJSON;
-        model.setTileLayer = setTileLayer;
+        model.setMapOptions = setMapOptions;
         model.setSetDataSource = setSetDataSource;
+        model.setTileLayer = setTileLayer;
+        model.setViewCenter = setViewCenter;
+        model.setViewCenter = setViewCenter;
+        model.setZoom = setZoom;
 
         // @important we return an copy to prevent the map from changed while working on one
         // part of the config
@@ -38,6 +41,14 @@
                 return angular.copy(data[key]);
             }
             return angular.copy(data);
+        }
+
+        function getCurrentConfigForMapOptions() {
+            if (! data.hasOwnProperty('mapOption')) {
+                return {};
+            }
+
+            return angular.copy(data.mapOption);
         }
 
         function setZoom(newZoom) {
@@ -71,6 +82,10 @@
             else {
                 data.dataSources[index] = newDataSource;
             }
+        }
+
+        function setMapOptions(options) {
+            data.mapOption = options;
         }
 
         // return the index if a dataSource with the same unique identifier is already present

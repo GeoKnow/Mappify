@@ -11,9 +11,9 @@
             'mappifyApp.models.exampleContainerModel',
             'mappifyApp.models.mapConfigModel',
             'mappifyApp.models.markerStyleModel',
+            'mappifyApp.models.mapSettingOptionModel',
             'mappifyApp.models.scaffoldingConfigModel',
             'mappifyApp.models.tileLayer',
-
 
             'mappifyApp.sidebar.configService',
 

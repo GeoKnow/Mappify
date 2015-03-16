@@ -1,0 +1,27 @@
+{
+  "showLoadingBar": {
+    "description": "Add a box to the map, indicating datasource interactions",
+    "key": "showLoadingBar",
+    "default": false
+  },
+  "showSearchBar": {
+    "description": "Add an search bar to the map",
+    "key": "showSearchBar",
+    "default": false
+  },
+  "togglePopUp": {
+    "description": "Only max. one PopUp will be displayed concurrently.",
+    "key": "togglePopUp",
+    "default": true
+  },
+  "shopPopUp": {
+    "description": "Should the map display PopUp",
+    "key": "shopPopUp",
+    "default": true
+  },
+  "emitSelectEvent": {
+    "description": "Should emit event regarding marker interaction",
+    "key": "emitSelectEvent",
+    "default": false
+  }
+}
