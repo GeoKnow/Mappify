@@ -46,7 +46,7 @@
 
         sidebar.toggleAutoRefresh = function() {
             sidebar.autoRefresh = !sidebar.autoRefresh;
-        }
+        };
 
     }
 

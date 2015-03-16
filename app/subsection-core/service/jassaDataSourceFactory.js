@@ -56,7 +56,7 @@
         // @improvement move this to a tool belt library
         // returns true if the passed value is an positive integer or zero
         function isNormalInteger(str) {
-            var n = ~~Number(str);
+            var n = Math.floor(Number(str));
             return String(n) === str && n >= 0;
         }
 

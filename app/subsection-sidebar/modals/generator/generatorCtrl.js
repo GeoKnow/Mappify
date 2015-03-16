@@ -86,12 +86,12 @@
 
         var content;
         if (JSZip.support.uint8array) {
-            content = zip.generate({type : "uint8array"});
+            content = zip.generate({type : 'uint8array'});
         } else {
-            content = zip.generate({type : "string"});
+            content = zip.generate({type : 'string'});
         }
 
-        var blob = new Blob([content], {type: ' application/zip'});
+        var blob = new Blob([content], {type: 'application/zip'});
         return URL.createObjectURL(blob);
     }
 

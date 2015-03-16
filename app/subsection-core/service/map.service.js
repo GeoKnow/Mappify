@@ -39,7 +39,7 @@
             $timeout(function(){
                 emitMapVisibilityChangedToEvent($rootScope, true);
             }, 1500);
-        }
+        };
 
         service.config = {};
         service.datasource = {};

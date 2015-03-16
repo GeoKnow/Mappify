@@ -48,7 +48,7 @@
 
             service.getGeneratorModal = function() {
                 return _.find(service.availableConfigs, function(modal) {
-                    return modal.id == 'generator';
+                    return modal.id === 'generator';
                 });
             };
 

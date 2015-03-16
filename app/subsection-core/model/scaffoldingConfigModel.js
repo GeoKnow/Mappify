@@ -84,6 +84,8 @@
             }
         }
 
+
+
         function setMapOptions(options) {
             data.mapOption = options;
         }
