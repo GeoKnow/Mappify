@@ -10,7 +10,12 @@
     ])
         .controller('AppCtrl', AppCtrl)
         .filter('translate', translateFilter)
-        .config(stateProviderConfig);
+        .config(stateProviderConfig)
+        .run(function(){
+            // Fixing image path bug: https://github.com/tombatossals/angular-leaflet-directive/issues/499
+            L.Icon.Default.imagePath = '/images';
+        })
+    ;
 
     function translateFilter(){
         return function(string){

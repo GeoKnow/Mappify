@@ -8,6 +8,7 @@ $.bower = require('gulp-bower');
 $.download = require('gulp-download');
 $.flatten = require('gulp-flatten');
 $.rename = require('gulp-rename');
+$.replace = require('gulp-replace');
 $.less = require('gulp-less');
 $.yaml = require('gulp-yaml');
 
@@ -26,7 +27,7 @@ var staticFiles = [
     {
         name: 'images',
         folder: 'dist/images',
-        src: ['app/images/*', '**/leaflet/dist/images/**'],
+        src: ['app/images/*', '**/leaflet/dist/images/**','**/*awesome-markers/dist/images/**'],
         pipe: $.lazypipe().pipe($.flatten).pipe($.imagemin)
     },
     {
@@ -55,7 +56,8 @@ var gulp = require('gulp-stack').gulp([
         },
         injectInto: {
             css: {
-                pre: mainLess
+                pre: mainLess,
+                post: leafletMarkerCSS
             }
         },
         bower: 'app/bower_components/**', // String of bower directory string
@@ -115,7 +117,14 @@ gulp.task('bower.writeConfig', function () {
 
 function mainLess() {
     return gulp.src('app/styles/app.less')
-        .pipe($.less())
+        .pipe($.less());
+}
+
+function leafletMarkerCSS(){
+    return gulp.src([ '**/leaflet/dist/*.css','**/*awesome-markers/dist/*.css'])
+        .pipe($.replace(/\(('?)images/g,'($1../images'))
+        .pipe($.flatten())
+        .pipe($.concat('leaflet.css'))
 }
 
 

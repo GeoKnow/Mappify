@@ -45,5 +45,3 @@
         - layer/tile/Google.js
     jassa:
       main: []
-  resolutions:
-    font-awesome: 4.3.0
