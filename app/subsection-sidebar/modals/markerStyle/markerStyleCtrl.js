@@ -120,7 +120,7 @@
                 prefix: 'fa',
                 icon:  modal.markers.m2.icon.icon,
                 markerColor: modal.markers.m2.icon.markerColor
-            }
+            };
 
             return result;
         }
