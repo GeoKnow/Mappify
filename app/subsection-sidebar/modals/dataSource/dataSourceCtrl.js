@@ -9,6 +9,7 @@
         ])
         .config(function (configServiceProvider) {
             var description = {
+                id: 'dataSource',
                 order: 20,
                 title: title,
                 fileName: 'dataSource',
@@ -27,7 +28,7 @@
         });
 
     /*@ngInject*/
-    function DataSourceCtrl($modalInstance, availableServices, scaffoldingConfigModel) {
+    function DataSourceCtrl($timeout, $modalInstance, availableServices, scaffoldingConfigModel) {
 
         var modal = this;
 

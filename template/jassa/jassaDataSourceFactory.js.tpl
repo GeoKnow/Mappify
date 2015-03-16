@@ -12,8 +12,8 @@
         var pageExpand = 100;
 
         var wktMapFactoryOptions = {
-            wktPredicateName: 'http://www.opengis.net/ont/geosparql#asWKT',
-            intersectsFnName:  'bif:st_intersects',
+            wktPredicateName:   'http://www.w3.org/2003/01/geo/wgs84_pos#geometry',
+            intersectsFnName:   'bif:st_intersects',
             geomFromTextFnName: 'bif:st_geomFromText'
         };
 

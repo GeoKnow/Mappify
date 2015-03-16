@@ -33,6 +33,11 @@ var staticFiles = [
         name: 'data jsons',
         folder: 'dist/data',
         src: 'data/*'
+    },
+    {
+        name: 'data template',
+        folder: 'dist/template',
+        src: 'template/**/*'
     }
 ];
 

@@ -12,7 +12,6 @@
 
                 <h6>service</h6>
 
-
                 <div ng-repeat="service in modal.availableServices">
                     <div ng-click="modal.toggleServiceSelection(service.id)"
                          ng-class="modal.isServiceSelected(service.id) ? 'bg-warning' : ''"
@@ -23,7 +22,6 @@
 
 
                 </div>
-
 
                 <label>concept</label>
                 <input class="form-control" type="text" ng-model="modal.ds.concept" value="http://dbpedia.org/ontology/University" placeholder="http://dbpedia.org/ontology/University"/>

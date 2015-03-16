@@ -9,6 +9,7 @@
 
         .config(function (configServiceProvider) {
             var description = {
+                id: 'marker',
                 order: 80,
                 title: title,
                 fileName: 'markerStyle',

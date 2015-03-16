@@ -10,7 +10,8 @@
         .config(function (configServiceProvider) {
 
             var description = {
-                order: 60,
+                id: 'layout',
+                order: 61,
                 fileName: 'layout',
                 title: title ,
                 icon: 'location-arrow',

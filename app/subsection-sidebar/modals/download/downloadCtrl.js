@@ -9,6 +9,7 @@
 
         .config(function (configServiceProvider) {
             var description = {
+                id: 'download',
                 order: 100,
                 title: title,
                 fileName: 'download',

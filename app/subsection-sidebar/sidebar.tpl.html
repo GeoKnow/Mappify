@@ -7,29 +7,19 @@
 <div class="clearfix"></div>
 
 <ul class="navigation">
-    <li ng-repeat="config in sidebar.availableConfigs">
-        <a href="" ng-click="config.open()">
-            <i class="fa fa-fw"
-               ng-class="'fa-'+config.icon"></i>
-            {{config.title}}
+    <li ng-repeat="modal in sidebar.availableModals">
+        <a href="" ng-click="modal.open()">
+            <i class="fa fa-fw" ng-class="'fa-'+modal.icon"></i>
+            {{modal.title}}
         </a>
     </li>
 </ul>
 
 <div class="col-xs-12">
     <hr>
-    <button ng-click="sidebar.generateApp('jassa')" class="btn btn-primary btn-block text-left"><i class="fa fa-fw fa-cogs"></i> Generate
+    <button ng-click="sidebar.generatorModal().open()" class="btn btn-primary btn-block text-left"><i class="fa fa-fw fa-cogs"></i> Generate
         AngularJS App
     </button>
-</div>
-
-
-<div class="col-xs-12" ng-if="sidebar.zipIsReady">
-    <hr>
-    <a ng-href="{{ sidebar.zipBlobURL }}" download="app.zip" target="_blank">
-        <i class="fa fa-fw fa-cloud-download"></i>
-        Download App
-    </a>
 </div>
 
 <div class="col-xs-12" style="position: absolute; bottom: 15px;">

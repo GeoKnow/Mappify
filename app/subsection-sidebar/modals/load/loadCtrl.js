@@ -8,6 +8,7 @@
         ])
         .config(function (configServiceProvider) {
             var description = {
+                id: 'load',
                 order: 0,
                 title: title,
                 fileName: 'load',

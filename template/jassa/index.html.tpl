@@ -5,6 +5,18 @@
     <title><%= appName %></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <style>
+        #map {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+        }
+
+        body {
+            margin: 0;
+        }
+    </style>
+
 
     <%= googleMaps %>
     <script src="//maps.google.com/maps/api/js?v=3&sensor=false"></script>
@@ -17,7 +29,11 @@
 </head>
 <body>
 
-<%= mappify %>
+<div ng-controller="AppCtrl as main">
+    <%= mappify %>
+</div>
+
+
 
 <!-- inject:vendor:js -->
 <!-- endinject -->

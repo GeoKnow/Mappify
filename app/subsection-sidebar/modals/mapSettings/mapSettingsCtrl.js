@@ -9,6 +9,7 @@
 
         .config(function (configServiceProvider) {
             var description = {
+                id: 'mapSetting',
                 order: 95,
                 title: title,
                 fileName: 'mapSettings',

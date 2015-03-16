@@ -6,6 +6,7 @@
 
             'mappifyApp.generator',
 
+            // model and option provider
             'mappifyApp.models.dataSourceService',
             'mappifyApp.models.exampleContainerModel',
             'mappifyApp.models.mapConfigModel',
@@ -13,9 +14,13 @@
             'mappifyApp.models.scaffoldingConfigModel',
             'mappifyApp.models.tileLayer',
 
+
             'mappifyApp.sidebar.configService',
+
+            // all modals
             'mappifyApp.sidebar.dataSource',
             'mappifyApp.sidebar.download',
+            'mappifyApp.sidebar.generator',
             'mappifyApp.sidebar.layout',
             'mappifyApp.sidebar.load',
             'mappifyApp.sidebar.mapSettings',
@@ -23,41 +28,21 @@
             'mappifyApp.sidebar.popups',
             'mappifyApp.sidebar.sponate',
             'mappifyApp.sidebar.tileLayer',
+
             'mappifyApp.service.mapService'
         ])
         .controller('SidebarController', SidebarController);
 
     /* @ngInject */
-    function SidebarController(scaffoldingConfigModel, configService, generatorService, mapService) {
+    function SidebarController(configService, mapService) {
 
         var sidebar = this;
 
-        sidebar.availableConfigs = configService.availableConfigs;
-        sidebar.getConfigModel   = scaffoldingConfigModel.getCurrentConfig;
-        sidebar.generateApp      = function(name) {
-            generatorService.generateApp(name).then(function(result) {
+        sidebar.availableModals  = configService.availableConfigs;
+        sidebar.refreshConfig    = mapService.refreshConfig;
+        sidebar.generatorModal   = configService.getGeneratorModal;
 
-                var zip = result;
-
-                var content = null;
-                if (JSZip.support.uint8array) {
-                    content = zip.generate({type : "uint8array"});
-                } else {
-                    content = zip.generate({type : "string"});
-                }
-
-                var blob = new Blob([content], {type: ' application/zip'});
-                sidebar.zipBlobURL =  URL.createObjectURL(blob);
-
-                sidebar.zipIsReady  = true;
-            });
-        };
-
-        sidebar.zipBlobURL = null;
-        sidebar.zipIsReady  = false;
         sidebar.autoRefresh = false;
-
-        sidebar.refreshConfig = mapService.refreshConfig;
 
         sidebar.toggleAutoRefresh = function() {
             sidebar.autoRefresh = !sidebar.autoRefresh;

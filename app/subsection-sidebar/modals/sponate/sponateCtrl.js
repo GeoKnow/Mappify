@@ -9,6 +9,7 @@
 
         .config(function (configServiceProvider) {
             var description = {
+                id: 'sponate',
                 order: 30,
                 title: title,
                 fileName: 'sponate',

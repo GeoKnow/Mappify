@@ -36,8 +36,15 @@
                 templateValueProviderKey: 'default',
                 url: baseUrl + 'bower.tpl',
                 fileName: 'bower.json'
+            }, {
+                templateValueProviderKey: 'default',
+                url: baseUrl + 'jshintrc.tpl',
+                fileName: '.jshintrc'
+            }, {
+                templateValueProviderKey: 'default',
+                url: baseUrl + 'gulpfile.js.tpl',
+                fileName: 'gulpfile.js'
             }
-
         ];
 
         // @improvement check http status code should be 200

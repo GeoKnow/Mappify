@@ -9,6 +9,7 @@
 
         .config(function (configServiceProvider) {
             var description = {
+                id: 'popup',
                 order: 90,
                 title: title,
                 fileName: 'popups',

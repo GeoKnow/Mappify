@@ -46,11 +46,18 @@
                 })
                 .value();
 
+            service.getGeneratorModal = function() {
+                return _.find(service.availableConfigs, function(modal) {
+                    return modal.id == 'generator';
+                });
+            };
+
             return service;
 
             function createConfig(description, resolveFunctions, callbackFunction) {
 
                 service.availableConfigs.push({
+                    id: description.id,
                     title: description.title,
                     icon: description.icon,
                     open: function () {

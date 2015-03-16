@@ -53,7 +53,7 @@
         function indexTemplateValueProvider() {
             return {
                 appName: 'myApp',
-                mappify: '<mappify></mappify>',
+                mappify: ' <mappify id="map" datasource="main.datasource" config="main.config"></mappify>',
                 googleMaps: ''
             };
         }

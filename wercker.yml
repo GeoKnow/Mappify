@@ -1,5 +1,4 @@
 # add GH_TOKEN to wercker pipeline
-
 box: leipert/ubuntu14.04-webessentials@2.0.1
 # Build definition
 build:

@@ -8,6 +8,7 @@
         ])
         .config(function (configServiceProvider) {
             var description = {
+                id: 'tileLayer',
                 order: 70,
                 title: title,
                 fileName: 'tileLayer',
