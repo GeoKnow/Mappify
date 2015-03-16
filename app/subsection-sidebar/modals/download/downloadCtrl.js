@@ -3,9 +3,9 @@
 
     var title = 'Download Config';
 
-    angular.module('mappifyApp.sidebar.download', [
-        'mappifyApp.sidebar.configService'
-    ])
+        angular.module('mappifyApp.sidebar.download', [
+            'mappifyApp.sidebar.configService'
+        ])
 
         .config(function (configServiceProvider) {
             var description = {
@@ -29,6 +29,7 @@
             $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|tel|file|blob):/);
         });
 
+    /*@ngInject*/
     function DownLoadCtrl($modalInstance, config) {
 
         var modal = this;

@@ -47,22 +47,10 @@
         modal.zipBlobURL = null;
 
         modal.generateApp = function() {
-
-            try {
-                generatorService.generateApp(selectedTemplateId).then(function(zip) {
-                    modal.zipBlobURL  = createZipAsBlobUrl(zip);
-                    modal.zipIsReady  = true;
-                });
-            } catch (e) {
-                console.log('lskdjvlkjds');
-                console.log('lskdjvlkjds');
-                console.log('lskdjvlkjds');
-                console.log('lskdjvlkjds');
-                console.log('lskdjvlkjds');
-                console.log('lskdjvlkjds');
-                console.log('lskdjvlkjds');
-
-            }
+            generatorService.generateApp(selectedTemplateId).then(function(zip) {
+                modal.zipBlobURL  = createZipAsBlobUrl(zip);
+                modal.zipIsReady  = true;
+            });
         };
 
         modal.selectTemplate = function(templateId) {

@@ -7,6 +7,7 @@
     function scaffoldingConfigModel() {
         var model = this;
 
+
         var data =
         {
             layout: {
@@ -28,6 +29,7 @@
         model.getCurrentConfigForMapOptions = getCurrentConfigForMapOptions;
         model.loadConfigModelFromJSON = loadConfigModelFromJSON;
         model.setMapOptions = setMapOptions;
+        model.setMarkerStyle = setMarkerStyle;
         model.setSetDataSource = setSetDataSource;
         model.setTileLayer = setTileLayer;
         model.setViewCenter = setViewCenter;
@@ -37,9 +39,12 @@
         // @important we return an copy to prevent the map from changed while working on one
         // part of the config
         function getCurrentConfig(key) {
+
+            // @improve add an list of allowed keys
             if(key && data.hasOwnProperty(key)){
                 return angular.copy(data[key]);
             }
+
             return angular.copy(data);
         }
 
@@ -68,6 +73,10 @@
             data.tileLayer = tileLayer;
         }
 
+        function setMarkerStyle(markerStyle) {
+            data.markers = markerStyle;
+        }
+
         // the display name is used as key and must be unique
         function setSetDataSource(newDataSource) {
 
@@ -83,7 +92,6 @@
                 data.dataSources[index] = newDataSource;
             }
         }
-
 
 
         function setMapOptions(options) {

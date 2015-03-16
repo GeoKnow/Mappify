@@ -7,7 +7,7 @@
 <div class="clearfix"></div>
 
 <ul class="navigation">
-    <li ng-repeat="modal in sidebar.availableModals">
+    <li ng-repeat="modal in sidebar.availableModals | filter: { id: '!' + 'generator'}">
         <a href="" ng-click="modal.open()">
             <i class="fa fa-fw" ng-class="'fa-'+modal.icon"></i>
             {{modal.title}}

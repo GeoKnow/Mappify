@@ -35,7 +35,7 @@
         });
 
     /*@ngInject*/
-    function MarkerStyleCtrl($modalInstance, availableMarkerStyles, layout) {
+    function MarkerStyleCtrl($modalInstance, scaffoldingConfigModel, availableMarkerStyles, layout) {
 
         var modal = this;
 
@@ -105,13 +105,33 @@
             }
         };
 
+
+        function map() {
+            var result = {};
+
+            result.unselected = {
+                prefix: 'fa',
+                icon:  modal.markers.m1.icon.icon,
+                markerColor: modal.markers.m1.icon.markerColor,
+                iconColor: 'white'
+            };
+
+            result.selected = {
+                prefix: 'fa',
+                icon:  modal.markers.m2.icon.icon,
+                markerColor: modal.markers.m2.icon.markerColor
+            }
+
+            return result;
+        }
+
         modal.cancel = function () {
             $modalInstance.dismiss();
         };
 
         modal.close = function () {
-            // ToDo
-            //scaffoldingConfigModel.setSetDataSource(data);
+            scaffoldingConfigModel.setMarkerStyle(map(modal.markers));
+
             $modalInstance.close(
                 {
                     marker: modal.markers.m1.icon.icon,
