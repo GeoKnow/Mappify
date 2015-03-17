@@ -11,7 +11,7 @@
 
         var service = this;
 
-        var baseUrl = '/template/jassa/';
+        var baseUrl = 'template/jassa/';
 
         var templateFileSet = [{
                 templateValueProviderKey: 'app',
