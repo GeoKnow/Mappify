@@ -13,7 +13,7 @@
         .config(stateProviderConfig)
         .run(function(){
             // Fixing image path bug: https://github.com/tombatossals/angular-leaflet-directive/issues/499
-            L.Icon.Default.imagePath = '/images';
+            L.Icon.Default.imagePath = 'images';
         })
     ;
 
