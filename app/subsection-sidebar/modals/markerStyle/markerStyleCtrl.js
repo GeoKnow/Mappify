@@ -70,7 +70,7 @@
     }
 
     /*@ngInject*/
-    function MarkerStyleCtrl($modalInstance, scaffoldingConfigModel, availableMarkerStyles, layout) {
+    function MarkerStyleCtrl($modalInstance, scaffoldingConfigModel, availableMarkerStyles, layout, mapService) {
 
         var modal = this;
         var scaffoldingConfigKey = 'markers';
@@ -202,6 +202,8 @@
                     unselected: modal.markers.m1.icon.markerColor
                 }
             );
+
+            mapService.triggerAutoRefreshConfig();
         };
     }
 

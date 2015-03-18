@@ -34,20 +34,25 @@
         .controller('SidebarController', SidebarController);
 
     /* @ngInject */
-    function SidebarController(configService, mapService) {
+    function SidebarController($rootScope, configService, mapService) {
 
         var sidebar = this;
 
-        sidebar.availableModals  = configService.availableConfigs;
-        sidebar.refreshConfig    = mapService.refreshConfig;
-        sidebar.generatorModal   = configService.getGeneratorModal;
+        sidebar.availableModals     = configService.availableConfigs;
+        sidebar.generatorModal      = configService.getGeneratorModal;
 
-        sidebar.autoRefresh = false;
+        sidebar.refreshConfig       = mapService.refreshConfig;
+        sidebar.autoRefresh         = mapService.autoRefresh;
+        sidebar.currentlyRefreshing = false;
 
         sidebar.toggleAutoRefresh = function() {
-            sidebar.autoRefresh = !sidebar.autoRefresh;
+            sidebar.autoRefresh    = !sidebar.autoRefresh;
+            mapService.autoRefresh = sidebar.autoRefresh;
         };
 
+        $rootScope.$on('mapVisibilityChanged', function(event, visibility) {
+            sidebar.currentlyRefreshing = ! visibility;
+        });
     }
 
 })();

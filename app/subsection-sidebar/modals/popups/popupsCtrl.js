@@ -21,7 +21,7 @@
         });
 
     /*@ngInject*/
-    function PopupCtrl($modalInstance) {
+    function PopupCtrl($modalInstance, mapService) {
 
         var modal = this;
 
@@ -36,6 +36,8 @@
         // modalInstance resolves the promise
         modal.close = function () {
             $modalInstance.close(modal.popups);
+
+            mapService.triggerAutoRefreshConfig();
         };
 
     }

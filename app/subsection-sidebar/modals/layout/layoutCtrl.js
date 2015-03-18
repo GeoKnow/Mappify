@@ -4,9 +4,11 @@
     var title = 'Change Zoom/Center';
 
     angular.module('mappifyApp.sidebar.layout', [
-        'leaflet-directive',
-        'mappifyApp.sidebar.configService'
-    ])
+            'leaflet-directive',
+            'mappifyApp.sidebar.configService',
+            'mappifyApp.service.mapService'
+        ])
+        /*@ngInject*/
         .config(function (configServiceProvider) {
 
             var description = {
@@ -33,7 +35,7 @@
         });
 
     /*@ngInject*/
-    function LayoutCtrl($modalInstance, layout, scaffoldingConfigModel) {
+    function LayoutCtrl($modalInstance, layout, scaffoldingConfigModel, mapService) {
 
         var modal = this;
 
@@ -94,6 +96,8 @@
             scaffoldingConfigModel.setZoom(modal.layout.zoom);
             scaffoldingConfigModel.setViewCenter(modal.layout.lat, modal.layout.lng);
             $modalInstance.close(modal.layout);
+
+            mapService.triggerAutoRefreshConfig();
         };
 
     }

@@ -21,7 +21,7 @@
         });
 
     /*@ngInject*/
-    function SponateCtrl($modalInstance) {
+    function SponateCtrl($modalInstance, mapService) {
 
         var modal = this;
 
@@ -36,6 +36,8 @@
         // modalInstance resolves the promise
         modal.close = function () {
             $modalInstance.close(modal.sponate);
+
+            mapService.triggerAutoRefreshConfig();
         };
 
     }

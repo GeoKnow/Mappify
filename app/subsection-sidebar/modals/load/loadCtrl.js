@@ -27,7 +27,7 @@
 
 
     /*@ngInject*/
-    function LoadCtrl($modalInstance, scaffoldingConfigModel, exampleContainer) {
+    function LoadCtrl($modalInstance, scaffoldingConfigModel, exampleContainer, mapService) {
 
         var modal = this;
 
@@ -48,6 +48,8 @@
         modal.close = function () {
             scaffoldingConfigModel.loadConfigModelFromJSON(modal.json);
             $modalInstance.close(modal.json);
+
+            mapService.triggerAutoRefreshConfig();
         };
 
     }

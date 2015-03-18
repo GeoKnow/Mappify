@@ -26,7 +26,7 @@
         });
 
     /*@ngInject*/
-    function MapSettingsCtrl($modalInstance, availableMapOptions, scaffoldingConfigModel) {
+    function MapSettingsCtrl($modalInstance, availableMapOptions, scaffoldingConfigModel, mapService) {
 
         var modal = this;
         var providedConfigValues = scaffoldingConfigModel.getCurrentConfigForMapOptions();
@@ -51,6 +51,8 @@
         modal.close = function () {
             scaffoldingConfigModel.setMapOptions(modal.mapSettings);
             $modalInstance.close(modal.mapSettings);
+
+            mapService.triggerAutoRefreshConfig();
         };
 
         // private functions

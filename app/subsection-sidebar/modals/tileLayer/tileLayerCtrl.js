@@ -33,7 +33,7 @@
         });
 
     /*@ngInject*/
-    function TileLayerCtrl($modalInstance, tileLayer, availableTileLayer, scaffoldingConfigModel) {
+    function TileLayerCtrl($modalInstance, tileLayer, availableTileLayer, scaffoldingConfigModel, mapService) {
 
         var modal = this;
 
@@ -50,6 +50,8 @@
         modal.close = function () {
             scaffoldingConfigModel.setTileLayer(modal.tl);
             $modalInstance.close(modal.tl);
+
+            mapService.triggerAutoRefreshConfig();
         };
     }
 

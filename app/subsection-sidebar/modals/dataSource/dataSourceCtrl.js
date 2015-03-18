@@ -28,7 +28,7 @@
         });
 
     /*@ngInject*/
-    function DataSourceCtrl($modalInstance, availableServices, scaffoldingConfigModel) {
+    function DataSourceCtrl($modalInstance, availableServices, scaffoldingConfigModel, mapService) {
 
         var modal = this;
 
@@ -95,6 +95,8 @@
 
             scaffoldingConfigModel.setSetDataSource(modal.ds);
             $modalInstance.close(modal.ds);
+
+            mapService.triggerAutoRefreshConfig();
         };
     }
 

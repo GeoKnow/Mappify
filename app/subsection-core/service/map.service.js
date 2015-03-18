@@ -2,62 +2,81 @@
     'use strict';
 
     angular.module('mappifyApp.service.mapService', [
-            'mappifyApp.service.jassaDataSourceFactory',
-            'mappifyApp.models.dataSourceConfigModel',
-            'mappifyApp.models.mapConfigModel'
-        ])
+        'mappifyApp.service.jassaDataSourceFactory',
+        'mappifyApp.models.dataSourceConfigModel',
+        'mappifyApp.models.mapConfigModel'
+    ])
         .service('mapService', mapService);
 
     function mapService($rootScope, $timeout, mapConfigModel, dataSourceConfigModel, jassaDataSourceFactory) {
 
         var service = this;
 
-        // public methods
+        // public properties
+        service.config = {};
+        service.datasource = {};
         service.showMap = true;
+        service.autoRefresh = true;
+        service.initialtMapConfig = getInitialMapConfig();
+        service.initialDatasource = getInitialDatasource();
 
-        service.getMapConfig = function() {
-            service.config =  mapConfigModel.createFromScafoldingConfig();
+        // public methods
+
+        service.getMapConfig = getMapConfig;
+        service.getDataSource = getDataSource;
+        service.triggerAutoRefreshConfig = autoRefreshConfig;
+        service.refreshConfig = refreshConfig;
+
+        function getMapConfig() {
+            service.config = mapConfigModel.createFromScafoldingConfig();
 
             return service.config;
-        };
+        }
 
         // todo there are two cases 1) jassa 2) sponate
-        service.getDataSource = function() {
+        function getDataSource() {
             service.datasource = handleJassaDataSource(
                 dataSourceConfigModel.createFromScaffoldingConfig(),
                 jassaDataSourceFactory
             );
 
             return service.datasource;
-        };
+        }
 
-        service.refreshConfig = function() {
+        function autoRefreshConfig() {
+            if (true === service.autoRefresh) {
+                service.refreshConfig()
+            }
+        }
+
+        function refreshConfig() {
             emitMapVisibilityChangedToEvent($rootScope, false);
             emitMapConfigChanged($rootScope);
             emitDatSourceConfigChanged($rootScope);
 
-            $timeout(function(){
+            $timeout(function () {
                 emitMapVisibilityChangedToEvent($rootScope, true);
             }, 1500);
-        };
-
-        service.config = {};
-        service.datasource = {};
+        }
 
         // the default map config values
-        service.initialtMapConfig = {
-            viewCenter: {
-                latitude:  51.339018,
-                longitude: 12.3797776
-            },
-            zoom: 12
+        function getInitialMapConfig() {
+            return {
+                viewCenter: {
+                    latitude: 51.339018,
+                    longitude: 12.3797776
+                },
+                zoom: 12
+            }
         };
 
-        // the default data source object
-        service.initialDatasource = {};
-        service.initialDatasource.fetchData = function () {
-            return [
-            ];
+        function getInitialDatasource() {
+            return {
+                fetchData: function () {
+                    return [];
+
+                }
+            };
         };
     }
 
