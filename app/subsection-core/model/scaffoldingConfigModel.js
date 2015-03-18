@@ -24,12 +24,14 @@
             }
         };
 
-        var allowedConfigKeys =  [ 'mapOption', 'layout', 'tileLayer', 'dataSources'];
+        // in alphabetical order
+        var allowedConfigKeys =  ['dataSources', 'layout', 'mapOption', 'markers',  'tileLayer'];
 
         // the public api / public methods
         model.getCurrentConfig = getCurrentConfig;
         model.getCurrentConfigForMapOptions = getCurrentConfigForMapOptions;
         model.loadConfigModelFromJSON = loadConfigModelFromJSON;
+        model.hasConfigValueFor = hasConfigValueFor;
         model.setMapOptions = setMapOptions;
         model.setMarkerStyle = setMarkerStyle;
         model.setSetDataSource = setSetDataSource;
@@ -48,11 +50,25 @@
                 } else if (_.indexOf(allowedConfigKeys, key) > -1) {
                     return [];
                 } else {
-                    throw new Error('scaffoldingConfigModel: unsupported config key (' + key.toString() + '). check the allowedConfigKeys array.');
+                    throw new Error(createUnSupportedKeyErrorMessage(key));
                 }
             }
 
             return angular.copy(data);
+        }
+
+        function hasConfigValueFor(key) {
+
+            // check if the passed key is a valid one
+            if (_.indexOf(allowedConfigKeys, key) === -1) {
+                throw new Error(createUnSupportedKeyErrorMessage(key));
+            }
+
+            return (data.hasOwnProperty(key));
+        }
+
+        function createUnSupportedKeyErrorMessage(key) {
+            return 'scaffoldingConfigModel: unsupported config key (' + key.toString() + '). check the allowedConfigKeys array.';
         }
 
         function getCurrentConfigForMapOptions() {

@@ -34,24 +34,8 @@
             configServiceProvider.registerConfig(description, resolve);
         });
 
-    /*@ngInject*/
-    function MarkerStyleCtrl($modalInstance, scaffoldingConfigModel, availableMarkerStyles, layout) {
-
-        var modal = this;
-
-        modal.title = title;
-
-        modal.search = {};
-
-        modal.availableMarkerStyles = availableMarkerStyles;
-
-        modal.availableColors = ['red', 'blue', 'green', 'purple', 'orange', 'darkred', 'lightred', 'beige', 'darkblue', 'darkgreen', 'cadetblue', 'darkpurple', 'white', 'pink', 'lightblue', 'lightgreen', 'gray', 'black', 'lightgray'];
-
-        modal.unSelectedColor = 'blue';
-        modal.selectedColor = 'red';
-        modal.icon = 'star';
-
-        modal.mapDefaults = {
+    function getLeafletMapDefaults() {
+        return {
             keyboard: false,
             dragging: false,
             zoomControl: false,
@@ -63,8 +47,10 @@
             fadeAnimation: false,
             markerZoomAnimation: false
         };
+    }
 
-        modal.layers = {
+    function getLeafletLayers() {
+        return {
             baselayers: {
                 googleRoadmap: {
                     name: 'Google Streets',
@@ -73,11 +59,83 @@
                 }
             }
         };
+    }
 
-        modal.layout = layout;
+    function getAvailableMarkerColors() {
+       return ['red', 'blue', 'green', 'purple', 'orange',
+           'darkred', 'lightred', 'beige', 'darkblue', 'darkgreen',
+           'cadetblue', 'darkpurple', 'white', 'pink', 'lightblue',
+           'lightgreen', 'gray', 'black', 'lightgray'
+       ];
+    }
 
-        modal.markers = {
-            m1: {
+    /*@ngInject*/
+    function MarkerStyleCtrl($modalInstance, scaffoldingConfigModel, availableMarkerStyles, layout) {
+
+        var modal = this;
+        var scaffoldingConfigKey = 'markers';
+
+        modal.title = title;
+
+        modal.search = {};
+        modal.availableMarkerStyles = availableMarkerStyles;
+        modal.layout                = layout;
+
+        modal.unSelectedColor       = null;
+        modal.selectedColor         = null;
+        modal.icon                  = null;
+        modal.availableColors       = null;
+        modal.mapDefaults           = null;
+
+
+        init(scaffoldingConfigModel);
+
+
+        // we handle two configuration source
+        //  - the defaults
+        //  - the provided config
+        function init(scaffoldingConfigModel) {
+            modal.availableColors       = getAvailableMarkerColors();
+            modal.mapDefaults           = getLeafletMapDefaults();
+            modal.layers                = getLeafletLayers();
+
+            // marker
+            initMarker(scaffoldingConfigModel);
+
+            // apply
+            modal.icon            = modal.markers.m1.icon.icon;
+            modal.unSelectedColor = modal.markers.m1.icon.markerColor;
+            modal.selectedColor   = modal.markers.m2.icon.markerColor;
+        }
+
+        function initMarker(scaffoldingConfigModel) {
+
+            var config;
+
+            // nothing passed -> use defaults
+            //
+            if (! scaffoldingConfigModel.hasConfigValueFor(scaffoldingConfigKey)) {
+                config = {
+                    unSelectedColor: 'blue',
+                    selectedColor: 'red',
+                    icon: 'star'
+                };
+            } else {
+                var unMappedConfig = scaffoldingConfigModel.getCurrentConfig(scaffoldingConfigKey);
+                config = {
+                    unSelectedColor: unMappedConfig.unselected.markerColor,
+                    selectedColor:   unMappedConfig.selected.markerColor,
+                    icon: unMappedConfig.selected.icon
+                };
+            }
+
+            modal.markers = unMap(config);
+        }
+
+        // map from mappify to leaflet directive
+        function unMap(config) {
+
+            var unSelectedMarker = {
                 lat: layout.lat,
                 lng: layout.lng - 0.03,
                 focus: false,
@@ -86,11 +144,12 @@
                 icon: {
                     type: 'awesomeMarker',
                     prefix: 'fa',
-                    icon: modal.icon,
-                    markerColor: modal.unSelectedColor
+                    icon: config.icon,
+                    markerColor: config.unSelectedColor
                 }
-            },
-            m2: {
+            };
+
+            var selectedMarker = {
                 lat: layout.lat,
                 lng: layout.lng + 0.03,
                 focus: false,
@@ -99,13 +158,18 @@
                 icon: {
                     type: 'awesomeMarker',
                     prefix: 'fa',
-                    icon: modal.icon,
-                    markerColor: modal.selectedColor
+                    icon: config.icon,
+                    markerColor: config.selectedColor
                 }
-            }
-        };
+            };
 
+            return {
+                m1: unSelectedMarker,
+                m2: selectedMarker
+            };
+        }
 
+        // map from leafet directive to mappify
         function map() {
             var result = {};
 
@@ -132,8 +196,7 @@
         modal.close = function () {
             scaffoldingConfigModel.setMarkerStyle(map(modal.markers));
 
-            $modalInstance.close(
-                {
+            $modalInstance.close({
                     marker: modal.markers.m1.icon.icon,
                     selected: modal.markers.m2.icon.markerColor,
                     unselected: modal.markers.m1.icon.markerColor
