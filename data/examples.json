@@ -14,6 +14,7 @@
         {
           "concept": "http://dbpedia.org/ontology/University",
           "service": {
+            "id": "DBpedia-Sparql",
             "displayName": "DBpedia",
             "serviceUrl": "http://akswnc3.informatik.uni-leipzig.de/data/dbpedia/sparql",
             "defaultGraphUris": [
@@ -40,6 +41,7 @@
         {
           "concept": "http://dbpedia.org/ontology/Castle",
           "service": {
+            "id": "DBpedia-Sparql",
             "displayName": "DBpedia",
             "serviceUrl": "http://akswnc3.informatik.uni-leipzig.de/data/dbpedia/sparql",
             "defaultGraphUris": [

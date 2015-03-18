@@ -24,6 +24,8 @@
             }
         };
 
+        var allowedConfigKeys =  [ 'mapOption', 'layout', 'tileLayer', 'dataSources'];
+
         // the public api / public methods
         model.getCurrentConfig = getCurrentConfig;
         model.getCurrentConfigForMapOptions = getCurrentConfigForMapOptions;
@@ -40,9 +42,14 @@
         // part of the config
         function getCurrentConfig(key) {
 
-            // @improve add an list of allowed keys
-            if(key && data.hasOwnProperty(key)){
-                return angular.copy(data[key]);
+            if (key) {
+                if(data.hasOwnProperty(key)){
+                    return angular.copy(data[key]);
+                } else if (_.indexOf(allowedConfigKeys, key) > -1) {
+                    return [];
+                } else {
+                    throw new Error('scaffoldingConfigModel: unsupported config key (' + key.toString() + '). check the allowedConfigKeys array.');
+                }
             }
 
             return angular.copy(data);

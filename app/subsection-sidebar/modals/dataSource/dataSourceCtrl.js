@@ -28,15 +28,37 @@
         });
 
     /*@ngInject*/
-    function DataSourceCtrl($timeout, $modalInstance, availableServices, scaffoldingConfigModel) {
+    function DataSourceCtrl($modalInstance, availableServices, scaffoldingConfigModel) {
 
         var modal = this;
 
-        modal.title = title;
-
-        modal.ds = {};
-        modal.selectedService = null;
+        modal.title             = title;
+        modal.ds                = extractPassedCurrentDataSourceValues(scaffoldingConfigModel);
+        modal.selectedService   = setInitialSelectedService(modal.ds);
         modal.availableServices = availableServices;
+
+        // @limitation we only handle the first data source
+        function extractPassedCurrentDataSourceValues(scaffoldingConfigModel) {
+
+            var dataSourceSet = scaffoldingConfigModel.getCurrentConfig('dataSources');
+            if (_.isEmpty(dataSourceSet)) {
+                return {};
+            }
+
+            return _.first(dataSourceSet);
+        }
+
+        function setInitialSelectedService(dataSource) {
+            if (_.isEmpty(dataSource)) {
+                return null;
+            }
+
+            if (! dataSource.hasOwnProperty('service')) {
+                return null;
+            }
+
+            return dataSource.service.id;
+        }
 
         function appendSelectedServiceToDataSource() {
             // we use serviceIdentifier insteadof serviceId to highlight the fact
