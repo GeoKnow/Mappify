@@ -8,9 +8,11 @@
             </div>
             <div class="modal-body">
                 <label>displayName</label>
-                <input type="text" ng-model="modal.ds.displayName" />
+                <input class="form-control" type="text" ng-model="modal.ds.displayName" />
 
-                <h6>service</h6>
+                <br />
+
+                <label>select a service</label>
 
                 <div ng-repeat="service in modal.availableServices">
                     <div ng-click="modal.toggleServiceSelection(service.id)"
@@ -19,6 +21,8 @@
                          {{service.id}}
                     </div>
                 </div>
+
+                <br />
 
                 <label>concept</label>
                 <input class="form-control" type="text" ng-model="modal.ds.concept" value="http://dbpedia.org/ontology/University" placeholder="http://dbpedia.org/ontology/University"/>
