@@ -9,15 +9,15 @@
         var factory = this;
 
         // default value overwritable via the definition object
-        var paginateValue = 100;
+        var paginateValue = 1500;
 
         // default value overwritable via the definition object
-        var pageExpand = 200;
+        var pageExpand = 100;
 
         // default value overwritable via the definition object
         var wktMapFactoryOptions = {
-            wktPredicateName: 'http://www.w3.org/2003/01/geo/wgs84_pos#geometry',
-            intersectsFnName:  'bif:st_intersects',
+            wktPredicateName:   'http://www.w3.org/2003/01/geo/wgs84_pos#geometry',
+            intersectsFnName:   'bif:st_intersects',
             geomFromTextFnName: 'bif:st_geomFromText'
         };
 
@@ -72,7 +72,7 @@
                 paginateValue = definition.pageExpand;
             }
 
-            // @note interface in js would be awesome
+            // @note interfaces in js would be awesome
             if (definition.hasOwnProperty('wktMapFactoryOptions')) {
                 wktMapFactoryOptions =  definition.pageExpand;
             }
@@ -89,7 +89,6 @@
                 createConcept(definition.concept)
             );
         };
-
 
     }
 })();

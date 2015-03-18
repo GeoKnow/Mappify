@@ -87,9 +87,7 @@
         modal.availableColors       = null;
         modal.mapDefaults           = null;
 
-
         init(scaffoldingConfigModel);
-
 
         // we handle two configuration source
         //  - the defaults
@@ -113,7 +111,6 @@
             var config;
 
             // nothing passed -> use defaults
-            //
             if (! scaffoldingConfigModel.hasConfigValueFor(scaffoldingConfigKey)) {
                 config = {
                     unSelectedColor: 'blue',

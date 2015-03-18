@@ -20,7 +20,7 @@
             data.zoom = currentScaffoldingConfig.layout.zoom;
             data.viewCenter = currentScaffoldingConfig.layout.viewCenter;
 
-            // next
+            data.marker = currentScaffoldingConfig.markers;
 
             return data;
         }

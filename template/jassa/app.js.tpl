@@ -15,20 +15,29 @@
 
     var dataSourceDefinitionObject = <%= dataSourceDefinitionObject %>;
 
+
     /* @ngInject */
     function AppCtrl(jassaDataSourceFactory) {
         var main = this;
 
-        main.getDataSource = function() {
-            return jassaDataSourceFactory
-                .createJassaDataSource(dataSourceDefinitionObject);
-        }
+        main.datasource = {
+            fetchData: function () {
+                return [];
+            }
+        };
 
-        main.dataSource = main.getDataSource();
+        main.config = getMappifyMapConfig();
 
-        main.getMapConfig = function() {
+        main.getMapConfig = function () {
             return getMappifyMapConfig();
+        };
+
+        function init() {
+            main.datasource = jassaDataSourceFactory
+                .createDataSource(dataSourceDefinitionObject);
         }
+
+        init();
     }
 
 })();

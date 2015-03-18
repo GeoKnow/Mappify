@@ -7,7 +7,6 @@
     function scaffoldingConfigModel() {
         var model = this;
 
-
         var data =
         {
             layout: {

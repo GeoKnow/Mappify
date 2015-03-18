@@ -45,7 +45,7 @@
 
         function autoRefreshConfig() {
             if (true === service.autoRefresh) {
-                service.refreshConfig()
+                service.refreshConfig();
             }
         }
 
@@ -67,8 +67,8 @@
                     longitude: 12.3797776
                 },
                 zoom: 12
-            }
-        };
+            };
+        }
 
         function getInitialDatasource() {
             return {
@@ -77,7 +77,7 @@
 
                 }
             };
-        };
+        }
     }
 
     function emitMapVisibilityChangedToEvent($rootScope, value) {

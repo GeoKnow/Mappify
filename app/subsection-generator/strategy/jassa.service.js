@@ -2,50 +2,17 @@
     'use strict';
 
     angular.module('mappifyApp.generator.jassa', [
+            'mappifyApp.generator.jassa.templateFileProvider',
             'mappifyApp.generator.jassa.templateValueProvider'
         ])
         .service('jassaStrategyService', jassaStrategyService);
 
     /* @ngInject */
-    function jassaStrategyService($http, $q, jassaTemplateValueProvider)  {
+    function jassaStrategyService($http, $q, jassaTemplateValueProvider, jassaStrategyTemplateFileProvider)  {
 
         var service = this;
 
-        var baseUrl = 'template/jassa/';
-
-        var templateFileSet = [{
-                templateValueProviderKey: 'app',
-                url: baseUrl + 'app.js.tpl',
-                fileName: 'app.js',
-                folder: 'app'
-            }, {
-                templateValueProviderKey: 'index',
-                url: baseUrl + 'index.html.tpl',
-                fileName: 'index.html',
-                folder: 'app'
-            }, {
-                templateValueProviderKey: 'default',
-                url: baseUrl + 'jassaDataSourceFactory.js.tpl',
-                fileName: 'jassaDataSourceFactory.js',
-                folder: 'app'
-            },  {
-                templateValueProviderKey: 'default',
-                url: baseUrl + 'package.tpl',
-                fileName: 'package.json'
-            }, {
-                templateValueProviderKey: 'default',
-                url: baseUrl + 'bower.tpl',
-                fileName: 'bower.json'
-            }, {
-                templateValueProviderKey: 'default',
-                url: baseUrl + 'jshintrc.tpl',
-                fileName: '.jshintrc'
-            }, {
-                templateValueProviderKey: 'default',
-                url: baseUrl + 'gulpfile.js.tpl',
-                fileName: 'gulpfile.js'
-            }
-        ];
+        var templateFileSet = jassaStrategyTemplateFileProvider.getTemplateFileSet();
 
         // @improvement check http status code should be 200
         function extract(result) {
@@ -68,8 +35,7 @@
         //
         function renderTemplate(template, templateFile) {
 
-            // we use lodash template functionality
-
+            // we use lodash's template functionality
             var compiled = _.template(template);
             var values   = jassaTemplateValueProvider.getTemplateValueProviderByKey(templateFile.templateValueProviderKey);
 

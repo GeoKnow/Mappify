@@ -2,13 +2,16 @@
     'use strict';
 
     angular.module('mappifyApp.generator.jassa.templateValueProvider', [
-            'mappifyApp.models.dataSourceConfigModel'
+            'mappifyApp.models.dataSourceConfigModel',
+            'mappifyApp.models.scaffoldingConfigModel'
         ])
         .service('jassaTemplateValueProvider', jassaTemplateValueProvider);
 
-    function jassaTemplateValueProvider(dataSourceConfigModel)  {
+    function jassaTemplateValueProvider(dataSourceConfigModel, mapConfigModel)  {
 
         var provider = this;
+
+        var appName = 'myApp';
 
         // public function
         provider.getTemplateValueProviderByKey = function(key) {
@@ -30,29 +33,36 @@
         // private functions
         function defaultTemplateValueProvider() {
             return {
-                appName: 'myApp'
+                appName: appName
             };
         }
 
         function appTemplateValueProvider() {
             return {
-                appName: 'myApp',
+                appName: appName,
                 dataSourceDefinitionObject: generateDataSourceDefinitionObject(dataSourceConfigModel),
-                mapConfig: '{ foo: 121212}'
+                mapConfig: generateMapConfig()
             };
         }
 
         function generateDataSourceDefinitionObject(dataSourceConfigModel) {
-            var dataSourceDefinitionObject = dataSourceConfigModel.createFromScaffoldingConfig();
-
-            return JSON.stringify(
-                dataSourceDefinitionObject, null, 2
-            );
+            return toJson(dataSourceConfigModel.createFromScaffoldingConfig());
         }
 
+        function generateMapConfig() {
+            return toJson(mapConfigModel.createFromScafoldingConfig());
+        }
+
+        function toJson(element) {
+            return JSON.stringify(
+                element, null, 2
+            ).replace(/"/g, '\'');
+        }
+
+        // @notice it works but should be improved
         function indexTemplateValueProvider() {
             return {
-                appName: 'myApp',
+                appName: appName,
                 mappify: ' <mappify id="map" datasource="main.datasource" config="main.config"></mappify>',
                 googleMaps: ''
             };
