@@ -17,7 +17,8 @@
                 ctrl: PopupCtrl
             };
 
-            configServiceProvider.registerConfig(description);
+            // @notice the template modal is currently disabled
+            //configServiceProvider.registerConfig(description);
         });
 
     /*@ngInject*/

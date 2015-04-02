@@ -43,5 +43,3 @@
     leaflet-plugins:
       main:
         - layer/tile/Google.js
-    jassa:
-      main: []

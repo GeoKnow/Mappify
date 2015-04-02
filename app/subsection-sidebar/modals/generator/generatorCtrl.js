@@ -29,8 +29,6 @@
                 }
             };
 
-            console.log('lkadsjlkdjslkfjjldflkjsflkjsljkf   generatir');
-
             configServiceProvider.registerConfig(description, resolve);
         });
 
@@ -73,6 +71,8 @@
     function createZipAsBlobUrl(zip) {
 
         var content;
+
+        // does the browser supports uint8array? Use string as fallback
         if (JSZip.support.uint8array) {
             content = zip.generate({type : 'uint8array'});
         } else {
@@ -80,6 +80,7 @@
         }
 
         var blob = new Blob([content], {type: 'application/zip'});
+
         return URL.createObjectURL(blob);
     }
 

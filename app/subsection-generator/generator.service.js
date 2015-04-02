@@ -7,8 +7,7 @@
         .service('generatorService', generatorService);
 
     // @improvement write meaningful error messages
-
-    function generatorService($q, jassaStrategyService)  {
+    function generatorService(jassaStrategyService)  {
 
         var service = this;
 
@@ -29,6 +28,8 @@
         };
 
         // private functions and variables
+
+        // @improvement - this could be moved to a propertyProvider ("data and logic in one service"-violation)
         var strategySet = {
             jassa: {
                 id: 'jassa',

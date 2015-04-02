@@ -28,6 +28,7 @@
             'mappifyApp.sidebar.popups',
             'mappifyApp.sidebar.sponate',
             'mappifyApp.sidebar.tileLayer',
+            'mappifyApp.sidebar.filterDataSource',
 
             'mappifyApp.service.mapService'
         ])

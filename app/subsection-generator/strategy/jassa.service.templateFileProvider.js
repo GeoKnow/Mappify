@@ -45,7 +45,7 @@
             } , {
                 templateValueProviderKey: 'default',
                 url: baseUrl + 'readme.md',
-                fileName: ' readme.md'
+                fileName: 'readme.md'
             }
         ];
 

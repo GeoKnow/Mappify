@@ -1,34 +1,32 @@
 (function () {
     'use strict';
 
-    var title = 'Change Sponate Mapping';
+    var title = 'Filter DataSource';
 
-    angular.module('mappifyApp.sidebar.sponate', [
+    angular.module('mappifyApp.sidebar.filterDataSource', [
         'mappifyApp.sidebar.configService'
     ])
 
         .config(function (configServiceProvider) {
             var description = {
-                id: 'sponate',
-                order: 30,
+                id: 'filterDataSource',
+                order: 25,
                 title: title,
-                fileName: 'sponate',
-                icon: 'random',
-                ctrl: SponateCtrl
+                fileName: 'filterDataSource',
+                icon: 'filter',
+                ctrl: FilterDataSourceCtrl
             };
 
-            // @notice the "sponate Mapping"-modal is currently disabled
-            //configServiceProvider.registerConfig(description);
+            configServiceProvider.registerConfig(description);
         });
 
     /*@ngInject*/
-    function SponateCtrl($modalInstance, mapService) {
+    function FilterDataSourceCtrl($modalInstance, mapService) {
 
         var modal = this;
-
         modal.title = title;
 
-        modal.sponate = '';
+
 
         modal.cancel = function () {
             $modalInstance.dismiss();
@@ -36,8 +34,7 @@
 
         // modalInstance resolves the promise
         modal.close = function () {
-            $modalInstance.close(modal.sponate);
-
+            $modalInstance.close(modal.popups);
             mapService.triggerAutoRefreshConfig();
         };
 
