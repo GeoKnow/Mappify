@@ -4,7 +4,9 @@
     var title = 'Filter DataSource';
 
     angular.module('mappifyApp.sidebar.filterDataSource', [
-        'mappifyApp.sidebar.configService'
+        'mappifyApp.sidebar.configService',
+        'mappifyApp.service.dddiContainer',
+        'ui.jassa'
     ])
 
         .config(function (configServiceProvider) {
@@ -21,10 +23,24 @@
         });
 
     /*@ngInject*/
-    function FilterDataSourceCtrl($modalInstance, mapService) {
+    function FilterDataSourceCtrl($modalInstance, dddiContainer) {
 
         var modal = this;
         modal.title = title;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

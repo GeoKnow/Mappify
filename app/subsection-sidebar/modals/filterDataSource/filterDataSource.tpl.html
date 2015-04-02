@@ -8,6 +8,15 @@
             </div>
             <div class="modal-body">
 
+                <facet-list
+                        ui-model="active.config.breadcrumb"
+                        constraint-manager="active.config.facetTreeConfig.getFacetConfig().getConstraintManager()"
+                        lookup-service-node-labels="active.services.lookupServiceNodeLabels"
+                        constraint-service="active.services.listServiceConstraintLabels"
+                        facet-service="active.services.facetService"
+                        facet-value-service="active.services.facetValueService"
+                        select="selectFacet(path)"
+                        ></facet-list>
             </div>
             <div class="modal-footer">
                 <div class="row">
