@@ -1,0 +1,25 @@
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                {{modal.title}}
+                <i class="fa fa-times close"
+                   ng-click="modal.cancel()"></i>
+            </div>
+            <div class="modal-body">
+                <div ng-repeat="(optionKey, optionValue) in modal.mapSettings">
+                    <input type="checkbox" ng-model="optionValue" ng-change="modal.setOption(optionKey, optionValue)"/>
+                    {{modal.getDescriptionForOption(optionKey)}}
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" ng-click="modal.close()">
+                    <i class="fa fa-fw fa-save"></i>
+                    Save
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

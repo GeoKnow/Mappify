@@ -1,0 +1,39 @@
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                {{modal.title}}
+                <i class="fa fa-times close"
+                   ng-click="modal.cancel()"></i>
+            </div>
+            <div class="modal-body">
+                <div ng-if="! modal.zipIsReady">
+                    <h5>select an application template</h5>
+
+                    <div class="selectBox"
+                         ng-class="modal.isSelected(template.id) ? 'bg-warning' : ''"
+                         ng-repeat="template in modal.availableTemplates"
+                         ng-click="modal.selectTemplate(template.id)">
+
+                        <span class="head">{{template.displayName}}</span>
+                        <p>{{template.description}}</p>
+                    </div>
+
+                    <button ng-click="modal.generateApp()" class="btn btn-success btn-block text-left"><i class="fa fa-fw fa-cogs"></i> Generate
+                        AngularJS App
+                    </button>
+                </div>
+
+                <div ng-if="modal.zipIsReady">
+                    <a ng-href="{{ modal.zipBlobURL }}" download="app.zip" target="_blank">
+                        <i class="fa fa-fw fa-cloud-download"></i>
+                        Download App
+                    </a>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>

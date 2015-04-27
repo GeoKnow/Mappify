@@ -1,0 +1,64 @@
+.modal:not(.untouched) .modal {
+  &-backdrop {
+    background-color: #555;
+    &.in {
+      opacity: 0.75;
+    }
+  }
+
+  &-body {
+    padding: @grid-gutter-width;
+
+    &.fixed-height {
+      height: 450px;
+      max-height: 450px;
+      min-height: 450px;
+      overflow-y: scroll;
+    }
+
+  }
+
+  &-header, &-footer {
+    height: @grid-gutter-width * 2;
+  }
+
+  &-header {
+    padding: @grid-gutter-width / 2;
+    height: @grid-gutter-width * 2;
+    background-color: @title-background;
+    color: #ffffff;
+    font-size: @font-size-h4;
+    .text-vertical-middle();
+
+    .close {
+      cursor: pointer;
+      position: absolute;
+      right: @grid-gutter-width / 2;
+      top: 0;
+      margin: 0;
+      height: @grid-gutter-width * 2;
+      line-height: @grid-gutter-width * 2;
+    }
+
+  }
+
+  &-footer {
+    background-color: #eaeaea;
+    padding:     @grid-gutter-width / 2;
+    padding-left: @grid-gutter-width ;
+    padding-right: @grid-gutter-width ;
+
+    .btn {
+      .btn-sm();
+    }
+
+  }
+
+  .table {
+    &, tr, td {
+      border: none;
+    }
+    margin: 0;
+  }
+
+}

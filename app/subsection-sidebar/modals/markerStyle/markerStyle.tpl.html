@@ -1,0 +1,83 @@
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                {{modal.title}}
+                <i class="fa fa-times close"
+                   ng-click="modal.cancel()"></i>
+            </div>
+            <zenubu-form submit-function="modal.close" validation-object="{}" model="modal">
+                <div class="modal-body row">
+
+                    <div class="col-xs-12">
+                        <label> Please select a marker and colors.</label>
+                    </div>
+
+                    <div class="col-xs-6">
+                        <div>
+                            <label>Current Marker:</label>
+                            <i class="fa fa-fw" ng-class="'fa-'+ modal.markers.m1.icon.icon"
+                               style="width: 30px;font-size: 18px; padding: 4px; margin: 4px;"></i>
+                        </div>
+                        <div>
+                            <label>Colors</label>
+
+                            <div class="row">
+                                <zenubu-input-group model="modal.markers.m1.icon">
+                                    <zenubu-select class="col-xs-6" field="markerColor" type="array"
+                                                   value-object="modal.availableColors"
+                                                   label="unselected"></zenubu-select>
+                                </zenubu-input-group>
+                                <zenubu-input-group model="modal.markers.m2.icon">
+                                    <zenubu-select class="col-xs-6" field="markerColor" type="array"
+                                                   value-object="modal.availableColors"
+                                                   label="selected"></zenubu-select>
+                                </zenubu-input-group>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-6">
+                        <leaflet defaults="modal.mapDefaults" center="modal.layout" markers="modal.markers"
+                                 layers="modal.layers" width="100%" height="100px"></leaflet>
+
+                    </div>
+
+                    <div class="col-xs-12">
+                        <hr/>
+                        <label>Available icons</label>
+                        <div class="clearfix"><br></div>
+
+
+                        <input class="form-control" ng-model="modal.search.$" placeholder="Search the icons, try currency or circle"/>
+
+                        <div class="clearfix"><br></div>
+                        <div class="iconBox"
+                             ng-class="(filtered.length < 16)? 'flex-rows-single' : 'flex-rows-multiple' "
+                                >
+                <span ng-repeat="icon in filtered = (modal.availableMarkerStyles | filter : modal.search) "
+                      class="btn"
+                      ng-click="modal.markers.m1.icon.icon = icon.id;modal.markers.m2.icon.icon = icon.id"
+                      ng-class="{'btn-info': modal.markers.m1.icon.icon === icon.id}"
+                        >
+                    <i class="fa fa-fw"
+                       ng-class="'fa-' + icon.id"
+                            ></i>
+                </span>
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                </div>
+                <div class="modal-footer">
+                    <zenubu-submit class="btn-success">
+                        <i class="fa fa-fw fa-save"></i>
+                        Save
+                    </zenubu-submit>
+                </div>
+            </zenubu-form>
+        </div>
+    </div>
+</div>

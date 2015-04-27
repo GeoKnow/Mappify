@@ -1,0 +1,24 @@
+# add GH_TOKEN to wercker pipeline
+box: leipert/ubuntu14.04-webessentials@2.0.1
+# Build definition
+build:
+  # The steps that will be executed on build
+  steps:
+    # A step that executes `npm install` command
+    - npm-install
+    # Run bower `install` with cache
+    - leipert/yeoman-bower-install
+    # Actually build with gulp and run tests
+    - script:
+        name: Run gulp build & test
+        code: gulp generateIconJSON && gulp
+    - script:
+        name: Cleanup build output
+        code: ls -A | grep -v dist | xargs rm -rf
+
+deploy:
+  steps:
+    - leipert/git-push:
+         gh_oauth: $GH_TOKEN
+         gh_pages: true
+         basedir: dist

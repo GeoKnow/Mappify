@@ -1,0 +1,30 @@
+{
+  "browser": true,
+  "esnext": true,
+  "bitwise": true,
+  "camelcase": true,
+  "curly": true,
+  "eqeqeq": true,
+  "immed": true,
+  "latedef": "nofunc",
+  "newcap": true,
+  "noarg": true,
+  "quotmark": "single",
+  "regexp": true,
+  "undef": true,
+  "unused": true,
+  "globalstrict": true,
+  "trailing": true,
+  "smarttabs": true,
+  "validthis":true,
+  "globals": {
+    "angular": false,
+    "jassa": false,
+    "$": false,
+    "L": false,
+    "FastClick": false,
+    "alert": false,
+    "_": false,
+    "console": false
+  }
+}
