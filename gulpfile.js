@@ -69,9 +69,9 @@ var gulp = require('gulp-stack').gulp([
  * Alias Tasks
  */
 
-gulp.newTask('default', ['build', 'jshint']);
+gulp.newTask('default', ['build' /*, 'jshint'*/]);
 
-gulp.newTask('test', ['jshint']);
+gulp.newTask('test', [/*'jshint'*/]);
 
 gulp.newTask('build', ['html', 'app', 'static', 'vendor']);
 
