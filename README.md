@@ -5,7 +5,7 @@ mappify
 
 ###demo
 
-demo:  [demo](http://danielkeil.github.io/mappify/#/) 
+demo:  [demo](http://geoknow.github.io/Mappify/#/) 
 
 ### Getting Started
 
