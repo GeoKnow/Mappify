@@ -39,7 +39,7 @@
         model.setViewCenter = setViewCenter;
         model.setZoom = setZoom;
 
-        // @important we return an copy to prevent the map from changed while working on one
+        // @important we return an copy to prevent the map from changing while working on one
         // part of the config
         function getCurrentConfig(key) {
 
