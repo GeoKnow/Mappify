@@ -23,7 +23,20 @@
             "geoMapFactory": "wkt"
           }
         }
-      ]
+      ],
+      "markers": {
+        "unselected": {
+          "prefix": "fa",
+          "icon": "university",
+          "markerColor": "blue",
+          "iconColor": "white"
+        },
+        "selected": {
+          "prefix": "fa",
+          "icon": "university",
+          "markerColor": "red"
+        }
+      }
     }
   },
   "jassaCastles": {
@@ -50,7 +63,20 @@
             "geoMapFactory": "wkt"
           }
         }
-      ]
+      ],
+      "markers": {
+        "unselected": {
+          "prefix": "fa",
+          "icon": "home",
+          "markerColor": "blue",
+          "iconColor": "white"
+        },
+        "selected": {
+          "prefix": "fa",
+          "icon": "home",
+          "markerColor": "red"
+        }
+      }
     }
   }
 }
