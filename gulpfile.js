@@ -16,7 +16,12 @@ var staticFiles = [
     {
         name: 'jassa',
         folder: 'dist/bower_components/jassa',
-        src: 'app/bower_components/jassa/*.min.js'
+        src: 'app/bower_components/jassa/*.js'
+    },
+    {
+        name: 'jassa-ui',
+        folder: 'dist/bower_components/jassa-ui-angular',
+        src: 'app/bower_components/jassa-ui-angular/*.js  '
     },
     {
         name: 'fonts',

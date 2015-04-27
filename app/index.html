@@ -37,12 +37,12 @@
 <!-- endinject -->
 <!-- endref -->
 
-<script src="bower_components/dddi-angular/dddi-angular.js"></script>
 <script src="bower_components/jassa/jassa.js"></script>
-<script src="bower_components/jassa-ui-angular/jassa-ui-angular-tpls.js"></script>
-
 <!-- inject:js -->
 <!-- endinject -->
+<!-- always include jassa-ui after including angular -->
+<script src="bower_components/jassa-ui-angular/jassa-ui-angular-tpls.js"></script>
+
 <script>
     // global jassa object
     var jassa = new Jassa(Promise, function() {
